@@ -70,7 +70,7 @@ const ContactMain = () => {
             </main>
 
             {/* footer area */}
-            <FooterOne topCls="" whiteFooter={true} />
+            <FooterOne/>
             {/* footer area */}
           </div>
         </div>
