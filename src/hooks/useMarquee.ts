@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 
 export function useMarquee(speed = 1, direction: 1 | -1 = -1) {
   const ref = useRef<HTMLDivElement | null>(null);
+  const paused = useRef(false);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -16,12 +17,14 @@ export function useMarquee(speed = 1, direction: 1 | -1 = -1) {
       const delta = time - lastTime;
       lastTime = time;
 
-      x += direction * speed * (delta * 0.05);
-      el.style.transform = `translateX(${x}px)`;
+      if (!paused.current) {
+        x += direction * speed * (delta * 0.05);
+        el.style.transform = `translateX(${x}px)`;
 
-      // reset for seamless loop
-      if (Math.abs(x) > el.scrollWidth / 2) {
-        x = 0;
+        // reset for seamless loop
+        if (Math.abs(x) > el.scrollWidth / 2) {
+          x = 0;
+        }
       }
 
       rafId = requestAnimationFrame(animate);
@@ -32,5 +35,13 @@ export function useMarquee(speed = 1, direction: 1 | -1 = -1) {
     return () => cancelAnimationFrame(rafId);
   }, [speed, direction]);
 
-  return ref;
+  const pause = () => {
+    paused.current = true;
+  };
+
+  const resume = () => {
+    paused.current = false;
+  };
+
+  return { ref, pause, resume };
 }

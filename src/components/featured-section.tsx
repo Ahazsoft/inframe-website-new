@@ -161,11 +161,8 @@ function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
 export function FeaturedWorkSection() {
   const [paused, setPaused] = useState(false);
 
-  const [row1Speed, setRow1Speed] = useState(0.6);
-  const [row2Speed, setRow2Speed] = useState(1);
-
-  const row1Ref = useMarquee(paused ? 0 : row1Speed, -1);
-  const row2Ref = useMarquee(paused ? 0 : row2Speed, -1);
+  const row1Marquee = useMarquee(0.6, -1);
+  const row2Marquee = useMarquee(1, -1);
 
   const autoplayPlugin = useMemo(
     () => Autoplay({ delay: 5000, stopOnInteraction: false }),
@@ -177,6 +174,16 @@ export function FeaturedWorkSection() {
     if (paused) autoplayPlugin.stop();
     else autoplayPlugin.reset();
   }, [paused, autoplayPlugin]);
+
+  useEffect(() => {
+    if (paused) {
+      row1Marquee.pause();
+      row2Marquee.pause();
+    } else {
+      row1Marquee.resume();
+      row2Marquee.resume();
+    }
+  }, [paused]);
 
   return (
     <section className="featured-work-section bg-black py-5" id="our-work">
@@ -246,9 +253,9 @@ export function FeaturedWorkSection() {
 
           <div
             className="d-flex project-row mb-3 mb-md-4"
-            ref={row1Ref}
-            onMouseEnter={() => setRow1Speed(0.15)}
-            onMouseLeave={() => setRow1Speed(0.6)}
+            ref={row1Marquee.ref}
+            onMouseEnter={() => row1Marquee.pause()}
+            onMouseLeave={() => row1Marquee.resume()}
           >
             {[...gridProjects.slice(0, 8), ...gridProjects.slice(0, 8)].map(
               (item, idx) => (
@@ -259,9 +266,9 @@ export function FeaturedWorkSection() {
 
           <div
             className="d-flex project-row"
-            ref={row2Ref}
-            onMouseEnter={() => setRow2Speed(0.15)}
-            onMouseLeave={() => setRow2Speed(1)}
+            ref={row2Marquee.ref}
+            onMouseEnter={() => row2Marquee.pause()}
+            onMouseLeave={() => row2Marquee.resume()}
           >
             {[...gridProjects.slice(8, 15), ...gridProjects.slice(8, 15)].map(
               (item, idx) => (

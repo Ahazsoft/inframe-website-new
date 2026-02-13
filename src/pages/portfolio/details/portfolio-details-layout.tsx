@@ -43,7 +43,7 @@ const PortfolioDetailsLayout = ({ project }: Props) => {
             <PortfolioDetailsThreeArea project={project} />
           </main>
 
-          <FooterOne topCls="" whiteFooter={true} />
+          <FooterOne/>
         </div>
       </div>
     </Wrapper>
