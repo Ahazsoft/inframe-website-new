@@ -74,7 +74,7 @@ const AboutUsMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterOne topCls="" />
+          <FooterOne/>
           {/* footer area */}
         </div>
       </div>
