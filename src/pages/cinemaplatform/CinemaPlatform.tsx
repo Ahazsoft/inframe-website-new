@@ -151,7 +151,6 @@ const CinemaPlatform = () => {
             style={{
               width: "100%",
               maxWidth: "80%",
-              width: "100%",
               height: "100%",
             }}
           >
