@@ -1,14 +1,11 @@
 import React from "react";
-import {
-  Play,
-  Grid,
-  Camera,
-  Megaphone,
-  Disc,
-  Cloud,
-} from "lucide-react";
+import { Play, Grid, Camera, Megaphone, Disc, Cloud } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 const BundlePackage = () => {
+  const router = useRouter();
+
   return (
     <div className="container my-5">
       <div
@@ -59,9 +56,13 @@ const BundlePackage = () => {
               Bundle production with post and promotion. And save more.
             </h2>
 
-            <button className="btn btn-dark px-4 py-2 rounded-pill">
+            <Button
+              variant="secondary"
+              className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+              onClick={() => router.push("/contact")}
+            >
               Get a quote
-            </button>
+            </Button>
           </div>
         </div>
       </div>

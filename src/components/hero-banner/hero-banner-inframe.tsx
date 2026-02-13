@@ -6,9 +6,13 @@ import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUsHero() {
+  const router = useRouter();
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoWrapRef = useRef<HTMLDivElement>(null);
 
@@ -136,9 +140,17 @@ export default function AboutUsHero() {
               that captivates
             </h1>
 
-            <Link className="tp-btn-white background-black" href="#">
+            {/* <Link className="tp-btn-white background-black" href="#">
               Contact Us
-            </Link>
+            </Link> */}
+
+            <Button
+                variant="secondary"
+                className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+                onClick={() => router.push("/contact")}
+              >
+                Contact Us
+            </Button>
 
             <div style={{ height: 40 }} />
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -13,68 +14,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
-/* ============================= */
-/* Data */
-/* ============================= */
-
-const featuredProjects = [
-  {
-    id: 1,
-    category: "Documentary",
-    title: "Transforming visions into visual stories.",
-    type: "video",
-    src: "/assets/img/featured/docufeatured.mp4",
-    poster: "/assets/img/featured/fallback/docufeatured_FB.png",
-  },
-  {
-    id: 2,
-    category: "Photography",
-    title: "Capturing authentic moments.",
-    type: "image",
-    src: "/2026-01-14_16-59.png",
-  },
-  {
-    id: 3,
-    category: "TV Commercial",
-    title: "Creating compelling brand narratives.",
-    type: "video",
-    src: "/assets/img/featured/commercialfeatured1.mp4",
-    poster: "/assets/img/featured/fallback/commercialfeatured_FB.png",
-  },
-  {
-    id: 4,
-    category: "Events",
-    title: "Capturing authentic moments.",
-    type: "video",
-    src: "/assets/img/featured/eventfeatured.mp4",
-    poster: "/assets/img/featured/fallback/eventfeatured_FB.png",
-  },
-  {
-    id: 5,
-    category: "Social Media",
-    title: "Capturing authentic moments.",
-    type: "image",
-    src: "/assets/img/featured/smfeatured21.png",
-  },
-];
-
-const gridProjects = [
-  { id: 1, type: "image", src: "/assets/img/featured/grid/images/emushu01.jpg" },
-  { id: 2, type: "video", src: "/assets/img/featured/grid/videos/docfeaturedgrid.mp4", poster: "/assets/img/featured/grid/videos/fallback/docfeaturedgrid.png" },
-  { id: 3, type: "image", src: "/assets/img/featured/grid/images/commercial3.jpg" },
-  { id: 4, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured1.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured1.png" },
-  { id: 5, type: "image", src: "/assets/img/featured/grid/images/commercial2.jpg" },
-  { id: 6, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured2.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured2.png" },
-  { id: 7, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured3.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured3.png" },
-  { id: 8, type: "image", src: "/assets/img/featured/grid/images/smfeatured1.png" },
-  { id: 9, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured4.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured4.png" },
-  { id: 10, type: "image", src: "/assets/img/featured/grid/images/docufeatured_2.png" },
-  { id: 11, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured5.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured5.png" },
-  { id: 12, type: "image", src: "/assets/img/featured/grid/images/docufeatured_2_1.png" },
-  { id: 13, type: "video", src: "/assets/img/featured/grid/videos/commercialfeatured6.mp4", poster: "/assets/img/featured/grid/videos/fallback/commercialfeatured6.png" },
-  { id: 14, type: "image", src: "/assets/img/featured/grid/images/docufeatured_2_2.png" },
-  { id: 15, type: "video", src: "/assets/img/featured/grid/videos/eventfeatured.mp4", poster: "/assets/img/featured/grid/videos/fallback/eventfeatured.png" },
-];
+import { projectsData } from "./portfolio/details/projectData";
 
 /* ============================= */
 /* Intersection Observer Hook */
@@ -119,35 +59,34 @@ function useInView(ref: React.RefObject<Element>, threshold = 0.8, delay = 250) 
 function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
   const ref = useRef<HTMLDivElement>(null!);
   const inView = useInView(ref);
+  const router = useRouter();
+
+  // Grid MUST show image only (no video)
+  const image =
+    item.heroImage ||
+    item.secondImage ||
+    item.gallery?.[0] ||
+    item.btsGallery?.[0] ||
+    "/default-placeholder.png";
 
   return (
     <div
       ref={ref}
       className="project-card bg-dark flex-shrink-0 position-relative overflow-hidden"
     >
-      {item.type === "video" && inView && !paused ? (
-        <video
-          src={item.src}
-          poster={item.poster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          className="project-image"
-        />
-      ) : (
-        <Image
-          src={item.poster || item.src}
-          alt={`Project ${item.id}`}
-          fill
-          className="project-image"
-        />
-      )}
+      <Image
+        src={image}
+        alt={`Project ${item.id}`}
+        fill
+        className="project-image"
+      />
 
       <div className="project-overlay" />
 
-      <Button className="btn btn-secondary btn-sm project-btn rounded-pill bg-white text-dark fw-semibold px-4 px-md-5">
+      <Button
+        className="btn btn-secondary btn-sm project-btn rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
+        onClick={() => router.push(`/projects/${item.id}`)}
+      >
         View Project
       </Button>
     </div>
@@ -159,6 +98,7 @@ function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
 /* ============================= */
 
 export function FeaturedWorkSection() {
+  const router = useRouter();
   const [paused, setPaused] = useState(false);
 
   const row1Marquee = useMarquee(0.6, -1);
@@ -185,6 +125,9 @@ export function FeaturedWorkSection() {
     }
   }, [paused]);
 
+  const featuredProjects = projectsData.filter((p) => p.featured === true);
+  const gridProjects = projectsData.filter((p) => p.grid === true);
+
   return (
     <section className="featured-work-section bg-black py-5" id="our-work">
       <div className="container-fluid">
@@ -200,20 +143,25 @@ export function FeaturedWorkSection() {
               <CarouselItem key={project.id} className="custom-basis">
                 <div className="position-relative overflow-hidden cursor-pointer carousel-fixed-size">
 
-                  {project.type === "video" ? (
+                  {project.heroVideo ? (
                     <video
-                      src={project.src}
-                      poster={project.poster}
+                      src={project.heroVideo}
+                      poster={
+                        project.heroVideoFallbackImage ||
+                        project.secondImage ||
+                        project.heroImage ||
+                        "/default-placeholder.png"
+                      }
                       autoPlay={!paused}
                       muted
                       loop
                       playsInline
-                      preload="none"
+                      preload="metadata"
                       className="object-fit-contain w-100 h-100"
                     />
                   ) : (
                     <Image
-                      src={project.src}
+                      src={project.heroImage || project.secondImage || "/default-placeholder.png"}
                       alt={project.title}
                       fill
                       className="object-fit-cover"
@@ -227,6 +175,7 @@ export function FeaturedWorkSection() {
                     <Button
                       variant="secondary"
                       className="rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
+                      onClick={() => router.push(`/projects/${project.id}`)}
                     >
                       View Project
                     </Button>
@@ -286,11 +235,11 @@ export function FeaturedWorkSection() {
               variant="secondary"
               className="rounded-pill bg-white text-dark fw-semibold px-5 py-3"
               style={{ transform: "translateX(27.5%)" }}
+              onClick={() => router.push("/projects")}
             >
               See all Projects
             </Button>
           </div>
-
 
           <Button
             variant="outline"

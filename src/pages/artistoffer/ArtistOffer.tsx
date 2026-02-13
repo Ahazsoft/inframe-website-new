@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const ArtistOffer = () => {
+  const router = useRouter();
+  
   return (
     <div
       className="overflow-hidden"
@@ -24,9 +28,13 @@ const ArtistOffer = () => {
                 special rates.
               </h2>
 
-              <button className="btn btn-dark px-4 py-2 rounded-pill">
-                Work with us
-              </button>
+            <Button
+              variant="secondary"
+              className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+              onClick={() => router.push("/contact")}
+            >
+              Work with us
+            </Button>
             </div>
           </div>
 

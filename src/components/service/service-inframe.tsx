@@ -113,8 +113,8 @@ export function ServiceInframe() {
             </p>
           </div>
 
-          <a
-            href="/portfolio"
+          {/* <a
+            href="/projects"
             className="mb-5 text-md fw-medium"
             style={{
               color: "#0d6efd", // bootstrap blue
@@ -127,7 +127,16 @@ export function ServiceInframe() {
             }}
           >
             View Our Portfolio <span>&gt;</span>
-          </a>
+          </a> */}
+
+            <Link
+              href="/projects"
+              className="text-primary fw-medium"
+              style={{ marginLeft: "0.8em", fontSize:'19px' }}
+            >
+              View Our Portfolio
+              <i className="fa-solid fa-angle-right learn-more-icon"></i>
+            </Link>
 
           {/* Platform icons */}
           <div className="row justify-content-center g-4 mx-auto" style={{ marginTop: "38px"}}>

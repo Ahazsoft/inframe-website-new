@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-
+import { Button } from "@/components/ui/button";
 
 
 const CinemaPlatform = () => {
+  const router = useRouter();
   return (
     <section className="section-routers"
     style={{
@@ -52,15 +54,21 @@ const CinemaPlatform = () => {
 
             {/* <div className="d-flex align-items-center gap-5"> */}
             <div className="typography-router-cta ctas large-12 large-centered pb-100">
-              <button
-                className="btn btn-dark px-4 py-2 rounded-pill"
-                style={{ marginRight: "0.8em" }}
+
+
+
+              <Button
+                variant="secondary"
+                className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+                onClick={() => router.push("/service")}
               >
                 Services
-              </button>
+              </Button>
+
+              
 
               <Link
-                href="#"
+                href="/about-us"
                 className="text-primary fw-medium"
                 style={{ marginLeft: "0.8em" }}
               >
@@ -127,7 +135,7 @@ const CinemaPlatform = () => {
               
 
               <Link
-                href="#"
+                href="/about-us"
                 className="text-primary fw-medium"
                 style={{ marginLeft: "0.8em" }}
               >

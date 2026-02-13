@@ -21,12 +21,16 @@ export type ProjectType = {
 
   secondImage?: any;
   gallery?: any[];
-  btsGallery?: any[];  
+  btsGallery?: any[];
+
   introTitle: string;
   introText: string[];
   goalTitle: string;
   goalText: string[];
   link: string;
+
+  featured?: boolean;
+  grid?: boolean;
 };
 
 
@@ -39,7 +43,7 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/ZTE/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/ZTE/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/ZTE/herofallback.png",
     secondImage: "/assets/img/portfolio/ZTE/heroimage.png",
     gallery: ["/assets/img/portfolio/ZTE/gallery1.png","/assets/img/portfolio/ZTE/gallery2.png"],
     introTitle: "Sleek Modern Commercial",
@@ -52,7 +56,9 @@ export const projectsData: ProjectType[] = [
       "Deliver a premium, cinematic TV commercial that highlights product elegance and brand identity.",
       "Create a strong visual language for both broadcast and digital platforms."
     ],
-    link: "#"
+    link: "#",
+    featured: true,
+    grid: true
   },
 
   {
@@ -63,16 +69,16 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Negus/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/Negus/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/Negus/herofallback.png",
     secondImage: "/assets/img/portfolio/Negus/heroimage.png",
     gallery: ["/assets/img/portfolio/Negus/gallery1.png","/assets/img/portfolio/Negus/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/Negus/bts1.png",
-    "/assets/img/portfolio/Negus/bts2.png",
-    "/assets/img/portfolio/Negus/bts3.png",
-    "/assets/img/portfolio/Negus/bts4.png",
-    "/assets/img/portfolio/Negus/bts5.png"],
-
+      "/assets/img/portfolio/Negus/bts1.png",
+      "/assets/img/portfolio/Negus/bts2.png",
+      "/assets/img/portfolio/Negus/bts3.png",
+      "/assets/img/portfolio/Negus/bts4.png",
+      "/assets/img/portfolio/Negus/bts5.png"
+    ],
     introTitle: "Warm Lifestyle Commercial",
     introText: [
       "A warm, lifestyle-driven commercial capturing everyday moments through soft natural light, authentic performances, and rich cinematic color grading.",
@@ -83,7 +89,9 @@ export const projectsData: ProjectType[] = [
       "Capture real human moments with cinematic lighting and emotional storytelling.",
       "Build a premium brand image that feels authentic and relatable."
     ],
-    link: "#"
+    link: "#",
+    featured: true,
+    grid: true
   },
 
   {
@@ -94,7 +102,7 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Largo/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/Largo/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/Largo/herofallback.png",
     secondImage: "/assets/img/portfolio/Largo/heroimage.png",
     gallery: ["/assets/img/portfolio/Largo/gallery1.png","/assets/img/portfolio/Largo/gallery2.png"],
     introTitle: "Bright Family Commercial",
@@ -107,7 +115,9 @@ export const projectsData: ProjectType[] = [
       "Create a clean, warm commercial that connects with families and showcases trust.",
       "Deliver a bright and optimistic visual style suitable for TV and digital."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -118,12 +128,13 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Castle/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/Castle/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/Castle/herofallback.png",
     secondImage: "/assets/img/portfolio/Castle/heroimage.png",
     gallery: ["/assets/img/portfolio/Castle/gallery1.png","/assets/img/portfolio/Castle/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/Castle/bts1.png",
-    "/assets/img/portfolio/Castle/bts2.png"],
+      "/assets/img/portfolio/Castle/bts1.png",
+      "/assets/img/portfolio/Castle/bts2.png"
+    ],
     introTitle: "Romantic Cinematic Campaign",
     introText: [
       "A romantic, cinematic commercial capturing intimate moments through warm lighting, elegant styling, and refined visual storytelling.",
@@ -134,7 +145,9 @@ export const projectsData: ProjectType[] = [
       "Showcase premium brand identity through cinematic storytelling and romantic visuals.",
       "Create campaign content suitable for social media and digital platforms."
     ],
-    link: "#"
+    link: "#",
+    featured: true,
+    grid: false
   },
 
   {
@@ -145,16 +158,16 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/EAL/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/EAL/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/EAL/herofallback.png",
     secondImage: "/assets/img/portfolio/EAL/heroimage.png",
     gallery: ["/assets/img/portfolio/EAL/gallery1.png","/assets/img/portfolio/EAL/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/EAL/bts1.png",
-    "/assets/img/portfolio/EAL/bts2.png",
-    "/assets/img/portfolio/EAL/bts3.png",
-    "/assets/img/portfolio/EAL/bts4.png",
-    "/assets/img/portfolio/EAL/bts5.png",],
-
+      "/assets/img/portfolio/EAL/bts1.png",
+      "/assets/img/portfolio/EAL/bts2.png",
+      "/assets/img/portfolio/EAL/bts3.png",
+      "/assets/img/portfolio/EAL/bts4.png",
+      "/assets/img/portfolio/EAL/bts5.png"
+    ],
     introTitle: "Cinematic Brand Campaign",
     introText: [
       "A cinematic brand campaign blending Ethiopian heritage, live music, and a modern travel experience.",
@@ -165,7 +178,9 @@ export const projectsData: ProjectType[] = [
       "Capture the spirit of national identity with cinematic storytelling.",
       "Highlight travel experience and modern luxury with premium visuals."
     ],
-    link: "#"
+    link: "#",
+    featured: true,
+    grid: false
   },
 
   {
@@ -176,17 +191,18 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/YG-Techno/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png",
     secondImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
     gallery: ["/assets/img/portfolio/YG-Techno/gallery1.png","/assets/img/portfolio/YG-Techno/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/YG-Techno/bts1.png",
-    "/assets/img/portfolio/YG-Techno/bts2.png",
-    "/assets/img/portfolio/YG-Techno/bts3.png",
-    "/assets/img/portfolio/YG-Techno/bts4.png",
-    "/assets/img/portfolio/YG-Techno/bts5.png",
-    "/assets/img/portfolio/YG-Techno/bts6.png",
-    "/assets/img/portfolio/YG-Techno/bts7.png",],
+      "/assets/img/portfolio/YG-Techno/bts1.png",
+      "/assets/img/portfolio/YG-Techno/bts2.png",
+      "/assets/img/portfolio/YG-Techno/bts3.png",
+      "/assets/img/portfolio/YG-Techno/bts4.png",
+      "/assets/img/portfolio/YG-Techno/bts5.png",
+      "/assets/img/portfolio/YG-Techno/bts6.png",
+      "/assets/img/portfolio/YG-Techno/bts7.png"
+    ],
     introTitle: "Story-Driven Brand Campaign",
     introText: [
       "A story-driven brand campaign blending everyday craftsmanship and human connection with TECNO’s innovative technology.",
@@ -197,7 +213,9 @@ export const projectsData: ProjectType[] = [
       "Showcase the phone as part of real life, creativity, and progress.",
       "Create warm, cinematic content optimized for social platforms."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -208,7 +226,7 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Senq/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroVideoFallbackImage: "/assets/img/portfolio/Senq/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/Senq/herofallback.png",
     secondImage: "/assets/img/portfolio/Senq/heroimage.png",
     gallery: ["/assets/img/portfolio/Senq/gallery2.png","/assets/img/portfolio/Senq/gallery1.png"],
     introTitle: "Heartfelt Family Campaign",
@@ -221,7 +239,9 @@ export const projectsData: ProjectType[] = [
       "Create emotional storytelling with soft lighting and intimate moments.",
       "Position the brand as part of family love and celebration."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -231,13 +251,14 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EthioTelecom/herovideo.mp4",
-    heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png", // optional
+    heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
     secondImage: "/assets/img/portfolio/EthioTelecom/gallery1.png",
     gallery: ["/assets/img/portfolio/EthioTelecom/heroimage.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/EthioTelecom/bts1.png",
-    "/assets/img/portfolio/EthioTelecom/bts2.png",
-    "/assets/img/portfolio/EthioTelecom/bts3.png"],
+      "/assets/img/portfolio/EthioTelecom/bts1.png",
+      "/assets/img/portfolio/EthioTelecom/bts2.png",
+      "/assets/img/portfolio/EthioTelecom/bts3.png"
+    ],
     introTitle: "Futuristic Brand Campaign",
     introText: [
       "A high-impact brand campaign introducing Ethio Telecom’s 5G network through futuristic visuals, dynamic motion graphics, and cinematic storytelling.",
@@ -248,7 +269,9 @@ export const projectsData: ProjectType[] = [
       "Create futuristic visuals to introduce 5G network benefits.",
       "Deliver campaign content that supports national digital transformation."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -258,13 +281,13 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/AmbCamp - Techno/herovideo.mp4",
-    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png", // optional
     secondImage: "/assets/img/portfolio/AmbCamp - Techno/heroimage.png",
     gallery: ["/assets/img/portfolio/AmbCamp - Techno/gallery2.png","/assets/img/portfolio/AmbCamp - Techno/gallery1.png"],
     btsGallery:[
-    "/assets/img/portfolio/AmbCamp - Techno/bts1.png",
-    "/assets/img/portfolio/AmbCamp - Techno/bts2.png",
-    "/assets/img/portfolio/AmbCamp - Techno/bts3.png"],
+      "/assets/img/portfolio/AmbCamp - Techno/bts1.png",
+      "/assets/img/portfolio/AmbCamp - Techno/bts2.png",
+      "/assets/img/portfolio/AmbCamp - Techno/bts3.png"
+    ],
     introTitle: "Lifestyle Ambassador Campaign",
     introText: [
       "A lifestyle-driven brand campaign featuring Abubeker Nura, showcasing TECNO smartphones as part of everyday performance and balance.",
@@ -275,7 +298,9 @@ export const projectsData: ProjectType[] = [
       "Showcase modern productivity and balance using authentic storytelling.",
       "Create social-first content optimized for digital platforms."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -285,13 +310,13 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EZM/herovideo.mp4",
-    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png", // optional
     secondImage: "/assets/img/portfolio/EZM/heroimage.png",
     gallery: ["/assets/img/portfolio/EZM/gallery1.png","/assets/img/portfolio/EZM/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/EZM/bts1.png",
-    "/assets/img/portfolio/EZM/bts2.png",
-    "/assets/img/portfolio/EZM/bts3.png"],
+      "/assets/img/portfolio/EZM/bts1.png",
+      "/assets/img/portfolio/EZM/bts2.png",
+      "/assets/img/portfolio/EZM/bts3.png"
+    ],
     introTitle: "Clean Product Campaign",
     introText: [
       "A clean, modern product campaign showcasing RIIFO’s PPR and PVC systems through precision visuals, well-lit showroom environments, and informative lifestyle demonstrations.",
@@ -302,7 +327,9 @@ export const projectsData: ProjectType[] = [
       "Create precise product visuals that show quality and engineering.",
       "Deliver a corporate style campaign suitable for B2B marketing."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   // {
@@ -400,24 +427,24 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/Beynouna/herovideo.mp4",
-    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png", // optional
     secondImage: "/assets/img/portfolio/Beynouna/heroimage.png",
     gallery: ["/assets/img/portfolio/Beynouna/gallery1.png","/assets/img/portfolio/Beynouna/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/Beynouna/bts1.png",
-    "/assets/img/portfolio/Beynouna/bts2.png",
-    "/assets/img/portfolio/Beynouna/bts3.png",
-    "/assets/img/portfolio/Beynouna/bts4.png",
-    "/assets/img/portfolio/Beynouna/bts5.png",
-    "/assets/img/portfolio/Beynouna/bts6.png",
-    "/assets/img/portfolio/Beynouna/bts7.png",
-    "/assets/img/portfolio/Beynouna/bts8.png",
-    "/assets/img/portfolio/Beynouna/bts9.png",
-    "/assets/img/portfolio/Beynouna/bts10.png",
-    "/assets/img/portfolio/Beynouna/bts14.png",
-    "/assets/img/portfolio/Beynouna/bts15.png",
-    "/assets/img/portfolio/Beynouna/bts16.png",
-    "/assets/img/portfolio/Beynouna/bts17.png"],
+      "/assets/img/portfolio/Beynouna/bts1.png",
+      "/assets/img/portfolio/Beynouna/bts2.png",
+      "/assets/img/portfolio/Beynouna/bts3.png",
+      "/assets/img/portfolio/Beynouna/bts4.png",
+      "/assets/img/portfolio/Beynouna/bts5.png",
+      "/assets/img/portfolio/Beynouna/bts6.png",
+      "/assets/img/portfolio/Beynouna/bts7.png",
+      "/assets/img/portfolio/Beynouna/bts8.png",
+      "/assets/img/portfolio/Beynouna/bts9.png",
+      "/assets/img/portfolio/Beynouna/bts10.png",
+      "/assets/img/portfolio/Beynouna/bts14.png",
+      "/assets/img/portfolio/Beynouna/bts15.png",
+      "/assets/img/portfolio/Beynouna/bts16.png",
+      "/assets/img/portfolio/Beynouna/bts17.png"
+    ],
     introTitle: "Village Documentary",
     introText: [
       "A cinematic documentary showcasing the natural setting, community life, and sustainable tourism vision of Beynouna Village.",
@@ -428,7 +455,9 @@ export const projectsData: ProjectType[] = [
       "Tell a story of sustainable tourism and cultural heritage.",
       "Create cinematic visuals that highlight village life and natural beauty."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   // {
@@ -482,13 +511,13 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
-    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png", // optional
     secondImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
     gallery: ["/assets/img/portfolio/infinix - ST/bts1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
     btsGallery:[
-    "/assets/img/portfolio/infinix - ST/gallery1.png",
-    "/assets/img/portfolio/infinix - ST/bts2.png",
-    "/assets/img/portfolio/infinix - ST/bts3.png"],
+      "/assets/img/portfolio/infinix - ST/gallery1.png",
+      "/assets/img/portfolio/infinix - ST/bts2.png",
+      "/assets/img/portfolio/infinix - ST/bts3.png"
+    ],
     introTitle: "Influencer Social Campaign",
     introText: [
       "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean, cinematic visuals.",
@@ -499,7 +528,9 @@ export const projectsData: ProjectType[] = [
       "Create social-first content optimized for engagement.",
       "Showcase modern lifestyle visuals with clean cinematic treatment."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   // {
@@ -540,7 +571,9 @@ export const projectsData: ProjectType[] = [
       "Create moody, high-contrast beer visuals with premium lighting.",
       "Highlight texture and atmosphere in a cinematic style."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   {
@@ -549,8 +582,6 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    // heroImage: full_image,
-    // secondImage: full_image_2,
     gallery: ["/assets/img/portfolio/Jenboro/gallery1.png","/assets/img/portfolio/Jenboro/gallery2.png"],
     introTitle: "Humanized Real Estate",
     introText: [
@@ -561,7 +592,9 @@ export const projectsData: ProjectType[] = [
       "Make spaces feel lived-in and relatable through natural moments.",
       "Use light, playful storytelling to humanize the property."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   // {
@@ -613,14 +646,12 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/YG-Techno-SR/herovideo.mp4",
-    // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    // heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno-SR/herofallback.png", // optional
-    // secondImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
     btsGallery:[
-    "/assets/img/portfolio/YG-Techno-SR/bts1.png",
-    "/assets/img/portfolio/YG-Techno-SR/bts2.png",
-    "/assets/img/portfolio/YG-Techno-SR/bts3.png",
-    "/assets/img/portfolio/YG-Techno-SR/bts4.png"],
+      "/assets/img/portfolio/YG-Techno-SR/bts1.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts2.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts3.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts4.png"
+    ],
     introTitle: "Narrative Photography",
     introText: [
       "Narrative-driven photography blending real craftsmanship and human stories with cinematic visual treatment."
@@ -630,7 +661,9 @@ export const projectsData: ProjectType[] = [
       "Tell a story through photography using cinematic lighting and real human moments.",
       "Create emotionally engaging visuals that feel authentic."
     ],
-    link: "#"
+    link: "#",
+    featured: true,
+    grid: false
   },
 
   // {
@@ -723,10 +756,6 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    // heroVideo: "/assets/img/portfolio/ZTE/herovideo.mp4",
-    // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
-    // heroVideoFallbackImage: "/assets/img/portfolio/ZTE/herofallback.png", // optional
-    // secondImage: "/assets/img/portfolio/ZTE/heroimage.png",
     gallery: ["/assets/img/portfolio/Leykun/gallery1.png","/assets/img/portfolio/Leykun/gallery2.png"],
     introTitle: "Album Art Photography",
     introText: [
@@ -737,7 +766,9 @@ export const projectsData: ProjectType[] = [
       "Create strong visual identity through mood and color.",
       "Support musical storytelling with bold artistic photography."
     ],
-    link: "#"
+    link: "#",
+    featured: false,
+    grid: true
   },
 
   // {
