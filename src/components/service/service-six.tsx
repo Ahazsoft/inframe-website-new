@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
+
 // SERVICE DATA
 const service_data = [
   {
@@ -137,13 +138,14 @@ export default function ServiceSix() {
                       </div>
 
                       <div className="sv-service-btn">
-                        <Button
-                          variant="secondary"
-                          className="rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
-                          href="/service-details"
-                        >
-                          See Details
-                        </Button>
+                        <Link href="/service-details">
+                          <Button
+                            variant="secondary"
+                            className="rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
+                          >
+                            See Details
+                          </Button>
+                        </Link>
                       </div>
                     </div>
 
