@@ -117,7 +117,7 @@ function useInView(ref: React.RefObject<Element>, threshold = 0.8, delay = 250) 
 /* ============================= */
 
 function GridProjectCard({ item }: { item: any }) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null!);
   const inView = useInView(ref);
 
   return (
