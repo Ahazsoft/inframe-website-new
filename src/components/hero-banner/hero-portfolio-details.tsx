@@ -2,7 +2,8 @@ import Image from "next/image";
 import useLazyVideo from "@/hooks/useLazyVideo";
 import { useEffect, useRef } from "react";
 
-const HeroMedia = ({ project }) => {
+const HeroMedia = ({ project }: { project: any }) => {
+
   const { videoRef, isVisible } = useLazyVideo();
   const hasVideo = !!project.heroVideo;
 
