@@ -14,7 +14,7 @@ import HeroMedia from '@/components/hero-banner/hero-portfolio-details';
 import { ProjectType } from './projectData';
 
 type Props = {
-  project: ProjectType;
+  project?: ProjectType;
 };
 
 // slider setting
