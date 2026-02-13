@@ -51,7 +51,8 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           <div className="row">
             <div className="col-xl-12">
               <h2 className="tp-section-title-160 mb-50 tp-char-animation">
-                {project.title}
+                {project?.title}
+
               </h2>
             </div>
           </div>
