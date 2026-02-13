@@ -285,10 +285,12 @@ export function FeaturedWorkSection() {
             <Button
               variant="secondary"
               className="rounded-pill bg-white text-dark fw-semibold px-5 py-3"
+              style={{ transform: "translateX(27.5%)" }}
             >
               See all Projects
             </Button>
           </div>
+
 
           <Button
             variant="outline"
