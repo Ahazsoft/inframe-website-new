@@ -1,0 +1,233 @@
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import { scroller } from 'react-scroll';
+import Link from 'next/link';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function AboutUsHero() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const videoWrapRef = useRef<HTMLDivElement>(null);
+
+  const heroTextRef = useRef<HTMLDivElement>(null);
+  const h2Ref = useRef<HTMLDivElement>(null);
+
+  const scrollTo = () => {
+    scroller.scrollTo("about-info", {
+      duration: 800,
+      delay: 10,
+      smooth: "easeInOutQuart",
+    });
+  };
+
+  const text = `InFrame Productions and Promotion was founded in 2022 by two co-founders, Seyfe Molla and Eliyas Takele.
+  Both founders have experience working at EBS, a major television company in Ethiopia. Their goal is to build the best creative production and marketing team.
+  They aim to become one of the leading industry players in Ethiopia and a major force in the creative sector.`;
+
+  const parts = text.split('\n');
+
+  useEffect(() => {
+    if (!sectionRef.current || !videoWrapRef.current || !h2Ref.current) return;
+
+    const lines = h2Ref.current.querySelectorAll("h2");
+
+    // Overlay
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "+=300",
+      scrub: true,
+      onUpdate: (self) => {
+        if (!videoWrapRef.current) return; // <-- guard
+        const progress = Math.min(self.progress * 1, 1);
+        videoWrapRef.current.style.setProperty("--overlay", String(progress));
+      },
+    });
+
+    // Fade out H1 + button + p
+    gsap.to(heroTextRef.current, {
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "+=100",
+        scrub: true,
+      },
+      opacity: 0,
+      y: 0,
+    });
+
+    // H2 moves up and fades in
+    gsap.fromTo(
+      h2Ref.current,
+      { opacity: 0, y: 840 },
+      {
+        opacity: 1,
+        y: -360,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top+=80",
+          end: "+=300",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.set(lines, { opacity: 0, y: 80 });
+
+    gsap.to(lines, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.55,
+      ease: "none",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top+=20",
+        end: "+=480",
+        scrub: true,
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
+
+
+  return (
+    <div
+      ref={sectionRef}
+      className="ab-inner-hero-area ab-inner-hero-bg p-relative"
+      style={{ height: "150vh" }}
+    >
+      {/* VIDEO BACKGROUND */}
+      <div ref={videoWrapRef} className="ab-hero-video-wrap">
+        <video className="ab-hero-video" autoPlay muted loop playsInline>
+          <source
+            src="/assets/img/home-01/hero/herovideo.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div className="ab-hero-overlay" />
+        <div className="ab-hero-scroll-overlay" />
+      </div>
+
+      <div className="ab-inner-hero-scroll smooth">
+        <a className="pointer" onClick={scrollTo}></a>
+      </div>
+
+      <div className="container container-1208">
+        <div className="row">
+          {/* <div className="col-xl-8"> */}
+
+            {/* H1 + Button + P */}
+          <div
+            className="ab-inner-hero-title-box"
+            data-lag="0.2"
+            data-stagger="0.08"
+            ref={heroTextRef}
+          >
+            <h1 className="ab-inner-hero-title ">
+              Visual storytelling
+              <br />
+              that captivates
+            </h1>
+
+            <Link className="tp-btn-white background-black" href="#">
+              Contact Us
+            </Link>
+
+            <div style={{ height: 40 }} />
+
+            <p className="text-white text-justify break-words ab-inner-hero-title">
+              We craft powerful visual experiences that go beyond aesthetics — stories that move people, spark emotion, and leave a lasting impression. 
+              From concept to final frame, we transform ideas into compelling narratives that connect brands with audiences in meaningful and unforgettable ways.
+            </p>
+
+          </div>
+
+
+
+
+
+            {/* H2s */}
+            
+            <div ref={h2Ref}>
+              {parts.map((p, idx) => (
+                <div key={idx}>
+                  <h2 className="text-white text-center">{p}</h2>
+                  <div style={{ height: idx === parts.length - 1 ? 80 : 15 }} />
+                </div>
+              ))}
+            </div>
+
+            
+            
+
+          {/* </div> */}
+        </div>
+      </div>
+
+      <style jsx>{`
+        .ab-inner-hero-area {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .ab-hero-video-wrap {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          --overlay: 0;
+        }
+
+        .ab-hero-video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+        }
+
+        .ab-hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.7)
+          );
+        }
+
+        .ab-hero-scroll-overlay {
+          position: absolute;
+          inset: 0;
+          background: black;
+          opacity: var(--overlay);
+          pointer-events: none;
+        }
+
+        .ab-inner-hero-area .container {
+          position: relative;
+          z-index: 2;
+        }
+
+        
+
+        .ab-inner-hero-title-box h1,
+        .ab-inner-hero-title-box p {
+          color: #ffffff !important;
+          
+        }
+      `}</style>
+    </div>
+  );
+}
