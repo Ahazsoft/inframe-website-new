@@ -10,7 +10,7 @@ import logoicon from "../../../public/assets/img/logo/inframelogo3.png"
 import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
 
 const footer_links = [
-  { link: "/portfolio-details-1", title: "Projects" },
+  { link: "/projects", title: "Projects" },
   { link: "/service", title: "What we do" },
   { link: "/about-us", title: "About" },
   // { link: "/blog-modern", title: "Blog" },
