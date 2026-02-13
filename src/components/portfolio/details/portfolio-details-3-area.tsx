@@ -1,17 +1,15 @@
 "use client";
 
-import React from 'react';
-import { scroller } from 'react-scroll';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import { SwiperOptions } from 'swiper/types';
-import Image from 'next/image';
-import { Leaf, ScrollDownTwo, UpArrowFour } from '@/components/svg';
-import Link from 'next/link';
-import HeroMedia from '@/components/hero-banner/hero-portfolio-details';
-// import { ProjectType } from '@/data/projectData';
-
-import { ProjectType } from './projectData';
+import React from "react";
+import { scroller } from "react-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { SwiperOptions } from "swiper/types";
+import Image from "next/image";
+import { Leaf, ScrollDownTwo, UpArrowFour } from "@/components/svg";
+import Link from "next/link";
+import HeroMedia from "@/components/hero-banner/hero-portfolio-details";
+import { ProjectType } from "./projectData";
 
 type Props = {
   project?: ProjectType;
@@ -35,11 +33,14 @@ const slider_setting: SwiperOptions = {
 };
 
 export default function PortfolioDetailsThreeArea({ project }: Props) {
+  // ✅ Early guard — prevents all TypeScript "possibly undefined" errors
+  if (!project) return null;
+
   const scrollTo = () => {
-    scroller.scrollTo('xyz', {
+    scroller.scrollTo("xyz", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     });
   };
 
@@ -51,8 +52,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           <div className="row">
             <div className="col-xl-12">
               <h2 className="tp-section-title-160 mb-50 tp-char-animation">
-                {project?.title}
-
+                {project.title}
               </h2>
             </div>
           </div>
@@ -79,37 +79,10 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         </div>
       </div>
 
-      {/* HERO IMAGE */}
-      {/* <div className="tp-project-details-3-full-width-thumb mb-120">
-        <Image src={project.heroImage} alt={project.title} style={{ height: 'auto' }} />
-      </div> */}
-
-      {/* <div className="tp-project-details-3-full-width-thumb mb-120">
-        {project.heroVideo ? (
-          <video
-            src={project.heroVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-100"
-            style={{ height: "auto" }}
-          />
-        ) : (
-          <Image
-            src={project.heroImage}
-            alt={project.title}
-            style={{ height: "auto" }}
-          />
-        )}
-      </div> */}
-
+      {/* HERO MEDIA */}
       {(project.heroImage || project.heroVideo) && (
         <HeroMedia project={project} />
       )}
-
-
-
 
       {/* INTRO SECTION */}
       <div className="showcase-details-2-area pb-120">
@@ -127,7 +100,9 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
 
             <div className="col-xl-9">
               {project.introText.map((text, i) => (
-                <p key={i} className="pb-25">{text}</p>
+                <p key={i} className="pb-25">
+                  {text}
+                </p>
               ))}
             </div>
           </div>
@@ -149,7 +124,6 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         </div>
       )}
 
-
       {/* GOAL SECTION */}
       <div className="showcase-details-2-area pb-120">
         <div className="container">
@@ -166,7 +140,9 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
 
             <div className="col-xl-9">
               {project.goalText.map((text, i) => (
-                <p key={i} className="pb-25">{text}</p>
+                <p key={i} className="pb-25">
+                  {text}
+                </p>
               ))}
             </div>
           </div>
@@ -206,8 +182,6 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         </div>
       )}
 
-
-
       {/* SLIDER */}
       {project.btsGallery && project.btsGallery.length > 0 && (
         <div className="pd-visual-slider-wrap pb-40">
@@ -219,7 +193,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
                     src={img}
                     alt="bts-slider-img"
                     width={665}
-                    height={475} 
+                    height={475}
                     style={{ objectFit: "cover" }}
                   />
                 </div>
@@ -227,7 +201,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             ))}
           </Swiper>
         </div>
-)}
+      )}
 
     </>
   );

@@ -116,7 +116,7 @@ function useInView(ref: React.RefObject<Element>, threshold = 0.8, delay = 250) 
 /* Grid Card Component */
 /* ============================= */
 
-function GridProjectCard({ item }: { item: any }) {
+function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
   const ref = useRef<HTMLDivElement>(null!);
   const inView = useInView(ref);
 
@@ -125,7 +125,7 @@ function GridProjectCard({ item }: { item: any }) {
       ref={ref}
       className="project-card bg-dark flex-shrink-0 position-relative overflow-hidden"
     >
-      {item.type === "video" && inView ? (
+      {item.type === "video" && inView && !paused ? (
         <video
           src={item.src}
           poster={item.poster}
@@ -159,16 +159,24 @@ function GridProjectCard({ item }: { item: any }) {
 /* ============================= */
 
 export function FeaturedWorkSection() {
+  const [paused, setPaused] = useState(false);
+
   const [row1Speed, setRow1Speed] = useState(0.6);
   const [row2Speed, setRow2Speed] = useState(1);
 
-  const row1Ref = useMarquee(row1Speed, -1);
-  const row2Ref = useMarquee(row2Speed, -1);
+  const row1Ref = useMarquee(paused ? 0 : row1Speed, -1);
+  const row2Ref = useMarquee(paused ? 0 : row2Speed, -1);
 
   const autoplayPlugin = useMemo(
     () => Autoplay({ delay: 5000, stopOnInteraction: false }),
     []
   );
+
+  useEffect(() => {
+    if (!autoplayPlugin) return;
+    if (paused) autoplayPlugin.stop();
+    else autoplayPlugin.reset();
+  }, [paused, autoplayPlugin]);
 
   return (
     <section className="featured-work-section bg-black py-5" id="our-work">
@@ -189,7 +197,7 @@ export function FeaturedWorkSection() {
                     <video
                       src={project.src}
                       poster={project.poster}
-                      autoPlay
+                      autoPlay={!paused}
                       muted
                       loop
                       playsInline
@@ -244,7 +252,7 @@ export function FeaturedWorkSection() {
           >
             {[...gridProjects.slice(0, 8), ...gridProjects.slice(0, 8)].map(
               (item, idx) => (
-                <GridProjectCard key={`row1-${idx}`} item={item} />
+                <GridProjectCard key={`row1-${idx}`} item={item} paused={paused} />
               )
             )}
           </div>
@@ -257,12 +265,33 @@ export function FeaturedWorkSection() {
           >
             {[...gridProjects.slice(8, 15), ...gridProjects.slice(8, 15)].map(
               (item, idx) => (
-                <GridProjectCard key={`row2-${idx}`} item={item} />
+                <GridProjectCard key={`row2-${idx}`} item={item} paused={paused} />
               )
             )}
           </div>
 
         </div>
+
+        {/* BUTTONS BELOW SECOND GRID */}
+        <div className="d-flex justify-content-between align-items-center mt-4">
+          <div className="flex-grow-1 d-flex justify-content-center">
+            <Button
+              variant="secondary"
+              className="rounded-pill bg-white text-dark fw-semibold px-5 py-3"
+            >
+              See all Projects
+            </Button>
+          </div>
+
+          <Button
+            variant="outline"
+            className="rounded-pill border-white text-white fw-semibold px-5 py-3"
+            onClick={() => setPaused((prev) => !prev)}
+          >
+            <i className={`fa ${paused ? "fa-play" : "fa-pause"}`} />
+          </Button>
+        </div>
+
       </div>
     </section>
   );
