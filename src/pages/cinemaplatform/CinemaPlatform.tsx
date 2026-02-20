@@ -5,33 +5,22 @@ import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
-
 const CinemaPlatform = () => {
   const router = useRouter();
   return (
-    <section className="section-routers"
-    style={{
-      width: "97%",
-      margin: "auto",
+    <section
+      className="section-routers"
+      style={{
+        width: "97%",
+        margin: "auto",
       }}
-      >
-      <div
-        className="lower-container"
-        style={{
-          position: "relative",
-          maxWidth: "100%",
-          margin: "40px auto",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "32px", // space between boxes preserved
-        }}
-      >
+    >
+      <div className="lower-container">
         {/* Cinema Grade */}
         <div
-          className="d-flex flex-column align-items-center text-center p-5"
+          className="d-flex flex-column align-items-center text-center p-5 cinema-platform-content"
           style={{
             backgroundColor: "#ECBD46",
-            width: "48.5%",
             minHeight: "880px",
             justifyContent: "space-between",
           }}
@@ -45,54 +34,38 @@ const CinemaPlatform = () => {
               Cinema Grade
             </span>
 
-            <p
-              className="typography-router-headline "
-              
-            >
-              Professional quality. <br/> Cinematic in every frame.
+            <p className="typography-router-headline ">
+              Professional quality. <br /> Cinematic in every frame.
             </p>
 
             {/* <div className="d-flex align-items-center gap-5"> */}
-            <div className="typography-router-cta ctas large-12 large-centered pb-100">
-
-
-
+            <div className="typography-router-cta ctas large-12 large-centered  pb-100 ">
               <Button
                 variant="secondary"
-                className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+                className="rounded-pill bg-black text-white fw-semibold px-md-5 py-md-3 py-sm-2 px-sm-3"
                 onClick={() => router.push("/service")}
               >
                 Services
               </Button>
-
-              
 
               <Link
                 href="/about-us"
                 className="text-primary fw-medium"
                 style={{ marginLeft: "0.8em" }}
               >
-                Learn more 
+                Learn more
                 <i className="fa-solid fa-angle-right learn-more-icon"></i>
               </Link>
-
-
-            
-
-
-
             </div>
-
           </div>
 
           {/* Image */}
           <div
-            className="position-relative rounded-4 overflow-hidden shadow-lg"
+            className="position-relative rounded-4 overflow-hidden shadow-lg cinema-image-container"
             style={{
               width: "100%",
               maxWidth: "80%",
               height: "100%",
-              
             }}
           >
             <Image
@@ -106,12 +79,12 @@ const CinemaPlatform = () => {
 
         {/* Multi Platform */}
         <div
-          className="d-flex flex-column align-items-center text-center p-5"
+          className="d-flex flex-column align-items-center text-center p-5 cinema-platform-content"
           style={{
             backgroundColor: "#ECBD46",
-            width: "48.5%",
+
             minHeight: "880px",
-            justifyContent: "space-between",
+            justifyContent: "space-evenly",
           }}
         >
           {/* Top content */}
@@ -123,39 +96,25 @@ const CinemaPlatform = () => {
               Multi-Platform
             </span>
 
-            <p
-              className="typography-router-headline "
-              
-            >
+            <p className="typography-router-headline ">
               Deliver your content to any screen.
             </p>
 
-
             <div className="typography-router-cta ctas large-12 large-centered pb-100">
-              
-
               <Link
                 href="/about-us"
                 className="text-primary fw-medium"
                 style={{ marginLeft: "0.8em" }}
               >
-                Learn more 
+                Learn more
                 <i className="fa-solid fa-angle-right learn-more-icon"></i>
               </Link>
-
-
-            
-
-
-
             </div>
-
-            
           </div>
 
           {/* Image */}
           <div
-            className="position-relative rounded-4 overflow-hidden shadow-lg"
+            className="position-relative rounded-4 overflow-hidden shadow-lg cinema-image-container"
             style={{
               width: "100%",
               maxWidth: "80%",
@@ -168,12 +127,49 @@ const CinemaPlatform = () => {
               fill
               style={{ objectFit: "cover" }}
             />
-            
           </div>
         </div>
       </div>
-      </section>
 
+      <style jsx>{`
+        .lower-container {
+          position: relative;
+          maxwidth: 100%;
+          margin: 40px auto;
+          display: flex;
+          flex-direction: row;
+          justifycontent: space-between;
+          gap: 32px;
+        }
+
+        .cinema-platform-content {
+          width: 48.5%;
+          
+        }
+
+        @media (max-width: 760px) {
+          .lower-container {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            justifycontent: space-between;
+            align-items:center;
+            gap: 32px;
+          } // lower container
+
+          .cinema-platform-content {
+            width: 100%;
+            margin:0 30px;
+          }
+          .cinema-image-container {
+            max-width:100%;
+            height: 300px;
+            aspect-ratio: 0.8;
+          }
+
+        } // media query
+      `}</style>
+    </section>
   );
 };
 
