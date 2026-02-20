@@ -220,6 +220,19 @@ const menu_data:IMenuDT[] = [
     //   { title: 'Post With Sidebar', link: '/blog-details-2' },
     // ]
   },
+
+    {
+    id: 4,
+    title: 'BTS',
+    link: '#',
+    // dropdown_menus: [
+    //   { title: 'Modern', link: '/blog-modern' },
+    //   { title: 'Classic Sidebar', link: '/blog-classic' },
+    //   { title: 'Minimal List', link: '/blog-list' },
+    //   { title: 'Post Single', link: '/blog-details' },
+    //   { title: 'Post With Sidebar', link: '/blog-details-2' },
+    // ]
+  },
   {
     id: 5,
     title: 'Contact',

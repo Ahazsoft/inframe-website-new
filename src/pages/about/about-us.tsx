@@ -14,6 +14,7 @@ import FooterTwo from "@/layouts/footers/footer-two";
 import AboutUsHero from "@/components/about/about-us-hero";
 import AboutUsArea from "@/components/about/about-us-area";
 import TeamOne from "@/components/team/team-one";
+import TeamTwo from "@/components/team/team-two";
 import FunFactOne from "@/components/fun-fact/fun-fact-one";
 import BrandFive from "@/components/brand/brand-five";
 import AwardOne from "@/components/award/award-one";
@@ -55,7 +56,8 @@ const AboutUsMain = () => {
             {/* about area */}
 
             {/* team area */}
-            <TeamOne spacing="" />
+            {/* <TeamOne spacing="" /> */}
+            <TeamTwo />
             {/* team area */}
 
             {/* brand area */}

@@ -103,7 +103,7 @@ export default function AboutUsHero() {
     <div
       ref={sectionRef}
       className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{ height: "120vh" }}
+      style={{ height: "200vh" }}
     >
       
       {/* VIDEO BACKGROUND */}
