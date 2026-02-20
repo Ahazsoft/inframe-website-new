@@ -3,7 +3,7 @@ import { ITeamDT } from "@/types/team-d-t";
 const team_data:ITeamDT[] = [
   {
     id:1,
-    img:"/assets/img/team/1.jpg",
+    image:"/assets/img/team/1.jpg",
     designation:"Co-Founder, Creative Director",
     name:"Seyfe Molla",
     socials:[
@@ -15,7 +15,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:2,
-    img:"/assets/img/team/2.jpg",
+    image:"/assets/img/team/2.jpg",
     designation:"Co-Founder, Creative Director",
     name:"Elyase Takele",
     socials:[
@@ -27,7 +27,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:3,
-    img:"/assets/img/team/3.jpg",
+    image:"/assets/img/team/3.jpg",
     designation:"",
     name:"Tismeru",
     socials:[
@@ -39,7 +39,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:4,
-    img:"/assets/img/team/4.jpg",
+    image:"/assets/img/team/4.jpg",
     designation:"",
     name:"Adonias",
     socials:[

@@ -60,7 +60,7 @@ export default function TeamTwo() {
                       <div className="tp-hover-btn-item">
                           <Image
                             className="w-100"
-                            src={item.img}
+                            src={item.image}
                             alt="team-img"
                             width={500}
                             height={500}
