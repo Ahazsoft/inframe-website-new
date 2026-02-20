@@ -3,7 +3,8 @@ import { gsap,Power2 } from "gsap";
 
 export default function cursorAnimation() {
     if(typeof window !== 'undefined'){
-        if ($("body").not(".is-mobile").hasClass("tp-magic-cursor")) {
+        const isMobile = window.innerWidth < 768;        
+        if  ((!isMobile) && $("body").hasClass("tp-magic-cursor")) {
             $(".tp-magnetic-item").wrap('<div class="tp-magnetic-wrap"></div>');
             
             if ($("a.tp-magnetic-item").length) {

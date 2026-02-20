@@ -44,12 +44,7 @@ const FaqMain = () => {
                       <div className="mx-auto mb-5" style={{ maxWidth: "48rem" }}>
                         {/* <span className="tm-hero-subtitle">Inframe</span> */}
                         <h2
-                            className="tm-hero-content"
-                            style={{
-                              fontSize: "80px",
-                              lineHeight: "1.05",
-                              letterSpacing: "-0.02em",
-                            }}
+                            className="tm-hero-content"                            
                           >
                           Questions ? Answers  
                         </h2>

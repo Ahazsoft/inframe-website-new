@@ -314,6 +314,17 @@
 
 .tm-hero-content {
   margin-top: 50px;
+  font-size: 65px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width:768px) {
+.tm-hero-content{
+  font-size: 80px;
+
+}
+  
 }
 
 .tp-footer-big-title {
