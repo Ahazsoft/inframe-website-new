@@ -45,7 +45,7 @@ export default function AboutUsHero() {
       end: "+=300",
       scrub: true,
       onUpdate: (self) => {
-        if (!videoWrapRef.current) return; // <-- guard
+        if (!videoWrapRef.current) return; 
         const progress = Math.min(self.progress * 1, 1);
         videoWrapRef.current.style.setProperty("--overlay", String(progress));
       },
@@ -69,7 +69,7 @@ export default function AboutUsHero() {
       { opacity: 0, y: 840 },
       {
         opacity: 1,
-        y: -360,
+        y: -460,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top+=80",
@@ -104,8 +104,9 @@ export default function AboutUsHero() {
     <div
       ref={sectionRef}
       className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{ height: "150vh" }}
+      style={{ height: "120vh" }}
     >
+      
       {/* VIDEO BACKGROUND */}
       <div ref={videoWrapRef} className="ab-hero-video-wrap">
         <video className="ab-hero-video" autoPlay muted loop playsInline>
@@ -122,6 +123,8 @@ export default function AboutUsHero() {
       <div className="ab-inner-hero-scroll smooth">
         <a className="pointer" onClick={scrollTo}></a>
       </div>
+
+      <div style={{ height: 40 }} />
 
       <div className="container container-1208">
         <div className="row">
@@ -198,15 +201,15 @@ export default function AboutUsHero() {
           --overlay: 0;
         }
 
-        .ab-hero-video {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transform: translate(-50%, -50%);
-        }
+.ab-hero-video {
+  position: absolute;
+  inset: 0;              /* fills the parent exactly */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* true "background-size: cover" behavior */
+  object-position: center;
+}
+
 
         .ab-hero-overlay {
           position: absolute;
