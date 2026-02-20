@@ -80,8 +80,40 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
       </div>
 
       {/* HERO MEDIA */}
-      {(project.heroImage || project.heroVideo) && (
-        <HeroMedia project={project} />
+      {project.youtubeUrl ? (
+        <div
+          className="tp-project-details-3-youtube full-screen-video"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "100vh", // full viewport height
+            overflow: "hidden",
+            zIndex: 1,
+          }}
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            src={`${project.youtubeUrl.replace(
+              "watch?v=",
+              "embed/"
+            )}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=${project.youtubeUrl.split("v=")[1]}`}
+            title={project.title}
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none", // makes video unclickable
+            }}
+          ></iframe>
+        </div>
+      ) : (
+        project.heroVideo || project.heroImage ? <HeroMedia project={project} /> : null
       )}
 
       {/* INTRO SECTION */}
@@ -110,11 +142,11 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
       </div>
 
       {/* SECOND IMAGE */}
-      {project.secondImage && (
+      {project.thumbnailImage && (
         <div id="xyz" className="tp-project-details-3-thumb mb-120">
           <div className="container container-1560">
             <Image
-              src={project.secondImage}
+              src={project.heroImage}
               alt={project.title}
               width={1500}
               height={800}

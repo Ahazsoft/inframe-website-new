@@ -16,10 +16,13 @@ export type ProjectType = {
 
   heroImage?: any;
   heroVideo?: string;
+  youtubeUrl?: string;
+
+
   // heroVideoPoster?: string;
   heroVideoFallbackImage?: any;
 
-  secondImage?: any;
+  thumbnailImage?: any;
   gallery?: any[];
   btsGallery?: any[];
 
@@ -44,7 +47,8 @@ export const projectsData: ProjectType[] = [
     heroVideo: "/assets/img/portfolio/ZTE/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/ZTE/herofallback.png",
-    secondImage: "/assets/img/portfolio/ZTE/heroimage.png",
+    heroImage:"/assets/img/portfolio/ZTE/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/ZTE/heroimage.jpg",
     gallery: ["/assets/img/portfolio/ZTE/gallery1.png","/assets/img/portfolio/ZTE/gallery2.png"],
     introTitle: "Sleek Modern Commercial",
     introText: [
@@ -70,7 +74,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "/assets/img/portfolio/Negus/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/Negus/herofallback.png",
-    secondImage: "/assets/img/portfolio/Negus/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Negus/heroimage.jpg",
     gallery: ["/assets/img/portfolio/Negus/gallery1.png","/assets/img/portfolio/Negus/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/Negus/bts1.png",
@@ -103,7 +107,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "/assets/img/portfolio/Largo/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/Largo/herofallback.png",
-    secondImage: "/assets/img/portfolio/Largo/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Largo/heroimage.jpg",
     gallery: ["/assets/img/portfolio/Largo/gallery1.png","/assets/img/portfolio/Largo/gallery2.png"],
     introTitle: "Bright Family Commercial",
     introText: [
@@ -129,7 +133,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "/assets/img/portfolio/Castle/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/Castle/herofallback.png",
-    secondImage: "/assets/img/portfolio/Castle/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Castle/thumbimage.jpg",
     gallery: ["/assets/img/portfolio/Castle/gallery1.png","/assets/img/portfolio/Castle/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/Castle/bts1.png",
@@ -157,9 +161,10 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/EAL/herovideo.mp4",
+    youtubeUrl: "https://youtu.be/ZI49B85NjOI?si=Ae7yytxIxEW3DeMo",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/EAL/herofallback.png",
-    secondImage: "/assets/img/portfolio/EAL/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/EAL/heroimage.jpg",
     gallery: ["/assets/img/portfolio/EAL/gallery1.png","/assets/img/portfolio/EAL/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/EAL/bts1.png",
@@ -192,7 +197,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "/assets/img/portfolio/YG-Techno/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png",
-    secondImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
     gallery: ["/assets/img/portfolio/YG-Techno/gallery1.png","/assets/img/portfolio/YG-Techno/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/YG-Techno/bts1.png",
@@ -226,8 +231,10 @@ export const projectsData: ProjectType[] = [
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Senq/herovideo.mp4",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
+    heroImage: "/assets/img/portfolio/Senq/heroimage.png",
+
     heroVideoFallbackImage: "/assets/img/portfolio/Senq/herofallback.png",
-    secondImage: "/assets/img/portfolio/Senq/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Senq/heroimage.jpg",
     gallery: ["/assets/img/portfolio/Senq/gallery2.png","/assets/img/portfolio/Senq/gallery1.png"],
     introTitle: "Heartfelt Family Campaign",
     introText: [
@@ -252,7 +259,7 @@ export const projectsData: ProjectType[] = [
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EthioTelecom/herovideo.mp4",
     heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
-    secondImage: "/assets/img/portfolio/EthioTelecom/gallery1.png",
+    thumbnailImage: "/assets/img/portfolio/EthioTelecom/gallery1.png",
     gallery: ["/assets/img/portfolio/EthioTelecom/heroimage.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/EthioTelecom/bts1.png",
@@ -281,7 +288,7 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/AmbCamp - Techno/herovideo.mp4",
-    secondImage: "/assets/img/portfolio/AmbCamp - Techno/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/AmbCamp - Techno/heroimage.png",
     gallery: ["/assets/img/portfolio/AmbCamp - Techno/gallery2.png","/assets/img/portfolio/AmbCamp - Techno/gallery1.png"],
     btsGallery:[
       "/assets/img/portfolio/AmbCamp - Techno/bts1.png",
@@ -310,7 +317,7 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EZM/herovideo.mp4",
-    secondImage: "/assets/img/portfolio/EZM/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/EZM/heroimage.png",
     gallery: ["/assets/img/portfolio/EZM/gallery1.png","/assets/img/portfolio/EZM/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/EZM/bts1.png",
@@ -339,7 +346,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Berry Advertising",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Cinematic City Film",
   //   introText: [
@@ -354,49 +361,52 @@ export const projectsData: ProjectType[] = [
   //   link: "#"
   // },
 
-  // {
-  //   id: 12,
-  //   title: "Wenchi Eco Lodge – PMO Documentary",
-  //   category: "Documentary and Brand Film",
-  //   year: "2024",
-  //   agency: "Berry Advertising",
-  //   heroImage: full_image,
-  //   secondImage: full_image_2,
-  //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
-  //   introTitle: "Eco Lodge Documentary",
-  //   introText: [
-  //     "A cinematic documentary capturing the natural beauty, community life, and sustainable vision of Wenchi Eco Lodge.",
-  //     "Produced for the PMO as part of the Gebeta Le Hager project, the film blends authentic storytelling and scenic cinematography."
-  //   ],
-  //   goalTitle: "The Goal",
-  //   goalText: [
-  //     "Highlight eco-tourism and sustainability through cinematic visuals.",
-  //     "Tell authentic community stories in a national development context."
-  //   ],
-  //   link: "#"
-  // },
+  {
+    id: 12,
+    title: "Wenchi Eco Lodge – PMO Documentary",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Berry Advertising",
+    
+    youtubeUrl: "https://www.youtube.com/watch?v=rjSHkAs338Y", 
+    heroImage: "/assets/img/portfolio/Wenchi/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/Wenchi/heroimage.jpg",
+    // gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
+    introTitle: "Eco Lodge Documentary",
+    introText: [
+      "A cinematic documentary capturing the natural beauty, community life, and sustainable vision of Wenchi Eco Lodge.",
+      "Produced for the PMO as part of the Gebeta Le Hager project, the film blends authentic storytelling and scenic cinematography."
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Highlight eco-tourism and sustainability through cinematic visuals.",
+      "Tell authentic community stories in a national development context."
+    ],
+    link: "#"
+  },
 
-  // {
-  //   id: 13,
-  //   title: "Cubera Churchura Lodge – Gebeta Le Hager",
-  //   category: "Documentary and Brand Film",
-  //   year: "2024",
-  //   agency: "Berry Advertising",
-  //   heroImage: full_image,
-  //   secondImage: full_image_2,
-  //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
-  //   introTitle: "Eco Tourism Documentary",
-  //   introText: [
-  //     "A cinematic documentary highlighting the natural beauty, cultural environment, and eco-tourism potential of Cubera Churchura Lodge.",
-  //     "Produced as part of the Gebeta Le Hager project, the film focuses on sustainable hospitality and conservation."
-  //   ],
-  //   goalTitle: "The Goal",
-  //   goalText: [
-  //     "Showcase sustainable hospitality and eco-tourism potential.",
-  //     "Capture authentic cultural and natural storytelling."
-  //   ],
-  //   link: "#"
-  // },
+  {
+    id: 13,
+    title: "Chebera Churchura Lodge – Gebeta Le Hager",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Berry Advertising",
+    heroImage: "/assets/img/portfolio/Chebera/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/Chebera/heroimage.jpg",
+    youtubeUrl: "https://youtu.be/9W9zJ2YCyZA?si=B4MURXxytpoHFKbS",
+    
+    introTitle: "Eco Tourism Documentary",
+    introText: [
+      "A cinematic documentary highlighting the natural beauty, cultural environment, and eco-tourism potential of Cubera Churchura Lodge.",
+      "Produced as part of the Gebeta Le Hager project, the film focuses on sustainable hospitality and conservation."
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Showcase sustainable hospitality and eco-tourism potential.",
+      "Capture authentic cultural and natural storytelling."
+    ],
+    link: "#"
+  },
 
   // {
   //   id: 14,
@@ -405,7 +415,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Berry Advertising",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Heritage Documentary",
   //   introText: [
@@ -426,8 +436,9 @@ export const projectsData: ProjectType[] = [
     category: "Documentary and Brand Film",
     year: "2024",
     agency: "Berry Advertising",
-    heroVideo: "/assets/img/portfolio/Beynouna/herovideo.mp4",
-    secondImage: "/assets/img/portfolio/Beynouna/heroimage.png",
+    // heroVideo: "/assets/img/portfolio/Beynouna/herovideo.mp4",
+    youtubeUrl: "https://www.youtube.com/watch?v=7Eqhk3ABQYk&feature=youtu.be",
+    thumbnailImage: "/assets/img/portfolio/Beynouna/heroimage.png",
     gallery: ["/assets/img/portfolio/Beynouna/gallery1.png","/assets/img/portfolio/Beynouna/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/Beynouna/bts1.png",
@@ -467,7 +478,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Coffee Brand Film",
   //   introText: [
@@ -489,7 +500,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2025",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Gaming Event Campaign",
   //   introText: [
@@ -511,7 +522,7 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
-    secondImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
     gallery: ["/assets/img/portfolio/infinix - ST/bts1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/infinix - ST/gallery1.png",
@@ -540,7 +551,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Food & Lifestyle Campaign",
   //   introText: [
@@ -604,7 +615,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Premium Product Photography",
   //   introText: [
@@ -625,7 +636,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Modern Lifestyle Photography",
   //   introText: [
@@ -673,7 +684,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Ambassador Lifestyle Photography",
   //   introText: [
@@ -694,7 +705,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Influencer Photography",
   //   introText: [
@@ -715,7 +726,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Warm Family Photography",
   //   introText: [
@@ -736,7 +747,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Clean Product Photography",
   //   introText: [
@@ -778,7 +789,7 @@ export const projectsData: ProjectType[] = [
   //   year: "2024",
   //   agency: "Inframe Production",
   //   heroImage: full_image,
-  //   secondImage: full_image_2,
+  //   thumbnailImage: full_image_2,
   //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
   //   introTitle: "Appetizing Food Photography",
   //   introText: [
@@ -791,4 +802,65 @@ export const projectsData: ProjectType[] = [
   //   ],
   //   link: "#"
   // }
+
+    {
+    id: 31,
+    title: "Gorgora Documentary",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Berry Advertising",
+    heroImage: "/assets/img/portfolio/Gorgora/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/Gorgora/heroimage.jpg",
+    youtubeUrl: "https://youtu.be/oqmvvoDMK2Q?si=ek4nQfSysqltWGuU",
+    
+    introTitle: "Heritage Documentary",
+    introText: [
+      "",
+      ""
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Highlight heritage preservation through cinematic storytelling.",
+      "Showcase architecture and history with premium visuals."
+    ],
+    link: "#"
+  },
+      {
+    id: 32,
+    title: "Halala Kela Documentary",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Berry Advertising",
+    heroImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
+    introTitle: "Heritage Documentary",
+    introText: [
+      "",
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "",
+      ""
+    ],
+    link: "#"
+  },
+
+  {
+    id: 33,
+    title: "Zemen Gebeya",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Berry Advertising",
+    thumbnailImage: "/assets/img/portfolio/Zemen/thumbimage.jpg",
+    introTitle: "Heritage Documentary",
+    introText: [
+      ""
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "",
+      ""
+    ],
+    link: "#"
+  },
 ];

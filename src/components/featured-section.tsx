@@ -68,7 +68,7 @@ function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
   // Grid MUST show image only (no video)
   const image =
     item.heroImage ||
-    item.secondImage ||
+    item.thumbnailImage ||
     item.gallery?.[0] ||
     item.btsGallery?.[0] ||
     "/default-placeholder.png";
@@ -150,7 +150,7 @@ export function FeaturedWorkSection() {
                       src={project.heroVideo}
                       poster={
                         project.heroVideoFallbackImage ||
-                        project.secondImage ||
+                        project.thumbnailImage ||
                         project.heroImage ||
                         "/default-placeholder.png"
                       }
@@ -163,11 +163,7 @@ export function FeaturedWorkSection() {
                     />
                   ) : (
                     <Image
-                      src={
-                        project.heroImage ||
-                        project.secondImage ||
-                        "/default-placeholder.png"
-                      }
+                      src={project.heroImage || project.thumbnailImage || "/default-placeholder.png"}
                       alt={project.title}
                       fill
                       className="object-fit-cover"

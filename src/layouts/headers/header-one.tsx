@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderMenus from "./header-menus";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
-import logo from "../../../public/assets/img/logo/logodark.png";
+import logoDark from "../../../public/assets/img/logo/logodark.png";
 import logoWhite from "../../../public/assets/img/logo/logowhite.jpg";
 import useStickyHeader from "@/hooks/use-sticky-header";
 
@@ -31,10 +31,10 @@ const HeaderOne = () => {
               <div className="col-xl-2 col-lg-2 col-6">
                 <div className="tp-header-logo">
                   <Link className="logo-1" href="/">
-                    <Image style={{ width: "auto", height: "auto" }} src={logoiconheader} alt="logo" width={85} height={26} />
+                    <Image style={{ width: "auto", height: "auto" }} src={logoDark} alt="logo" width={85} height={26} />
                   </Link>
                   <Link className="logo-2" href="/">
-                    <Image style={{ width: "auto", height: "auto" }} src={logoiconheader} alt="logo" width={85} height={26} />
+                    <Image style={{ width: "auto", height: "auto" }} src={logoDark} alt="logo" width={85} height={26} />
                   </Link>
                 </div>
               </div>
