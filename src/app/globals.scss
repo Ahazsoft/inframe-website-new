@@ -328,8 +328,15 @@
 }
 
 .tp-footer-big-title {
+  font-size: 50px;
+}
+
+@media(min-width:1024px){
+.tp-footer-big-title {
   font-size: 120px;
 }
+}
+
 
 .pt-26 {
   padding-top: 26px;

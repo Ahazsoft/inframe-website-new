@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { UpArrow } from "../svg";
@@ -8,6 +8,22 @@ import { projectsData } from "@/components/portfolio/details/projectData";
 
 export default function PortfolioGridColTwoArea() {
   const { initIsotop, isotopContainer } = useIsotop();
+  const [height, setHeight] = useState(900); // Default height
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setHeight(500); // Set height for small screens
+            } else {
+                setHeight(900); // Set height for larger screens
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial check
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   useEffect(() => {
     initIsotop();
@@ -87,7 +103,7 @@ export default function PortfolioGridColTwoArea() {
                       src={thumbnail}
                       alt={item.title}
                       width={600}
-                      height={900}
+                      height={height}
                       style={{ objectFit: "cover"}}
                     />
 
@@ -133,6 +149,31 @@ export default function PortfolioGridColTwoArea() {
         </div>
 
       </div>
+
+      <style jsx>{
+        `
+
+        .cursor-hide{
+          max-width:100%;
+          height:900px;
+          border:4px solid red;
+        }
+
+        @media (max-width:760px){
+        .cursor-hide{
+          height:300px;
+        }
+                  
+        }
+        
+        
+        
+        
+        `        
+        }</style>
+
+
+
     </div>
   );
 }
