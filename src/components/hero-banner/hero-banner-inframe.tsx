@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import { scroller } from 'react-scroll';
-import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from "react";
+import { scroller } from "react-scroll";
+import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -31,7 +31,7 @@ export default function AboutUsHero() {
   Both founders have experience working at EBS, a major television company in Ethiopia. Their goal is to build the best creative production and marketing team.
   They aim to become one of the leading industry players in Ethiopia and a major force in the creative sector.`;
 
-  const parts = text.split('\n');
+  const parts = text.split("\n");
 
   useEffect(() => {
     if (!sectionRef.current || !videoWrapRef.current || !h2Ref.current) return;
@@ -76,7 +76,7 @@ export default function AboutUsHero() {
           end: "+=300",
           scrub: true,
         },
-      }
+      },
     );
 
     gsap.set(lines, { opacity: 0, y: 80 });
@@ -98,7 +98,6 @@ export default function AboutUsHero() {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
-
 
   return (
     <div
@@ -130,7 +129,7 @@ export default function AboutUsHero() {
         <div className="row">
           {/* <div className="col-xl-8"> */}
 
-            {/* H1 + Button + P */}
+          {/* H1 + Button + P */}
           <div
             className="ab-inner-hero-title-box"
             data-lag="0.2"
@@ -148,39 +147,37 @@ export default function AboutUsHero() {
             </Link> */}
 
             <Button
-                variant="secondary"
-                className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
-                onClick={() => router.push("/contact")}
-              >
-                Contact Us
+              variant="secondary"
+              className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+              id="ab-inner-hero-contact-button"
+              onClick={() => router.push("/contact")}
+            >
+              Contact Us
             </Button>
 
             <div style={{ height: 40 }} />
 
             <p className="text-white text-justify break-words ab-inner-hero-title">
-              We craft powerful visual experiences that go beyond aesthetics — stories that move people, spark emotion, and leave a lasting impression. 
-              From concept to final frame, we transform ideas into compelling narratives that connect brands with audiences in meaningful and unforgettable ways.
+              We craft powerful visual experiences that go beyond aesthetics —
+              stories that move people, spark emotion, and leave a lasting
+              impression. From concept to final frame, we transform ideas into
+              compelling narratives that connect brands with audiences in
+              meaningful and unforgettable ways.
             </p>
-
           </div>
 
+          {/* H2s */}
 
-
-
-
-            {/* H2s */}
-            
-            <div ref={h2Ref}>
-              {parts.map((p, idx) => (
-                <div key={idx}>
-                  <h2 className="text-white text-center">{p}</h2>
-                  <div style={{ height: idx === parts.length - 1 ? 80 : 15 }} />
-                </div>
-              ))}
-            </div>
-
-            
-            
+          <div ref={h2Ref}>
+            {parts.map((p, idx) => (
+              <div key={idx}>
+                <h2 className="text-white  ab-inner-hero-h2ref">
+                  {p}
+                </h2>
+                <div style={{ height: idx === parts.length - 1 ? 80 : 15 }} />
+              </div>
+            ))}
+          </div>
 
           {/* </div> */}
         </div>
@@ -190,6 +187,7 @@ export default function AboutUsHero() {
         .ab-inner-hero-area {
           position: relative;
           overflow: hidden;
+          height: 160vh;
         }
 
         .ab-hero-video-wrap {
@@ -235,12 +233,49 @@ export default function AboutUsHero() {
           z-index: 2;
         }
 
-        
-
-        .ab-inner-hero-title-box h1,
+        .ab-inner-hero-title-box h1{
+          color: #ffffff !important;
+          font-size:80px;
+          letter-spacing:1;
+        }
         .ab-inner-hero-title-box p {
           color: #ffffff !important;
-          
+        }
+
+
+        .ab-inner-hero-h2ref {
+            text-align: center;
+            font-size: 40px;
+          }
+        
+
+        @media (max-width: 540px) {
+          .ab-inner-hero-title-box h1 {
+            font-size: 40px;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 0.0013em;
+          }
+
+          #ab-inner-hero-contact-button {
+            width: 300px;
+            height: 50px;
+            color: red !important;
+            font-size: 40px;
+          }
+
+          .ab-inner-hero-title-box p {
+            font-size: 1.1rem;
+          }
+
+          .ab-inner-hero-area {
+            height: 180vh;
+          }
+
+          .ab-inner-hero-h2ref {
+            text-aling:left;
+            font-size: 30px;            
+          }
         }
       `}</style>
     </div>

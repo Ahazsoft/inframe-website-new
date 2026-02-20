@@ -1,16 +1,14 @@
-@forward '../../public/assets/css/bootstrap.min.css'; 
-@forward '../../public/assets/scss/main.scss';
+@forward "../../public/assets/css/bootstrap.min.css";
+@forward "../../public/assets/scss/main.scss";
 
-
-
-// Video modal style 
+// Video modal style
 .video-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -19,7 +17,7 @@
 
 .video-modal-container {
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1200px;
   position: relative;
 }
 
@@ -71,8 +69,6 @@
   height: 300px;
 }
 
-
-
 /* Negative margin */
 .ml-neg-4 {
   margin-left: -1rem;
@@ -107,19 +103,35 @@
 .custom-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 50%, transparent);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    transparent 50%,
+    transparent
+  );
 }
-
 
 .carousel-fixed-size {
-  width: 900px;
-  height: 506px;
+  width: fit-content;
+  height: 40vh;
+  aspect-ratio: 16 / 9;
+  max-width: 350px;
+  border-radius: 20px !important; /* same as grid cards */
+  overflow: hidden !important; /* force clipping inside rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+@media (min-width: 1024px) {
+  .carousel-fixed-size {
+    width: 900px;
+    max-width: 900px;
+    height: 506px;
+  }
+}
 
 .carousel-arrow {
-  width: 4rem;          /* size-16 */
-  height: 4rem;         /* size-16 */
+  width: 4rem; /* size-16 */
+  height: 4rem; /* size-16 */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -137,7 +149,7 @@
 }
 
 .carousel-prev {
-  left: 2rem;  /* left-8 */
+  left: 2rem; /* left-8 */
   font-size: 53px;
 }
 
@@ -145,7 +157,6 @@
   right: 2rem; /* right-8 */
   font-size: 53px;
 }
-
 
 .ml-neg-4 {
   margin-left: -1rem;
@@ -155,36 +166,33 @@
   margin-top: -1rem;
 }
 
-
 /* Horizontal arrow positioning */
 .carousel-arrow-prev-horizontal {
   top: 50%;
-  left: -3rem;          /* -left-12 */
+  left: -3rem; /* -left-12 */
   transform: translateY(-50%);
 }
 
 /* Vertical arrow positioning */
 .carousel-arrow-prev-vertical {
-  top: -3rem;           /* -top-12 */
+  top: -3rem; /* -top-12 */
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
 }
 
-
 /* Horizontal arrow positioning */
 .carousel-arrow-next-horizontal {
   top: 50%;
-  right: -3rem;         /* -right-12 */
+  right: -3rem; /* -right-12 */
   transform: translateY(-50%);
 }
 
 /* Vertical arrow positioning */
 .carousel-arrow-next-vertical {
-  bottom: -3rem;        /* -bottom-12 */
+  bottom: -3rem; /* -bottom-12 */
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
 }
-
 
 /* Row gap (gap-3 md:gap-4) */
 .project-row {
@@ -229,7 +237,6 @@
   }
 }
 
-
 /* Image hover scale */
 .project-image {
   object-fit: cover;
@@ -272,7 +279,6 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 2;
-  
 }
 
 .project-card:hover .project-btn {
@@ -283,52 +289,62 @@
   height: 100vh;
 }
 
-
-.pin-spacer-fix-2{
+.pin-spacer-fix-2 {
   height: 5vh;
 }
 
 // .tm-hero-text p{
 //   padding-top: 480px
 // }
-.tm-hero-text{
+.tm-hero-text {
   padding-left: 0;
 }
 
-.tp-brand-area{
+.tp-brand-area {
   padding-top: 0;
 }
 
-.tm-hero-ptb{
+.tm-hero-ptb {
   padding-top: 0;
   padding-bottom: 0;
 }
-.pin-spacer-fix{
+.pin-spacer-fix {
   height: 5vh;
 }
 
-.tm-hero-content{
+.tm-hero-content {
   margin-top: 50px;
+  font-size: 65px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
-.tp-footer-big-title{
-  font-size:120px
+@media (min-width:768px) {
+.tm-hero-content{
+  font-size: 80px;
+
+}
+  
 }
 
-.pt-26{
+.tp-footer-big-title {
+  font-size: 120px;
+}
+
+.pt-26 {
   padding-top: 26px;
 }
-.pb-26{
+.pb-26 {
   padding-bottom: 26px;
 }
-.mt-150{
+.mt-150 {
   margin-top: 150px;
 }
 .pb-100 {
   padding-bottom: 100px;
 }
 
-.cinema-grade{
+.cinema-grade {
   position: relative;
   width: 100%;
   padding-bottom: 100px;
@@ -350,15 +366,13 @@
   font-size: 19px;
   line-height: 1.2105263158;
   font-weight: 400;
-  letter-spacing: .012em;
+  letter-spacing: 0.012em;
 }
 
 .large-12 {
   flex-basis: 100%;
   max-width: 100%;
 }
-
-
 
 .ctas {
   margin-top: 26px;
@@ -376,16 +390,9 @@ a:hover .learn-more-icon {
   transform: translateX(4px);
 }
 
-
 .tp-header-logo img {
   width: 60px !important;
   height: 100% !important;
-}
-
-.carousel-fixed-size {
-  border-radius: 20px !important;      /* same as grid cards */
-  overflow: hidden !important;         /* force clipping inside rounded corners */
-  border: 1px solid rgba(255,255,255,0.12);
 }
 
 .custom-basis {
@@ -404,16 +411,15 @@ a:hover .learn-more-icon {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 135px;
 }
 
 .carousel-prev {
-  left: 5%;  /* adjust */
+  left: 5%; /* adjust */
 }
 
 .carousel-next {
   right: 5%; /* adjust */
 }
-

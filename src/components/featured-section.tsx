@@ -20,7 +20,11 @@ import { projectsData } from "./portfolio/details/projectData";
 /* Intersection Observer Hook */
 /* ============================= */
 
-function useInView(ref: React.RefObject<Element>, threshold = 0.8, delay = 250) {
+function useInView(
+  ref: React.RefObject<Element>,
+  threshold = 0.8,
+  delay = 250,
+) {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
@@ -38,7 +42,7 @@ function useInView(ref: React.RefObject<Element>, threshold = 0.8, delay = 250) 
           setInView(false);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(el);
@@ -72,7 +76,7 @@ function GridProjectCard({ item, paused }: { item: any; paused: boolean }) {
   return (
     <div
       ref={ref}
-      className="project-card bg-dark flex-shrink-0 position-relative overflow-hidden"
+      className="project-card bg-dark flex-shrink-0 position-relative overflow-hidden "
     >
       <Image
         src={image}
@@ -106,7 +110,7 @@ export function FeaturedWorkSection() {
 
   const autoplayPlugin = useMemo(
     () => Autoplay({ delay: 5000, stopOnInteraction: false }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -131,7 +135,6 @@ export function FeaturedWorkSection() {
   return (
     <section className="featured-work-section bg-black py-5" id="our-work">
       <div className="container-fluid">
-
         {/* Carousel */}
         <Carousel
           opts={{ align: "center", loop: true, duration: 65 }}
@@ -142,7 +145,6 @@ export function FeaturedWorkSection() {
             {featuredProjects.map((project) => (
               <CarouselItem key={project.id} className="custom-basis">
                 <div className="position-relative overflow-hidden cursor-pointer carousel-fixed-size">
-
                   {project.heroVideo ? (
                     <video
                       src={project.heroVideo}
@@ -157,7 +159,7 @@ export function FeaturedWorkSection() {
                       loop
                       playsInline
                       preload="metadata"
-                      className="object-fit-contain w-100 h-100"
+                      className="object-fit-cover w-100 h-100"
                     />
                   ) : (
                     <Image
@@ -172,13 +174,13 @@ export function FeaturedWorkSection() {
                   <div className="custom-gradient-overlay" />
 
                   <div className="position-absolute bottom-0 start-0 end-0 p-3 p-md-4 d-flex flex-column flex-md-row align-items-md-end gap-3">
-                    <Button
-                      variant="secondary"
-                      className="rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
-                      onClick={() => router.push(`/projects/${project.id}`)}
-                    >
-                      View Project
-                    </Button>
+                      <Button
+                        variant="secondary"
+                        className="rounded-pill bg-white text-dark fw-semibold px-sm-1 px-md-5 fs-6"
+                        onClick={() => router.push(`/projects/${project.id}`)}
+                      >
+                        View Project
+                      </Button>
 
                     <div className="text-white">
                       <span className="fw-bold">{project.category}</span>
@@ -199,7 +201,6 @@ export function FeaturedWorkSection() {
 
         {/* Marquee Rows */}
         <div className="position-relative overflow-hidden">
-
           <div
             className="d-flex project-row mb-3 mb-md-4"
             ref={row1Marquee.ref}
@@ -208,8 +209,12 @@ export function FeaturedWorkSection() {
           >
             {[...gridProjects.slice(0, 8), ...gridProjects.slice(0, 8)].map(
               (item, idx) => (
-                <GridProjectCard key={`row1-${idx}`} item={item} paused={paused} />
-              )
+                <GridProjectCard
+                  key={`row1-${idx}`}
+                  item={item}
+                  paused={paused}
+                />
+              ),
             )}
           </div>
 
@@ -221,11 +226,14 @@ export function FeaturedWorkSection() {
           >
             {[...gridProjects.slice(8, 15), ...gridProjects.slice(8, 15)].map(
               (item, idx) => (
-                <GridProjectCard key={`row2-${idx}`} item={item} paused={paused} />
-              )
+                <GridProjectCard
+                  key={`row2-${idx}`}
+                  item={item}
+                  paused={paused}
+                />
+              ),
             )}
           </div>
-
         </div>
 
         {/* BUTTONS BELOW SECOND GRID */}
@@ -233,7 +241,7 @@ export function FeaturedWorkSection() {
           <div className="flex-grow-1 d-flex justify-content-center">
             <Button
               variant="secondary"
-              className="rounded-pill bg-white text-dark fw-semibold px-5 py-3"
+              className="rounded-pill bg-white text-dark fw-semibold px-md-5 py-md-3 sm:px-2 sm:py-1"
               style={{ transform: "translateX(27.5%)" }}
               onClick={() => router.push("/projects")}
             >
@@ -243,13 +251,12 @@ export function FeaturedWorkSection() {
 
           <Button
             variant="outline"
-            className="rounded-pill border-white text-white fw-semibold px-5 py-3"
+            className="rounded-pill border-white text-white fw-semibold  px-md-5 py-md-3 sm:px-2 sm:py-1"
             onClick={() => setPaused((prev) => !prev)}
           >
             <i className={`fa ${paused ? "fa-play" : "fa-pause"}`} />
           </Button>
         </div>
-
       </div>
     </section>
   );
