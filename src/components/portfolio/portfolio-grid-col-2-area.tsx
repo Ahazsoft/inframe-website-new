@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,11 +7,16 @@ import { useIsotop } from "@/hooks/use-isotop";
 
 import { Button } from "../ui/button";
 
+
+import { useRouter } from 'next/navigation'
+
 import { projectsData } from "@/components/portfolio/details/projectData";
 
 export default function PortfolioGridColTwoArea() {
   const { initIsotop, isotopContainer } = useIsotop();
   const [height, setHeight] = useState(900); // Default height
+
+  const router = useRouter()
 
     useEffect(() => {
         const handleResize = () => {
