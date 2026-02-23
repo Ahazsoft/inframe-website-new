@@ -196,58 +196,6 @@ export function ServiceInframe() {
 
 
 
-          <Link
-            href="/projects"
-            className="text-primary fw-medium"
-            style={{ marginLeft: "0.8em", fontSize: "19px" }}
-          >
-            View Our Portfolio
-            <i className="fa-solid fa-angle-right learn-more-icon"></i>
-          </Link>
-
-          {/* Platform icons */}
-          <div
-            className="row justify-content-center g-4 mx-auto"
-            style={{ marginTop: "38px" }}
-          >
-            {[
-              {
-                name: "YouTube",
-                icon: "fab fa-youtube",
-                url: "#",
-              },
-              {
-                name: "TikTok",
-                icon: "fab fa-tiktok",
-                url: "https://www.tiktok.com/@inframeproduction1?_r=1&_t=ZS-944pU9U3VBw",
-              },
-              {
-                name: "Instagram",
-                icon: "fab fa-instagram",
-                url: "https://www.instagram.com/inframe_production_?igsh=MW0xcDVidG9mY2h4cw==",
-              },
-              {
-                name: "Linkedin",
-                icon: "fab fa-linkedin",
-                url: "https://www.linkedin.com/company/in-frame-production/",
-              },
-            ].map((item) => (
-              <div
-                key={item.name}
-                className="col-6 col-md-4 col-lg-2 text-center"
-              >
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-none text-dark"
-                >
-                  <i className={`${item.icon} fs-1 mb-2`}></i>
-                  <div className="fw-medium">{item.name}</div>
-                </a>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
       <style jsx>{`
