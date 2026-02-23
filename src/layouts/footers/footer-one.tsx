@@ -49,13 +49,13 @@ export default function FooterOne() {
                   <div className="tp-footer-content">
                     <h4 className="tp-footer-big-title footer-big-text">{"Let's"} Connect!</h4>
                   </div>
-                  <div className="row">
+                  <div className="row" style={{width:"500px"}}>
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="tp-footer-widget">
                         <h4 className="tp-footer-title tp_fade_bottom">
                           Say hello at:
                         </h4>
-                        <div className="tp-footer-widget-info">
+                        <div className="tp-footer-widget-info" >
                           <div className="tp-footer-widget-info-mail tp_fade_bottom">
                             <Link href="mailto:info@inframeadvertising.com">
                               info@inframeadvertising.com

@@ -333,10 +333,15 @@
 
 @media(min-width:1024px){
 .tp-footer-big-title {
-  font-size: 120px;
+  font-size: 110px; 
 }
 }
 
+@media(min-width:924px){
+.tp-footer-big-title {
+  font-size: 90px;
+}
+}
 
 .pt-26 {
   padding-top: 26px;

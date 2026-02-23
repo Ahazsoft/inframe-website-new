@@ -7,10 +7,11 @@ export function ServiceInframe() {
   return (
     <section id="what-we-do" className="py-5 bg-white">
       <div className="container text-center">
-
         {/* Header */}
-        <div className="mx-auto mb-5 d-flex flex-column align-items-center" style={{ maxWidth: "48rem" }}>
-          
+        <div
+          className="mx-auto mb-5 d-flex flex-column align-items-center"
+          style={{ maxWidth: "48rem" }}
+        >
           <figure
             style={{
               width: "79px",
@@ -18,14 +19,14 @@ export function ServiceInframe() {
               backgroundImage: "url('/inframelogo3.png')",
               backgroundSize: "79px 79px",
               backgroundRepeat: "no-repeat",
-              
             }}
           />
 
           <h2
             className="fw-bold text-black mb-4"
+            id="service-section-title"
             style={{
-              fontSize: "80px",
+              // fontSize: "80px",
               lineHeight: "1.05",
               letterSpacing: "-0.02em",
             }}
@@ -52,15 +53,22 @@ export function ServiceInframe() {
         </div>
 
         {/* Services grid */}
-        <div className="row justify-content-center g-5 mb-5" style={{ maxWidth: "56rem", margin: "0 auto" }}>
-          
+        <div
+          className="row justify-content-center g-5 mb-5"
+          style={{ maxWidth: "56rem", margin: "0 auto" }}
+        >
           <div className="col-12 col-md-4 text-center">
             <div className="d-flex flex-column align-items-center">
               <div
                 className="mb-4 p-4 rounded-4"
                 style={{ transition: "transform 0.3s" }}
               >
-                <Tv strokeWidth={1.5} width={80} height={80} className="text-black" />
+                <Tv
+                  strokeWidth={1.5}
+                  width={80}
+                  height={80}
+                  className="text-black"
+                />
               </div>
               <h3 className="fs-6 fw-medium text-black opacity-75">
                 TV Commercials
@@ -74,11 +82,14 @@ export function ServiceInframe() {
                 className="mb-4 p-4 rounded-4"
                 style={{ transition: "transform 0.3s" }}
               >
-                <Radio strokeWidth={1.5} width={80} height={80} className="text-black" />
+                <Radio
+                  strokeWidth={1.5}
+                  width={80}
+                  height={80}
+                  className="text-black"
+                />
               </div>
-              <h3 className="fs-6 fw-medium text-black opacity-75">
-                Radio
-              </h3>
+              <h3 className="fs-6 fw-medium text-black opacity-75">Radio</h3>
             </div>
           </div>
 
@@ -88,19 +99,23 @@ export function ServiceInframe() {
                 className="mb-4 p-4 rounded-4"
                 style={{ transition: "transform 0.3s" }}
               >
-                <Megaphone strokeWidth={1.5} width={80} height={80} className="text-black" />
+                <Megaphone
+                  strokeWidth={1.5}
+                  width={80}
+                  height={80}
+                  className="text-black"
+                />
               </div>
               <h3 className="fs-6 fw-medium text-black opacity-75">
                 Digital Campaign
               </h3>
             </div>
           </div>
-
         </div>
 
         {/* Platforms section */}
         <div className="py-5">
-          <div className="mx-auto mb-5" style={{ maxWidth: "41.6666666667%" }}>
+          <div className="mx-auto mb-5" id="see-our-works" >
             <p
               className="fw-semibold text-black text-center"
               style={{
@@ -129,6 +144,8 @@ export function ServiceInframe() {
             View Our Portfolio <span>&gt;</span>
           </a> */}
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <Link
               href="/projects"
               className="text-primary fw-medium"
@@ -180,10 +197,83 @@ export function ServiceInframe() {
             </div>
 
 
+=======
+=======
+>>>>>>> Stashed changes
+          <Link
+            href="/projects"
+            className="text-primary fw-medium"
+            style={{ marginLeft: "0.8em", fontSize: "19px" }}
+          >
+            View Our Portfolio
+            <i className="fa-solid fa-angle-right learn-more-icon"></i>
+          </Link>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
+          {/* Platform icons */}
+          <div
+            className="row justify-content-center g-4 mx-auto"
+            style={{ marginTop: "38px" }}
+          >
+            {[
+              {
+                name: "YouTube",
+                icon: "fab fa-youtube",
+                url: "#",
+              },
+              {
+                name: "TikTok",
+                icon: "fab fa-tiktok",
+                url: "https://www.tiktok.com/@inframeproduction1?_r=1&_t=ZS-944pU9U3VBw",
+              },
+              {
+                name: "Instagram",
+                icon: "fab fa-instagram",
+                url: "https://www.instagram.com/inframe_production_?igsh=MW0xcDVidG9mY2h4cw==",
+              },
+              {
+                name: "Linkedin",
+                icon: "fab fa-linkedin",
+                url: "https://www.linkedin.com/company/in-frame-production/",
+              },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="col-6 col-md-4 col-lg-2 text-center"
+              >
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-dark"
+                >
+                  <i className={`${item.icon} fs-1 mb-2`}></i>
+                  <div className="fw-medium">{item.name}</div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <style jsx>{`
+          #service-section-title {
+            font-size: 80px;
+          }
+          #see-our-works{
+            max-width:41.666%;
+          }
+        @media (max-width: 600px) {
+          #service-section-title {
+            font-size: 60px ;
+          }
+          #see-our-works{
+            max-width:85%;
+          }
+        }
+      `}</style>
     </section>
-
   );
 }
