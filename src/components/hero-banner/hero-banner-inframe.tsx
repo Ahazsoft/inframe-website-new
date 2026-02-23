@@ -36,84 +36,130 @@ export default function AboutUsHero() {
   useEffect(() => {
     if (!sectionRef.current || !videoWrapRef.current || !h2Ref.current) return;
 
-    const lines = h2Ref.current.querySelectorAll("h2");
+    const ctx = gsap.context(() => {
+      const lines = h2Ref.current!.querySelectorAll("h2");
 
-    // Overlay
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "+=300",
-      scrub: true,
-      onUpdate: (self) => {
-        if (!videoWrapRef.current) return; 
-        const progress = Math.min(self.progress * 1, 1);
-        videoWrapRef.current.style.setProperty("--overlay", String(progress));
-      },
-    });
+      // Initial states
+      gsap.set(heroTextRef.current, { opacity: 0 });
+      gsap.set(lines, { opacity: 0, y: 80 });
+      gsap.set(videoWrapRef.current, { "--overlay": 0 });
 
-    // Fade out H1 + button + p
-    gsap.to(heroTextRef.current, {
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "+=100",
-        scrub: true,
-      },
-      opacity: 0,
-      y: 0,
-    });
-
-    // H2 moves up and fades in
-    gsap.fromTo(
-      h2Ref.current,
-      { opacity: 0, y: 840 },
-      {
-        opacity: 1,
-        y: -460,
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top+=80",
-          end: "+=300",
+          start: "top top",
+          end: "+=950", 
           scrub: true,
-        },
-      },
-    );
+          invalidateOnRefresh: true,
+          pin: true,
+        }
+      });
 
-    gsap.set(lines, { opacity: 0, y: 80 });
+      /**
+       * 0:00 — Video plays alone
+       */
+      tl.to({}, { duration: 1.2 });
 
-    gsap.to(lines, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.55,
-      ease: "none",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top+=20",
-        end: "+=480",
-        scrub: true,
-      },
-    });
+      /**
+       * 0:05 — Hero fades in
+       */
+      tl.to(heroTextRef.current, {
+        opacity: 1,
+        duration: 0.15,
+        ease: "none",
+      });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
+      /**
+       * 0:05–0:15 — Hero holds 
+       */
+      tl.to({}, { duration: 0.45 });
+
+      /**
+       * 0:15 — Hero fades out while darkening begins
+       */
+      tl.to(heroTextRef.current, {
+        opacity: 0,
+        duration: 1,
+        ease: "none",
+      });
+
+      tl.to(videoWrapRef.current, {
+        "--overlay": 0.65,
+        duration: 1,
+        ease: "none",
+      }, "<");
+
+      /**
+       * 0:20 — First H2
+       */
+      tl.to(videoWrapRef.current, {
+        "--overlay": 0.85,
+        duration: 0.8,
+        ease: "none",
+      });
+
+      tl.to(lines[0], {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: "none",
+      }, "<");
+
+      /**
+       * 0:25 — Second H2
+       */
+      tl.to(videoWrapRef.current, {
+        "--overlay": 0.92,
+        duration: 0.8,
+        ease: "none",
+      });
+
+      tl.to(lines[1], {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: "none",
+      }, "<");
+
+      /**
+       * 0:30 — Third H2
+       */
+      tl.to(videoWrapRef.current, {
+        "--overlay": 0.95,
+        duration: 0.8,
+        ease: "none",
+      });
+
+      tl.to(lines[2], {
+        opacity: 1,
+        y: 0,
+        duration: 1.4,
+        ease: "none",
+      }, "<");
+
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
-
   return (
     <div
       ref={sectionRef}
-      className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{ height: "120vh" }}
+      // className="ab-inner-hero-area ab-inner-hero-bg p-relative"
+      className="ab-inner-hero-area p-relative"
+      style={{ height: "100vh" }}
     >
       
       {/* VIDEO BACKGROUND */}
       <div ref={videoWrapRef} className="ab-hero-video-wrap">
-        <video className="ab-hero-video" autoPlay muted loop playsInline>
-          <source
-            src="/assets/img/home-01/hero/herovideo.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <video
+          className="ab-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          src="/assets/img/home-01/hero/herovideo.mp4"
+        />
 
         <div className="ab-hero-overlay" />
         <div className="ab-hero-scroll-overlay" />
@@ -158,7 +204,7 @@ export default function AboutUsHero() {
             <div style={{ height: 40 }} />
 
             <p className="text-white text-justify break-words ab-inner-hero-title">
-              We craft powerful visual experiences that go beyond aesthetics —
+              We craft powerful visual experiences that go beyond aesthetics
               stories that move people, spark emotion, and leave a lasting
               impression. From concept to final frame, we transform ideas into
               compelling narratives that connect brands with audiences in
@@ -187,26 +233,35 @@ export default function AboutUsHero() {
         .ab-inner-hero-area {
           position: relative;
           overflow: hidden;
-          height: 160vh;
+          height: 200vh;
+          background: transparent
+          
         }
 
         .ab-hero-video-wrap {
-          position: absolute;
+          position: absolute;          
           inset: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          z-index: 0;              
           --overlay: 0;
+          pointer-events: none;    
         }
 
-.ab-hero-video {
-  position: absolute;
-  inset: 0;              /* fills the parent exactly */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* true "background-size: cover" behavior */
-  object-position: center;
-}
+
+        .ab-hero-video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          transform: translate(-50%, -50%);
+          object-fit: cover;
+          will-change: transform;
+        }
 
 
         .ab-hero-overlay {
@@ -228,9 +283,28 @@ export default function AboutUsHero() {
           pointer-events: none;
         }
 
+
+
         .ab-inner-hero-area .container {
-          position: relative;
+          position: absolute;
           z-index: 2;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .ab-inner-hero-title-box {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 75%;
+          margin: 0 auto;              
+          text-align: center;         
+          display: flex;
+          flex-direction: column;
+          align-items: center;        
+          justify-content: center;
         }
 
         .ab-inner-hero-title-box h1{
@@ -268,9 +342,6 @@ export default function AboutUsHero() {
             font-size: 1.1rem;
           }
 
-          .ab-inner-hero-area {
-            height: 180vh;
-          }
 
           .ab-inner-hero-h2ref {
             text-aling:left;

@@ -79,13 +79,13 @@ export default function FooterOne() {
                         </h4>
                         <ul className="tp-footer-widget-social">
                           <li className="tp_fade_bottom">
-                            <Link href="#">Facebook</Link>
+                            <Link href="https://www.linkedin.com/company/in-frame-production/">Linkedin</Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">Instagram</Link>
+                            <Link href="https://www.instagram.com/inframe_production_?igsh=MW0xcDVidG9mY2h4cw==">Instagram</Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">TikTok</Link>
+                            <Link href="https://www.tiktok.com/@inframeproduction1?_r=1&_t=ZS-944pU9U3VBw">TikTok</Link>
                           </li>
                           <li className="tp_fade_bottom">
                             <Link href="#">Youtube</Link>

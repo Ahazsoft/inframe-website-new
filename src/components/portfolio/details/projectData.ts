@@ -50,6 +50,11 @@ export const projectsData: ProjectType[] = [
     heroImage:"/assets/img/portfolio/ZTE/heroimage.png",
     thumbnailImage: "/assets/img/portfolio/ZTE/heroimage.jpg",
     gallery: ["/assets/img/portfolio/ZTE/gallery1.png","/assets/img/portfolio/ZTE/gallery2.png"],
+
+    btsGallery:[
+      "/assets/img/bts/ZTE/1.png",
+      "/assets/img/bts/ZTE/2.png",  
+    ],
     introTitle: "Sleek Modern Commercial",
     introText: [
       "A sleek, modern commercial showcasing ZTE smartphones through bold color design, confident talent presence, and polished cinematic lighting.",
@@ -109,6 +114,14 @@ export const projectsData: ProjectType[] = [
     heroVideoFallbackImage: "/assets/img/portfolio/Largo/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/Largo/heroimage.jpg",
     gallery: ["/assets/img/portfolio/Largo/gallery1.png","/assets/img/portfolio/Largo/gallery2.png"],
+    btsGallery:[
+      "/assets/img/bts/Largo/1.png",
+      "/assets/img/bts/Largo/2.png",
+      "/assets/img/bts/Largo/3.png",
+      "/assets/img/bts/Largo/4.png",
+      "/assets/img/bts/Largo/5.png",
+      
+    ],
     introTitle: "Bright Family Commercial",
     introText: [
       "A bright, family-centered commercial highlighting everyday care through natural performances, fresh lighting, and clean visual storytelling.",
@@ -127,7 +140,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 4,
     title: "Castel Wine – Valentine’s Day Campaign",
-    category: "Social Media and Digital Campaigns",
+    category: "TV Commercials",
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Castle/herovideo.mp4",
@@ -157,7 +170,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 5,
     title: "Ethiopian Airlines – “The New Spirit of Africa”",
-    category: "Documentary and Brand Film",
+    category: "TV Commercials",
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/EAL/herovideo.mp4",
@@ -191,7 +204,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 6,
     title: "Yewendoch Guday × TECNO Mobile – Brand Collaboration Campaign",
-    category: "Social Media and Digital Campaigns",
+    category: "TV Commercials",
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/YG-Techno/herovideo.mp4",
@@ -199,14 +212,23 @@ export const projectsData: ProjectType[] = [
     heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
     gallery: ["/assets/img/portfolio/YG-Techno/gallery1.png","/assets/img/portfolio/YG-Techno/gallery2.png"],
+    // btsGallery:[
+    //   "/assets/img/portfolio/YG-Techno/bts1.png",
+    //   "/assets/img/portfolio/YG-Techno/bts2.png",
+    //   "/assets/img/portfolio/YG-Techno/bts3.png",
+    //   "/assets/img/portfolio/YG-Techno/bts4.png",
+    //   "/assets/img/portfolio/YG-Techno/bts5.png",
+    //   "/assets/img/portfolio/YG-Techno/bts6.png",
+    //   "/assets/img/portfolio/YG-Techno/bts7.png"
+    // ],
+
     btsGallery:[
-      "/assets/img/portfolio/YG-Techno/bts1.png",
-      "/assets/img/portfolio/YG-Techno/bts2.png",
-      "/assets/img/portfolio/YG-Techno/bts3.png",
-      "/assets/img/portfolio/YG-Techno/bts4.png",
-      "/assets/img/portfolio/YG-Techno/bts5.png",
-      "/assets/img/portfolio/YG-Techno/bts6.png",
-      "/assets/img/portfolio/YG-Techno/bts7.png"
+      "/assets/img/bts/YWG/1.png",
+      "/assets/img/bts/YWG/2.png",
+      "/assets/img/bts/YWG/3.png",
+      "/assets/img/bts/YWG/4.png",
+      "/assets/img/bts/YWG/5.png",
+      
     ],
     introTitle: "Story-Driven Brand Campaign",
     introText: [
@@ -226,7 +248,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 7,
     title: "Senq Malt – Mother’s Day Campaign",
-    category: "Social Media and Digital Campaigns",
+    category: "TV Commercials",
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/Senq/herovideo.mp4",
@@ -254,7 +276,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 8,
     title: "Ethio Telecom – 5G Launch Campaign",
-    category: "Events",
+    category: "TV Commercials",
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EthioTelecom/herovideo.mp4",
@@ -493,27 +515,31 @@ export const projectsData: ProjectType[] = [
   //   link: "#"
   // },
 
-  // {
-  //   id: 17,
-  //   title: "Infinix – PUBG 2025 Event Campaign",
-  //   category: "Events",
-  //   year: "2025",
-  //   agency: "Inframe Production",
-  //   heroImage: full_image,
-  //   thumbnailImage: full_image_2,
-  //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
-  //   introTitle: "Gaming Event Campaign",
-  //   introText: [
-  //     "A dynamic event campaign capturing the energy of competitive gaming through fast-paced cinematography, immersive lighting, and live-event storytelling.",
-  //     "The production blends esports culture and Infinix innovation to create a bold, youth-driven brand experience."
-  //   ],
-  //   goalTitle: "The Goal",
-  //   goalText: [
-  //     "Capture esports energy with dynamic cinematography.",
-  //     "Create youth-driven content for digital and event platforms."
-  //   ],
-  //   link: "#"
-  // },
+  {
+    id: 17,
+    title: "Infinix – PUBG 2025 Event Campaign",
+    category: "Events",
+    year: "2025",
+    agency: "Inframe Production",
+    // heroImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
+    btsGallery: [
+      "/assets/img/portfolio/InfinixEvent/gallery1.png", 
+      "/assets/img/portfolio/InfinixEvent/gallery2.png",
+       "/assets/img/portfolio/InfinixEvent/gallery3.png", 
+       "/assets/img/portfolio/InfinixEvent/gallery4.png"],
+    introTitle: "Gaming Event Campaign",
+    introText: [
+      "A dynamic event campaign capturing the energy of competitive gaming through fast-paced cinematography, immersive lighting, and live-event storytelling.",
+      "The production blends esports culture and Infinix innovation to create a bold, youth-driven brand experience."
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Capture esports energy with dynamic cinematography.",
+      "Create youth-driven content for digital and event platforms."
+    ],
+    link: "#"
+  },
 
   {
     id: 18,
@@ -544,27 +570,27 @@ export const projectsData: ProjectType[] = [
     grid: true
   },
 
-  // {
-  //   id: 19,
-  //   title: "Jetson Doro – Social Media Photography & Video",
-  //   category: "Social Media and Digital Campaigns",
-  //   year: "2024",
-  //   agency: "Inframe Production",
-  //   heroImage: full_image,
-  //   thumbnailImage: full_image_2,
-  //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
-  //   introTitle: "Food & Lifestyle Campaign",
-  //   introText: [
-  //     "Appetizing social media photography and video content crafted to highlight Jetson Doro’s quality and freshness.",
-  //     "The production uses clean lighting, rich textures, and lifestyle storytelling to create engaging, platform-optimized visuals."
-  //   ],
-  //   goalTitle: "The Goal",
-  //   goalText: [
-  //     "Create appetizing visuals optimized for social media.",
-  //     "Highlight product quality through premium composition and lighting."
-  //   ],
-  //   link: "#"
-  // },
+  {
+    id: 19,
+    title: "Jetson Doro – Social Media Photography & Video",
+    category: "Social Media and Digital Campaigns",
+    year: "2024",
+    agency: "Inframe Production",
+    heroImage: "/assets/img/portfolio/Jetson/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/Jetson/thumb.jpg",
+    gallery: ["/assets/img/portfolio/Jetson/gallery.jpg", "/assets/img/portfolio/Jetson/thumb.jpg"],
+    introTitle: "Food & Lifestyle Campaign",
+    introText: [
+      "Appetizing social media photography and video content crafted to highlight Jetson Doro’s quality and freshness.",
+      "The production uses clean lighting, rich textures, and lifestyle storytelling to create engaging, platform-optimized visuals."
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Create appetizing visuals optimized for social media.",
+      "Highlight product quality through premium composition and lighting."
+    ],
+    link: "#"
+  },
 
   {
     id: 20,
@@ -825,25 +851,25 @@ export const projectsData: ProjectType[] = [
     ],
     link: "#"
   },
-      {
-    id: 32,
-    title: "Halala Kela Documentary",
-    category: "Documentary and Brand Film",
-    year: "2024",
-    agency: "Berry Advertising",
-    heroImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
-    thumbnailImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
-    introTitle: "Heritage Documentary",
-    introText: [
-      "",
-    ],
-    goalTitle: "The Goal",
-    goalText: [
-      "",
-      ""
-    ],
-    link: "#"
-  },
+  //     {
+  //   id: 32,
+  //   title: "Halala Kela Documentary",
+  //   category: "Documentary and Brand Film",
+  //   year: "2024",
+  //   agency: "Berry Advertising",
+  //   heroImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
+  //   thumbnailImage: "/assets/img/portfolio/Halala Kela/heroimage.jpg",
+  //   introTitle: "Heritage Documentary",
+  //   introText: [
+  //     "",
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "",
+  //     ""
+  //   ],
+  //   link: "#"
+  // },
 
   {
     id: 33,
