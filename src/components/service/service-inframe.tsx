@@ -196,17 +196,17 @@ export function ServiceInframe() {
 
 
 
-          <Link
+          {/* <Link
             href="/projects"
             className="text-primary fw-medium"
             style={{ marginLeft: "0.8em", fontSize: "19px" }}
           >
             View Our Portfolio
             <i className="fa-solid fa-angle-right learn-more-icon"></i>
-          </Link>
+          </Link> */}
 
           {/* Platform icons */}
-          <div
+          {/* <div
             className="row justify-content-center g-4 mx-auto"
             style={{ marginTop: "38px" }}
           >
@@ -247,7 +247,7 @@ export function ServiceInframe() {
                 </a>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
       <style jsx>{`
