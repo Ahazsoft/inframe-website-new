@@ -24,7 +24,7 @@ const HeaderOne = () => {
         <div
           id="header-sticky"
            className={`tp-header-area tp-header-mob-space pl-60 pr-60 z-index-9 ${isSticky ? 'header-sticky' : ''}`}
-           style={{ backgroundColor: '#fff' }}
+          //  style={{ backgroundColor: '#fff' }}
         >
           <div className="container">
             <div className="row align-items-center">

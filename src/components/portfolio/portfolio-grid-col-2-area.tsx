@@ -4,6 +4,8 @@ import Link from "next/link";
 import { UpArrow } from "../svg";
 import { useIsotop } from "@/hooks/use-isotop";
 
+import { Button } from "../ui/button";
+
 import { projectsData } from "@/components/portfolio/details/projectData";
 
 export default function PortfolioGridColTwoArea() {
@@ -96,16 +98,33 @@ export default function PortfolioGridColTwoArea() {
               >
                 <div
                   className="tp-project-5-2-thumb anim-zoomin-wrap mb-30 not-hide-cursor p-relative"
-                  data-cursor="View<br>Project"
+                  // data-cursor="View<br>Project"
                 >
-                  <Link href={`/projects/${item.id}`} className="cursor-hide">
+                  <Link href={`/projects/${item.id}`}>
                     <Image
                       src={thumbnail}
                       alt={item.title}
                       width={600}
                       height={height}
+                      
                       style={{ objectFit: "cover"}}
                     />
+
+                      {/* Hover Overlay */}
+                    <div className="project-hover">
+                      <Button
+                        className="btn btn-secondary btn-sm project-btn rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
+                        onClick={() => router.push(`/projects/${item.id}`)}
+                      >
+                        View Project
+                      </Button>
+                    </div>
+
+                    <div className="hover-btn">
+                      <Button className="btn btn-secondary btn-sm rounded-pill bg-white text-dark fw-semibold px-4 px-md-5">
+                        View Project
+                      </Button>
+                    </div>
 
                     <div className="tp-project-5-2-category tp_fade_anim">
                       <span>{item.category}</span>
@@ -127,7 +146,7 @@ export default function PortfolioGridColTwoArea() {
         </div>
 
         {/* MORE PROJECTS BUTTON */}
-        <div className="row">
+        {/* <div className="row">
           <div className="col-xl-12">
             <div className="tp-projct-5-2-btn-box mt-50 d-flex justify-content-center">
               <div className="tp-hover-btn-wrapper">
@@ -146,12 +165,36 @@ export default function PortfolioGridColTwoArea() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
       <style jsx>{
         `
+        .tp-project-5-2-thumb {
+          border-radius: 16px;
+          overflow: hidden; /* THIS makes the image respect the radius */
+        }
+
+
+        /* Hide button by default */
+        .hover-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: opacity 0.25s ease;
+          pointer-events: none; /* prevents weird hover flicker */
+        }
+
+        /* Show button ONLY when hovering the card */
+        .tp-project-5-2-thumb:hover .hover-btn {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        
+
 
         .cursor-hide{
           max-width:100%;
