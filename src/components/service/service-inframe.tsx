@@ -145,6 +145,7 @@ export function ServiceInframe() {
           </a> */}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <Link
               href="/projects"
               className="text-primary fw-medium"
@@ -172,6 +173,8 @@ export function ServiceInframe() {
 
 
 =======
+=======
+>>>>>>> Stashed changes
           <Link
             href="/projects"
             className="text-primary fw-medium"
@@ -180,6 +183,9 @@ export function ServiceInframe() {
             View Our Portfolio
             <i className="fa-solid fa-angle-right learn-more-icon"></i>
           </Link>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
           {/* Platform icons */}
