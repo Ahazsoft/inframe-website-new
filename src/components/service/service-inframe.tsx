@@ -115,7 +115,7 @@ export function ServiceInframe() {
 
         {/* Platforms section */}
         <div className="py-5">
-          <div className="mx-auto mb-5" id="see-our-works" >
+          <div className="mx-auto mb-5" id="see-our-works">
             <p
               className="fw-semibold text-black text-center"
               style={{
@@ -205,7 +205,6 @@ export function ServiceInframe() {
             <i className="fa-solid fa-angle-right learn-more-icon"></i>
           </Link>
 
-
           {/* Platform icons */}
           <div
             className="row justify-content-center g-4 mx-auto"
@@ -252,18 +251,18 @@ export function ServiceInframe() {
         </div>
       </div>
       <style jsx>{`
-          #service-section-title {
-            font-size: 80px;
-          }
-          #see-our-works{
-            max-width:41.666%;
-          }
+        #service-section-title {
+          font-size: 80px;
+        }
+        #see-our-works {
+          max-width: 41.666%;
+        }
         @media (max-width: 600px) {
           #service-section-title {
-            font-size: 60px ;
+            font-size: 60px;
           }
-          #see-our-works{
-            max-width:85%;
+          #see-our-works {
+            max-width: 85%;
           }
         }
       `}</style>
