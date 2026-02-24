@@ -4,40 +4,92 @@ import { parallaxSlider } from "@/utils/parallax-slider";
 
 const slider_data = [
   {
-    id: 1,
-    subtitle: "branding",
-    title: "Brand some",
-  },
-  {
-    id: 2,
-    subtitle: "Digital",
-    title: "Digital Thinker",
+    id: 3,
+    // subtitle: "branding",
+    title: "Largo",
   },
   {
     id: 3,
-    subtitle: "Markus",
-    title: "Markus Erickson",
+    // subtitle: "Digital",
+    title: "Largo",
   },
   {
-    id: 4,
-    subtitle: "Emko",
-    title: "Emko Furniture",
+    id: 3,
+    // subtitle: "Markus",
+    title: "Largo",
   },
   {
-    id: 5,
-    subtitle: "branding",
-    title: "Brand some",
+    id: 3,
+    // subtitle: "Emko",
+    title: "Largo",
+  },
+  {
+    id: 3,
+    // subtitle: "branding",
+    title: "Largo",
+  },
+  {
+    id: 2,
+    // subtitle: "Craig",
+    title: "Negus",
+  },
+  {
+    id: 2,
+    // subtitle: "Green",
+    title: "Negus",
+  },
+  {
+    id: 2,
+    // subtitle: "branding",
+    title: "Negus",
+  },
+  {
+    id: 2,
+    // subtitle: "Digital",
+    title: "Negus",
+  },
+  {
+    id: 2,
+    // subtitle: "Markus",
+    title: "Negus",
   },
   {
     id: 6,
-    subtitle: "Craig",
-    title: "Craig Reynolds",
+    // subtitle: "Emko",
+    title: "Yewendoch Guday",
   },
   {
-    id: 7,
-    subtitle: "Green",
-    title: "Green Reel",
+    id: 6,
+    // subtitle: "branding",
+    title: "Yewendoch Guday",
   },
+  {
+    id: 6,
+    // subtitle: "Craig",
+    title: "Yewendoch Guday",
+  },
+  {
+    id: 6,
+    // subtitle: "Green",
+    title: "Yewendoch Guday",
+  },
+  {
+    id: 6,
+    // subtitle: "Green",
+    title: "Yewendoch Guday",
+  },
+
+  {
+    id: 1,
+    // subtitle: "Green",
+    title: "ZTE",
+  },
+  {
+    id: 1,
+    // subtitle: "Green",
+    title: "ZTE",
+  },
+  
 ];
 
 export default function PortfolioSliderHomeTwelve() {
@@ -71,9 +123,9 @@ export default function PortfolioSliderHomeTwelve() {
 
           {slider_data.map((item) => (
             <div className="parallax-item" style={{border:"none"}} key={item.id}>
-              <Link href="#">
-                <div className="parallax-content" >
-                  <span>{item.subtitle}</span>
+              <Link href={`/projects/${item.id}`}>
+                <div className="parallax-content">
+                  {/* <span>{item.subtitle}</span> */}
                   <h4>{item.title}</h4>
                 </div>
                 <div className="parallax-img" style={{ height: "100%" }}></div>

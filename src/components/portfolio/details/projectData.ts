@@ -493,27 +493,34 @@ export const projectsData: ProjectType[] = [
     grid: true
   },
 
-  // {
-  //   id: 16,
-  //   title: "Teracon Coffee – Brand Documentary & Commercial Film",
-  //   category: "Documentary and Brand Film",
-  //   year: "2024",
-  //   agency: "Inframe Production",
-  //   heroImage: full_image,
-  //   thumbnailImage: full_image_2,
-  //   gallery: [port_img_1, port_img_2, port_img_3, port_img_4, port_img_5],
-  //   introTitle: "Coffee Brand Film",
-  //   introText: [
-  //     "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup.",
-  //     "The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
-  //   ],
-  //   goalTitle: "The Goal",
-  //   goalText: [
-  //     "Showcase coffee craftsmanship and heritage through cinematic storytelling.",
-  //     "Deliver content for brand positioning and digital platforms."
-  //   ],
-  //   link: "#"
-  // },
+  {
+    id: 16,
+    title: "Teracon Coffee – Brand Documentary & Commercial Film",
+    category: "Documentary and Brand Film",
+    year: "2024",
+    agency: "Inframe Production",
+    heroImage: "/assets/img/portfolio/Tracon/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Tracon/heroimage.png",
+    btsGallery:[
+      "/assets/img/portfolio/Tracon/gallery1.png",
+      "/assets/img/portfolio/Tracon/gallery2.png",
+      "/assets/img/portfolio/Tracon/gallery3.png",
+      "/assets/img/portfolio/Tracon/gallery4.png",
+      "/assets/img/portfolio/Tracon/gallery5.png",
+      "/assets/img/portfolio/Tracon/gallery6.png",
+    ],
+    introTitle: "Coffee Brand Film",
+    introText: [
+      "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup.",
+      "The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
+    ],
+    goalTitle: "The Goal",
+    goalText: [
+      "Showcase coffee craftsmanship and heritage through cinematic storytelling.",
+      "Deliver content for brand positioning and digital platforms."
+    ],
+    link: "#"
+  },
 
   {
     id: 17,
@@ -883,6 +890,63 @@ export const projectsData: ProjectType[] = [
       ""
     ],
     goalTitle: "The Goal",
+    goalText: [
+      "",
+      ""
+    ],
+    link: "#"
+  },
+
+   {
+    id: 34,
+    title: "Suprema",
+    category: "Photography",
+    year: "2024",
+    agency: "Berry Advertising",
+    thumbnailImage: "/assets/img/portfolio/Suprema/heroimage.jpg",
+    introTitle: "",
+    introText: [
+      ""
+    ],
+    goalTitle: "",
+    goalText: [
+      "",
+      ""
+    ],
+    link: "#"
+  },
+
+   {
+    id: 35,
+    title: "Vitrex",
+    category: "Photography",
+    year: "2024",
+    agency: "Berry Advertising",
+    thumbnailImage: "/assets/img/portfolio/Vitrex/heroimage.jpg",
+    introTitle: "",
+    introText: [
+      ""
+    ],
+    goalTitle: "",
+    goalText: [
+      "",
+      ""
+    ],
+    link: "#"
+  },
+
+   {
+    id: 36,
+    title: "Vega",
+    category: "Photography",
+    year: "2024",
+    agency: "Berry Advertising",
+    thumbnailImage: "/assets/img/portfolio/Vega/heroimage.jpg",
+    introTitle: "",
+    introText: [
+      ""
+    ],
+    goalTitle: "",
     goalText: [
       "",
       ""
