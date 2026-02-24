@@ -1,17 +1,55 @@
 export function parallaxSlider() {
-  const images: HTMLElement[] = Array.from(document.querySelectorAll<HTMLElement>('.parallax-img'));
-  const slider = document.querySelector('.parallax-slider') as HTMLElement;
-  let sliderWidth: number;
-  let imageWidth: number;
+  const images: HTMLElement[] = Array.from(
+    document.querySelectorAll<HTMLElement>(".parallax-img")
+  );
+
+  const slider = document.querySelector(
+    ".parallax-slider"
+  ) as HTMLElement;
+
+  // Adjust if needed
+  const IMAGE_WIDTH = 800;     // Added a fixed width for each image
+  const SLIDER_HEIGHT = "85vh";
+
   let current = 0;
   let target = 0;
   const ease = 0.05;
 
-  window.addEventListener('resize', init);
+  let maxScroll = 0;
+
+  // --------------------
+  // SETUP
+  // --------------------
+
+  slider.style.display = "flex";
+  slider.style.height = SLIDER_HEIGHT;
+  slider.style.position = "sticky";
+  slider.style.top = "0";
+  slider.style.overflow = "hidden";
 
   images.forEach((img, idx) => {
-    img.style.backgroundImage = `url(/assets/img/home-12/portfolio/port-${idx + 1}.jpg)`;
+    img.style.backgroundImage = `url(/assets/img/bts/${idx + 1}.png)`;
+    img.style.width = `${IMAGE_WIDTH}px`;
+    img.style.height = "100%";
+    img.style.flex = "0 0 auto";
   });
+
+  function init() {
+    const totalWidth = IMAGE_WIDTH * images.length * 0.7; // Added a threshold (0.7) to acoomodate total width size
+
+    slider.style.width = `${totalWidth}px`;
+
+    maxScroll = totalWidth - window.innerWidth;
+
+    document.body.style.height = `${totalWidth}px`;
+    
+  }
+
+  window.addEventListener("resize", init);
+
+  // --------------------
+  // ANIMATION
+  // --------------------
 
   function lerp(start: number, end: number, t: number): number {
     return start * (1 - t) + end * t;
@@ -21,29 +59,30 @@ export function parallaxSlider() {
     el.style.transform = transform;
   }
 
-  function init() {
-    sliderWidth = slider.getBoundingClientRect().width;
-    imageWidth = sliderWidth / images.length;
-    document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`;
-  }
-
   function animate() {
-    current = parseFloat(lerp(current, target, ease).toFixed(2));
     target = window.scrollY;
+
+    // clamp scroll so it never overshoots
+    if (target > maxScroll) target = maxScroll;
+
+    current = lerp(current, target, ease);
+
     setTransform(slider, `translateX(-${current}px)`);
+
     animateImages();
+
     requestAnimationFrame(animate);
   }
 
   function animateImages() {
-    let ratio = current / imageWidth;
-    let intersectionRatioValue: number;
+    const ratio = current / IMAGE_WIDTH;
 
     images.forEach((image, idx) => {
-      intersectionRatioValue = ratio - (idx * 0.7);
-      setTransform(image, `translateX(${intersectionRatioValue * 100}px)`);
+      const offset = (ratio - idx * 0.7) * 100;
+      setTransform(image, `translateX(${offset}px)`);
     });
   }
+
   init();
   animate();
 }

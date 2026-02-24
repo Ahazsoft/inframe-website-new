@@ -49,6 +49,30 @@ const team_data:ITeamDT[] = [
       {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
     ]
   },
+    {
+    id:5,
+    image:"/assets/img/team/5.png",
+    designation:"",
+    name:"Abdi",
+    socials:[
+      {icon:'fa-brands fa-twitter',link:'https://twitter.com'},
+      {icon:'fa-brands fa-facebook',link:'https://facebook.com'},
+      {icon:'fa-brands fa-instagram',link:'https://instagram.com'},
+      {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
+    ]
+  },
+    {
+    id:6,
+    image:"/assets/img/team/6.png",
+    designation:"Makeup Artist",
+    name:"Ludi",
+    socials:[
+      {icon:'fa-brands fa-twitter',link:'https://twitter.com'},
+      {icon:'fa-brands fa-facebook',link:'https://facebook.com'},
+      {icon:'fa-brands fa-instagram',link:'https://instagram.com'},
+      {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
+    ]
+  },
   // {
   //   id:5,
   //   img:"/assets/img/team/5.PNG",
