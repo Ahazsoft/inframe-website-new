@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 
 const ArtistOffer = () => {
   const router = useRouter();
-  
+  const { theme } = useTheme();
   return (
     <div
       className="overflow-hidden"
@@ -29,9 +30,14 @@ const ArtistOffer = () => {
               </h2>
 
             <Button
-              variant="secondary"
-              className="rounded-pill bg-black text-white fw-semibold px-5 py-3"
+              variant="outline"
+              className="rounded-pill fw-semibold px-5 py-3"
               onClick={() => router.push("/contact")}
+              style={{
+                
+                backgroundColor: theme === "light" ? "#FFFFFF" : "#111111",
+                color: theme === "light" ? "#121212" : "#F5F7F5",
+              }}
             >
               Work with us
             </Button>

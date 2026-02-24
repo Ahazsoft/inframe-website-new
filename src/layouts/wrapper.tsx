@@ -16,7 +16,7 @@ const Wrapper = ({ children, showBackToTop=true }: WrapperProps) => {
     <React.Fragment>
       {children}
       {showBackToTop && <BackToTop />}
-      <ThemeSetting />
+      {/* <ThemeSetting /> */}
     </React.Fragment>
   );
 };

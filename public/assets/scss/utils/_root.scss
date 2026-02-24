@@ -1,24 +1,33 @@
-@use 'colors' as *;
-@use 'typography' as *;
-@use 'typography' as *;
+@use "colors" as *;
+@use "typography" as *;
+@use "typography" as *;
 
 :root {
-    /**
+  /**
     @font family declaration
     */
-    @each $ff, $shades in $font-family {
-        @each $shade, $value in $shades {
-            --tp-#{$ff}-#{$shade}: #{$value};
-        }
+  @each $ff, $shades in $font-family {
+    @each $shade, $value in $shades {
+      --tp-#{$ff}-#{$shade}: #{$value};
     }
+  }
 
-    /**
+  /**
     @color declaration
     */
+//   :root[data-theme="light"] {
     @each $color, $shades in $colors {
-        @each $shade, $value in $shades {
-            --tp-#{$color}-#{$shade}: #{$value};
-        }
+      @each $shade, $value in $shades {
+        --tp-#{$color}-#{$shade}: #{$value};
+      }
     }
+//   }
 
+//   :root[data-theme="dark"] {
+//     @each $color, $shades in $colors-dark {
+//       @each $shade, $value in $shades {
+//         --tp-#{$color}-#{$shade}: #{$value};
+//       }
+//     }
+//   }
 }
