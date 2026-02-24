@@ -71,7 +71,7 @@ export default function PortfolioSliderHomeTwelve() {
 
           {slider_data.map((item) => (
             <div className="parallax-item" key={item.id}>
-              <Link href="/portfolio-showcase-details">
+              <Link href="#">
                 <div className="parallax-content">
                   <span>{item.subtitle}</span>
                   <h4>{item.title}</h4>
