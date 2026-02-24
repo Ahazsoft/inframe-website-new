@@ -2,7 +2,8 @@
 import React, { useEffect } from "react";
 
 // internal imports
-import HeaderEight from "@/layouts/headers/header-eight";
+// import HeaderEight from "@/layouts/headers/header-eight";
+import HeaderOne from "@/layouts/headers/header-one";
 import { cursorAnimation } from "@/plugins";
 import PortfolioSliderHomeTwelve from "@/components/portfolio/slider/portfolio-slider-home-twelve";
 import ThemeSetting from "@/components/theme-setting";
@@ -34,7 +35,8 @@ const HomeTwelveMain = () => {
       {/* magic cursor end */}
 
       {/* header area start */}
-      <HeaderEight container="1800" />
+      <HeaderOne/ >
+      {/* <HeaderEight container="1800" /> */}
       {/* header area end */}
 
       <main>

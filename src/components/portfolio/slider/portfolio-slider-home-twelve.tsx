@@ -51,18 +51,32 @@ export default function PortfolioSliderHomeTwelve() {
     <div className="parallax-slider-wrapper">
       <div className="parallax-slider">
         <div className="parallax-slider-inner">
-          {slider_data.map((item) => (
+          {/* {slider_data.map((item) => (
             <div
               className="parallax-item not-hide-cursor"
               data-cursor="View<br>Demo"
               key={item.id}
             >
+              {" "}
               <Link className="cursor-hide" href="/portfolio-showcase-details">
+                {" "}
+                <div className="parallax-content">
+                  {" "}
+                  <span>{item.subtitle}</span> <h4>{item.title}</h4>{" "}
+                </div>{" "}
+                <div className="parallax-img"></div>{" "}
+              </Link>{" "}
+            </div>
+          ))} */}
+
+          {slider_data.map((item) => (
+            <div className="parallax-item" key={item.id}>
+              <Link href="#">
                 <div className="parallax-content">
                   <span>{item.subtitle}</span>
                   <h4>{item.title}</h4>
                 </div>
-                <div className="parallax-img"></div>
+                <div className="parallax-img" style={{ height: "100%" }}></div>
               </Link>
             </div>
           ))}
