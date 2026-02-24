@@ -5,11 +5,11 @@ import Link from "next/link";
 import HeaderMenus from "./header-menus";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 import logoDark from "../../../public/assets/img/logo/logodark.png";
-import logoWhite from "../../../public/assets/img/logo/logowhite.jpg";
+import logoWhite from "../../../public/assets/img/logo/logo-white-transparent.png";
 import useStickyHeader from "@/hooks/use-sticky-header";
 
-
-import logoiconheader from "../../../public/assets/img/logo/inframelogoheader.png"
+import logoiconheader from "../../../public/assets/img/logo/inframelogoheader.png";
+import ThemeSetting from "@/components/theme-setting";
 
 const HeaderOne = () => {
   const { isSticky, headerRef, headerFullWidth } = useStickyHeader(20);
@@ -24,7 +24,7 @@ const HeaderOne = () => {
       <header className="tp-header-height" ref={headerRef}>
         <div
           id="header-sticky"
-           className={`tp-header-area tp-header-mob-space pl-60 pr-60 z-index-9 ${isSticky ? 'header-sticky' : ''}`}
+          className={`tp-header-area tp-header-mob-space pl-60 pr-60 z-index-9 ${isSticky ? "header-sticky" : ""}`}
           //  style={{ backgroundColor: '#fff' }}
         >
           <div className="container">
@@ -32,10 +32,22 @@ const HeaderOne = () => {
               <div className="col-xl-2 col-lg-2 col-6">
                 <div className="tp-header-logo">
                   <Link className="logo-1" href="/">
-                    <Image style={{ width: "auto", height: "auto" }} src={logoDark} alt="logo" width={85} height={26} />
+                    <Image
+                      style={{ width: "auto", height: "auto" }}
+                      src={logoDark}
+                      alt="logo"
+                      width={85}
+                      height={26}
+                    />
                   </Link>
                   <Link className="logo-2" href="/">
-                    <Image style={{ width: "auto", height: "auto" }} src={logoDark} alt="logo" width={85} height={26} />
+                    <Image
+                      style={{ width: "auto", height: "auto" }}
+                      src={logoWhite}
+                      alt="logo"
+                      width={85}
+                      height={26}
+                    />
                   </Link>
                 </div>
               </div>
@@ -48,9 +60,21 @@ const HeaderOne = () => {
                   </nav>
                 </div>
               </div>
-              <div className="col-xl-2 col-lg col-6">
-                <div className="tp-header-bar text-end">
-                  <button className="tp-offcanvas-open-btn" onClick={() => setOpenOffCanvas(true)}>
+              <div className="col-xl-2 col-lg col-6 ">
+                <div className="tp-header-bar text-end"
+                style={{
+                  display:"flex",
+                  flexDirection:"row",
+                  alignItems: "center",
+                  justifyContent: "space-around"
+                }}
+                >
+                  <ThemeSetting />
+
+                  <button
+                    className="tp-offcanvas-open-btn"
+                    onClick={() => setOpenOffCanvas(true)}
+                  >
                     <span></span>
                     <span></span>
                   </button>
@@ -60,9 +84,11 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
-
       {/* off canvas */}
-      <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
+      <MobileOffcanvas
+        openOffcanvas={openOffCanvas}
+        setOpenOffcanvas={setOpenOffCanvas}
+      />
       {/* off canvas */}
     </>
   );

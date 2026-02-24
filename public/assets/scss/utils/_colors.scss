@@ -25,6 +25,33 @@ $colors: (
     )
 );
 
+$colors-dark: (
+  'common': (
+    'white': #121212,
+    'white-solid': #1a1a1a,
+    'black': #F5F7F5,
+    'black-2': #FFFFFF,
+    'black-3': #E5E5E5,
+    'dark': #000000,
+    'orange': #FF7043
+  ),
+  'grey': (
+    '1': #1E1E1E,
+    '2': #2A2A2A,
+    '3': #B5B5B5,
+    '4': #1F1F1F
+  ),
+  'text': (
+    'body': #D1D1D1
+  ),
+  'theme': (
+    '1': #4C82FF
+  ),
+  'border': (
+    '1': #333333
+  )
+);
+
 
 $white : #fff;
 $black : #020626;

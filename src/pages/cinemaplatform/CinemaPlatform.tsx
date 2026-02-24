@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 const CinemaPlatform = () => {
   const router = useRouter();
+  const {theme} = useTheme();
   return (
     <section
       className="section-routers"
@@ -41,9 +42,13 @@ const CinemaPlatform = () => {
             {/* <div className="d-flex align-items-center gap-5"> */}
             <div className="typography-router-cta ctas large-12 large-centered  pb-100 ">
               <Button
-                variant="secondary"
-                className="rounded-pill bg-black text-white fw-semibold px-md-5 py-md-3 py-sm-2 px-sm-3"
+                variant="outline"
+                className="rounded-pill fw-semibold px-md-5 py-md-3 py-sm-2 px-sm-3"
                 onClick={() => router.push("/service")}
+                style={{
+                  backgroundColor: theme === "light" ? "#FFFFFF" : "#111111",
+                  color: theme === "light" ? "#121212" : "#F5F7F5",
+                }}
               >
                 Services
               </Button>
@@ -144,7 +149,6 @@ const CinemaPlatform = () => {
 
         .cinema-platform-content {
           width: 48.5%;
-          
         }
 
         @media (max-width: 760px) {
@@ -153,20 +157,19 @@ const CinemaPlatform = () => {
             display: flex;
             flex-direction: column;
             justifycontent: space-between;
-            align-items:center;
+            align-items: center;
             gap: 32px;
           } // lower container
 
           .cinema-platform-content {
             width: 100%;
-            margin:0 30px;
+            margin: 0 30px;
           }
           .cinema-image-container {
-            max-width:100%;
+            max-width: 100%;
             height: 300px;
             aspect-ratio: 0.8;
           }
-
         } // media query
       `}</style>
     </section>
