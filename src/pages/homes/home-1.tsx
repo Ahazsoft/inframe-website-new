@@ -39,6 +39,7 @@ import { hoverBtn } from "@/utils/hover-btn";
 import { footerTwoAnimation } from "@/utils/footer-anim";
 import { bounceAnimation, charAnimation, fadeAnimation } from "@/utils/title-animation";
 import FaqMain from "../faq/faq-main";
+import BrandFive from "@/components/brand/brand-five";
 
 
 const HomeMain = () => {

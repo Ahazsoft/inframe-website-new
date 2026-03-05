@@ -51,7 +51,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         <div className="container container-1560">
           <div className="row">
             <div className="col-xl-12">
-              <h2 className="tp-section-title-160 mb-50 tp-char-animation">
+              <h2 className="tp-section-title-70 mb-50 tp-char-animation">
                 {project.title}
               </h2>
             </div>
@@ -68,12 +68,14 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             </div>
 
             <div className="col-xl-6">
+            {project.link && (
               <div className="tp-project-details-3-link mt-30 text-start text-md-end">
                 <Link href={project.link}>
-                  Visit Website
+                  View Behind The Scenes
                   <span><UpArrowFour /></span>
                 </Link>
               </div>
+            )}
             </div>
           </div>
         </div>
@@ -116,8 +118,47 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         project.heroVideo || project.heroImage ? <HeroMedia project={project} /> : null
       )}
 
+
+      {/* GALLERY GRID */}
+      {project.gallery && project.gallery.length > 0 && (
+      // <div className="tp-project-details-3-thumb mb-90">
+      <div className="tp-project-details-3-thumb">
+
+        <div className="container">
+          <div className="row">
+            {project.gallery.slice(0, 2).map((img, i) => (
+              <div key={i} className="col-xl-6 col-lg-6 col-md-12">
+                <div
+                  className="tp-project-details-3-thumb-box mb-30"
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "400px", 
+                    overflow: "hidden",
+                    borderRadius: "20px",
+                  }}
+                >
+                  <Image
+                    src={img}
+                    alt="gallery-img"
+                    fill
+                    style={{
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+      
+
       {/* INTRO SECTION */}
-      <div className="showcase-details-2-area pb-120">
+      {/* <div className="showcase-details-2-area pb-120"> */}
+      <div className="showcase-details-2-area">
         <div className="container">
           <h4 className="showcase-details-2-section-title tp-char-animation">
             {project.introTitle}
@@ -142,7 +183,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
       </div>
 
       {/* SECOND IMAGE */}
-      {project.thumbnailImage && (
+      {/* {project.thumbnailImage && (
         <div id="xyz" className="tp-project-details-3-thumb mb-120">
           <div className="container container-1560">
             <Image
@@ -154,14 +195,14 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             />
           </div>
         </div>
-      )}
+      )} */}
 
       {/* GOAL SECTION */}
       <div className="showcase-details-2-area pb-120">
         <div className="container">
-          <h4 className="showcase-details-2-section-title tp-char-animation">
+          {/* <h4 className="showcase-details-2-section-title tp-char-animation">
             {project.goalTitle}
-          </h4>
+          </h4> */}
 
           <div className="row">
             <div className="col-xl-3">
@@ -180,39 +221,6 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           </div>
         </div>
       </div>
-
-      {/* GALLERY GRID */}
-      {project.gallery && project.gallery.length > 0 && (
-        <div className="tp-project-details-3-thumb mb-90">
-          <div className="container">
-            <div className="row">
-              {project.gallery.slice(0, 2).map((img, i) => {
-                const isEven = i % 2 === 0;
-
-                const width = 576;
-                const height = isEven
-                  ? Math.round((680 / 570) * 576)
-                  : Math.round((800 / 570) * 576);
-
-                return (
-                  <div key={i} className="col-xl-6">
-                    <div className="tp-project-details-3-thumb-box mb-30">
-                      <Image
-                        className="w-100"
-                        src={img}
-                        alt="gallery-img"
-                        width={width}
-                        height={height}
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* SLIDER */}
       {project.btsGallery && project.btsGallery.length > 0 && (
@@ -234,6 +242,8 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           </Swiper>
         </div>
       )}
+
+      
 
     </>
   );
