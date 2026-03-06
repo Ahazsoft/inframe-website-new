@@ -74,7 +74,11 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
-export default function ThemeSetting() {
+type ThemeSettingProps = {
+  isIndex?: boolean;
+};
+
+export default function ThemeSetting({ isIndex = false }: ThemeSettingProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   // Prevent hydration mismatch
@@ -103,9 +107,9 @@ export default function ThemeSetting() {
       }}
     >
       {isDark ? (
-        <Sun size={22} strokeWidth={1.8} color={iconBg} />
+        <Sun size={22} strokeWidth={1.8} color={isIndex ? "#FFF" : iconBg} />
       ) : (
-        <Moon size={22} strokeWidth={1.8} color={iconBg} />
+        <Moon size={22} strokeWidth={1.8} color={isIndex ? "#FFF" : iconBg} />
       )}
     </button>
   );
