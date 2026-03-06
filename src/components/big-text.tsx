@@ -17,7 +17,7 @@ export default function BigText({cls=""}: IProps) {
 
         <div className="sv-big-text-box">
           <h4 className="sv-big-text tp-char-animation">
-            <Link href="/contact">Let’s Create Something Powerful</Link>
+            <Link href="/contact">Let’s Create </Link>
           </h4>
         </div>
       </div>

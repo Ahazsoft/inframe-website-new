@@ -49,9 +49,9 @@ const PortfolioGridColTwoMain = () => {
     <Wrapper>
 
       {/* magic cursor start */}
-      <div id="magic-cursor">
+      {/* <div id="magic-cursor">
         <div id="ball"></div>
-      </div>
+      </div> */}
       {/* magic cursor end */}
       
       {/* header area start */}
@@ -71,7 +71,7 @@ const PortfolioGridColTwoMain = () => {
                         Inframe Productions & Promotion
                       </span>
                     <h4 className="tm-hero-title fs-120 tp-char-animation">
-                      Building Brands Through Story
+                      Building Brands <br /> Through Story
                     </h4>
                     </div>
                     <div className="tm-hero-text tp_title_anim pb-100">

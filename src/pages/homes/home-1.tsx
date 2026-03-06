@@ -10,7 +10,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderOne from "@/layouts/headers/header-one";
+import HeaderOne from "@/layouts/headers/header-one-index";
 import HeroBannerOne from "@/components/hero-banner/hero-banner-one";
 import HeroBannerInframe from "@/components/hero-banner/hero-banner-inframe";
 import VideOne from "@/components/video/video-one";
