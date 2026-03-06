@@ -11,6 +11,8 @@ import Link from "next/link";
 import HeroMedia from "@/components/hero-banner/hero-portfolio-details";
 import { ProjectType } from "./projectData";
 
+import InfinixLayout from "../InfinixLayout";
+import TecnoLayout from "../TechnoLayout";
 type Props = {
   project?: ProjectType;
 };
@@ -35,6 +37,14 @@ const slider_setting: SwiperOptions = {
 export default function PortfolioDetailsThreeArea({ project }: Props) {
   // ✅ Early guard — prevents all TypeScript "possibly undefined" errors
   if (!project) return null;
+
+  if (project.id === 9) {
+    return <TecnoLayout project={project} />;
+  }
+
+  if (project.id === 18) {
+    return <InfinixLayout project={project} />;
+  }
 
   const scrollTo = () => {
     scroller.scrollTo("xyz", {

@@ -18,7 +18,8 @@ export type ProjectType = {
   heroVideo?: string;
   youtubeUrl?: string;
 
-
+  makingVideo?: string;
+  makingFrame?: string;
   // heroVideoPoster?: string;
   heroVideoFallbackImage?: any;
 
@@ -298,7 +299,7 @@ export const projectsData: ProjectType[] = [
       "Create emotional storytelling with soft lighting and intimate moments.",
       "Position the brand as part of family love and celebration."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -310,54 +311,56 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EthioTelecom/herovideo.mp4",
-    heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
+    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/EthioTelecom/gallery1.png",
-    gallery: ["/assets/img/portfolio/EthioTelecom/heroimage.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
-    btsGallery:[
-      "/assets/img/portfolio/EthioTelecom/bts1.png",
-      "/assets/img/portfolio/EthioTelecom/bts2.png",
-      "/assets/img/portfolio/EthioTelecom/bts3.png"
-    ],
+    gallery: ["/assets/img/portfolio/EthioTelecom/gallery1.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
+    
+    // btsGallery:[
+    //   "/assets/img/portfolio/EthioTelecom/bts1.png",
+    //   "/assets/img/portfolio/EthioTelecom/bts2.png",
+    //   "/assets/img/portfolio/EthioTelecom/bts3.png"
+    // ],
     introTitle: "Futuristic Brand Campaign",
     introText: [
-      "A high-impact brand campaign introducing Ethio Telecom’s 5G network through futuristic visuals, dynamic motion graphics, and cinematic storytelling.",
-      "The production connects education, innovation, and urban connectivity, positioning 5G as a catalyst for national progress and digital transformation."
+      "A high-impact brand campaign introducing Ethio Telecom’s 5G network through futuristic visuals, dynamic motion graphics, and cinematic storytelling.The production connects education, innovation, and urban connectivity, positioning 5G as a catalyst for national progress and digital transformation."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Create futuristic visuals to introduce 5G network benefits.",
-      "Deliver campaign content that supports national digital transformation."
+      "Create futuristic visuals to introduce 5G network benefits. Deliver campaign content that supports national digital transformation."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
 
   {
     id: 9,
-    title: "Abubeker Nura × TECNO Mobile – Ambassador Campaign",
+    title: "TECNO Mobile – Lifestyle Ambassador Campaign",
     category: "Social Media and Digital Campaigns",
     year: "2024",
     agency: "Inframe Production",
-    heroVideo: "/assets/img/portfolio/AmbCamp - Techno/herovideo.mp4",
-    thumbnailImage: "/assets/img/portfolio/AmbCamp - Techno/heroimage.png",
-    gallery: ["/assets/img/portfolio/AmbCamp - Techno/gallery2.png","/assets/img/portfolio/AmbCamp - Techno/gallery1.png"],
-    btsGallery:[
-      "/assets/img/portfolio/AmbCamp - Techno/bts1.png",
-      "/assets/img/portfolio/AmbCamp - Techno/bts2.png",
-      "/assets/img/portfolio/AmbCamp - Techno/bts3.png"
+    heroVideo: "/assets/img/portfolio/Techno/herovideo.mp4",
+    thumbnailImage: "/assets/img/portfolio/Techno/heroimage.png",
+    gallery: [
+      "/assets/img/portfolio/Techno/gallery1.png",
+      "/assets/img/portfolio/Techno/gallery2.png",
+      "/assets/img/portfolio/Techno/gallery3.png",
+      "/assets/img/portfolio/Techno/gallery4.png",
+      "/assets/img/portfolio/Techno/gallery5.png",
+      "/assets/img/portfolio/Techno/gallery6.png",
+      "/assets/img/portfolio/Techno/gallery7.png",
+      "/assets/img/portfolio/Techno/gallery8.png",
     ],
+
     introTitle: "Lifestyle Ambassador Campaign",
     introText: [
-      "A lifestyle-driven brand campaign featuring Abubeker Nura, showcasing TECNO smartphones as part of everyday performance and balance.",
-      "The production blends authentic moments, clean cinematic lighting, and modern storytelling to highlight connectivity, productivity, and smart living."
+      "A lifestyle-driven brand campaign featuring Abubeker Nura and Danayit Mekbib, showcasing TECNO smartphones as part of everyday performance and balance. The production blends authentic moments, clean cinematic lighting, and modern storytelling to highlight connectivity, productivity, and smart living."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase modern productivity and balance using authentic storytelling.",
-      "Create social-first content optimized for digital platforms."
+      "Showcase modern productivity and balance using authentic storytelling. Create social-first content optimized for digital platforms."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -578,32 +581,71 @@ export const projectsData: ProjectType[] = [
     link: "#"
   },
 
+  // {
+  //   id: 18,
+  //   title: "TECNO × Selam Tesfaye – Social Media Campaign",
+  //   category: "Social Media and Digital Campaigns",
+  //   year: "2024",
+  //   agency: "Berry Advertising",
+  //   heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
+  //   thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
+  //   gallery: ["/assets/img/portfolio/infinix - ST/gallery1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
+  //   btsGallery:[
+  //     "/assets/img/portfolio/infinix - ST/bts1.png",
+  //     "/assets/img/portfolio/infinix - ST/bts2.png",
+  //     "/assets/img/portfolio/infinix - ST/heroimage.png"
+  //   ],
+  //   introTitle: "Influencer Social Campaign",
+  //   introText: [
+  //     "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean, cinematic visuals.The production highlights TECNO smartphones through relatable moments and platform-optimized content."
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "Create social-first content optimized for engagement.Showcase modern lifestyle visuals with clean cinematic treatment."
+  //   ],
+  //   link: "#",
+  //   featured: false,
+  //   grid: true
+  // },
+
   {
-    id: 18,
-    title: "TECNO × Selam Tesfaye – Social Media Campaign",
-    category: "Social Media and Digital Campaigns",
-    year: "2024",
-    agency: "Berry Advertising",
-    heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
-    thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
-    gallery: ["/assets/img/portfolio/infinix - ST/gallery1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
-    btsGallery:[
-      "/assets/img/portfolio/infinix - ST/bts1.png",
-      "/assets/img/portfolio/infinix - ST/bts2.png",
-      "/assets/img/portfolio/infinix - ST/heroimage.png"
-    ],
-    introTitle: "Influencer Social Campaign",
-    introText: [
-      "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean, cinematic visuals.The production highlights TECNO smartphones through relatable moments and platform-optimized content."
-    ],
-    goalTitle: "The Goal",
-    goalText: [
-      "Create social-first content optimized for engagement.Showcase modern lifestyle visuals with clean cinematic treatment."
-    ],
-    link: "#",
-    featured: false,
-    grid: true
-  },
+  id: 18,
+  title: "TECNO × Selam Tesfaye – Social Media Campaign",
+  category: "Social Media and Digital Campaigns",
+  year: "2024",
+  agency: "Berry Advertising",
+
+  thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
+
+  gallery: [
+    "/assets/img/portfolio/infinix - ST/gallery1.png",
+    "/assets/img/portfolio/infinix - ST/gallery2.png",
+    "/assets/img/portfolio/infinix - ST/gallery3.png",
+    "/assets/img/portfolio/infinix - ST/gallery4.png",
+    "/assets/img/portfolio/infinix - ST/gallery5.png",
+    "/assets/img/portfolio/infinix - ST/gallery6.png",
+    "/assets/img/portfolio/infinix - ST/gallery7.png",
+    "/assets/img/portfolio/infinix - ST/gallery8.png",
+    "/assets/img/portfolio/infinix - ST/gallery9.png",
+    "/assets/img/portfolio/infinix - ST/gallery10.png"
+  ],
+
+  makingVideo: "/assets/img/portfolio/infinix - ST/making.mp4",
+  makingFrame: "/assets/img/portfolio/infinix - ST/gallery4.png",
+
+  introTitle: "Influencer Social Campaign",
+  introText: [
+    "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean cinematic visuals. The production highlights TECNO smartphones through relatable moments and platform-optimized content. Create social-first content optimized for engagement. Showcase modern lifestyle visuals with a clean cinematic treatment."
+  ],
+
+  // goalText: [
+  //   "Create social-first content optimized for engagement. Showcase modern lifestyle visuals with a clean cinematic treatment."
+  // ],
+
+  link: "#",
+  featured: false,
+  grid: true
+},
 
   {
     id: 19,
