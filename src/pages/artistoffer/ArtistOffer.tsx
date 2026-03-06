@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -6,6 +6,14 @@ import { useTheme } from "next-themes";
 
 const ArtistOffer = () => {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null;
+  }
   const { theme } = useTheme();
   return (
     <div
@@ -14,7 +22,6 @@ const ArtistOffer = () => {
     >
       <div className="container">
         <div className="row align-items-center g-4">
-
           {/* Text */}
           <div className="col-12 col-md-6 text-center text-lg-start">
             <div className="mx-auto" style={{ maxWidth: "540px" }}>
@@ -29,18 +36,17 @@ const ArtistOffer = () => {
                 special rates.
               </h2>
 
-            <Button
-              variant="outline"
-              className="rounded-pill fw-semibold px-5 py-3"
-              onClick={() => router.push("/contact")}
-              style={{
-                
-                backgroundColor: theme === "light" ? "#FFFFFF" : "#111111",
-                color: theme === "light" ? "#121212" : "#F5F7F5",
-              }}
-            >
-              Work with us
-            </Button>
+              <Button
+                variant="outline"
+                className="rounded-pill fw-semibold px-5 py-3"
+                onClick={() => router.push("/contact")}
+                style={{
+                  backgroundColor: theme === "light" ? "#FFFFFF" : "#111111",
+                  color: theme === "light" ? "#121212" : "#F5F7F5",
+                }}
+              >
+                Work with us
+              </Button>
             </div>
           </div>
 
@@ -49,8 +55,8 @@ const ArtistOffer = () => {
             <div
               className="position-relative rounded-4 overflow-hidden shadow-lg"
               style={{
-                width: "472px",   // same as two images + gap
-                height: "384px",  // same height
+                width: "472px", // same as two images + gap
+                height: "384px", // same height
               }}
             >
               <Image
@@ -62,8 +68,6 @@ const ArtistOffer = () => {
               />
             </div>
           </div>
-
-
         </div>
       </div>
     </div>

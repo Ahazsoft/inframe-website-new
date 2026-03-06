@@ -1,8 +1,18 @@
 import React from "react";
 import { scroller } from "react-scroll";
 import Link from "next/link";
-
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 export default function AboutUsHero() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null;
+  }
   const scrollTo = () => {
     scroller.scrollTo("about-info", {
       duration: 800,
@@ -14,10 +24,10 @@ export default function AboutUsHero() {
   return (
     <div
       className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{ backgroundColor: "#222222" }}
+      style={{
+        backgroundColor: theme === "light" ? "#FFFFFF" : "#222",
+      }}
     >
-
-      
       {/* VIDEO BACKGROUND */}
       {/* <video
         className="ab-hero-video"
@@ -51,14 +61,25 @@ export default function AboutUsHero() {
               data-lag="0.2"
               data-stagger="0.08"
             >
-            <h1 className="ab-inner-hero-title tp-char-animation">
-              Crafting Powerful Brand Stories
-            </h1>
-            <p>
-              Creative production and marketing solutions that bring ideas to life. Inframe Productions and Promotion develops creative production and marketing
-              solutions that bring brands to life and drive real impact.
-            </p>
-
+              <h1
+                className="ab-inner-hero-title tp-char-animation"
+                style={{
+                  color: theme === "light" ? "#111111" : "#efefef",
+                }}
+              >
+                Crafting Powerful Brand Stories
+              </h1>
+              <p
+                style={{
+                  color: theme === "light" ? "#111111" : "#efefef",
+                }}
+              
+              >
+                Creative production and marketing solutions that bring ideas to
+                life. Inframe Productions and Promotion develops creative
+                production and marketing solutions that bring brands to life and
+                drive real impact.
+              </p>
             </div>
           </div>
         </div>
@@ -87,7 +108,7 @@ export default function AboutUsHero() {
       <style jsx>{`
         .ab-inner-hero-bg {
           background-image: none !important;
-          background-color: #222222 !important;
+          // background-color: #222222 !important;
         }
 
         .ab-inner-hero-bg::before,
@@ -96,7 +117,6 @@ export default function AboutUsHero() {
           display: none !important;
         }
 
-      
         .ab-inner-hero-area {
           position: relative;
           overflow: hidden;
