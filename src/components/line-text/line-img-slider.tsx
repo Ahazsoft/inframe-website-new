@@ -21,10 +21,10 @@ export default function LineImgSlider() {
           {port_images.map((imgSrc, index) => (
             <div
               key={index}
-              className={`sv-port-thumb port-thumb-${index % 2 === 0 ? 1 : 2}`}
+              // className={`sv-port-thumb port-thumb-${index % 2 === 0 ? 1 : 2}`}
               style={{marginRight: '40px'}}
             >
-              <Image src={imgSrc} alt="port-img" />
+              <Image src={imgSrc} alt="port-img" style={{ borderRadius: '12px' }}/>
             </div>
           ))}
         </Marquee>

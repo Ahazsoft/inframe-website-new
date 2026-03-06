@@ -18,7 +18,8 @@ export type ProjectType = {
   heroVideo?: string;
   youtubeUrl?: string;
 
-
+  makingVideo?: string;
+  makingFrame?: string;
   // heroVideoPoster?: string;
   heroVideoFallbackImage?: any;
 
@@ -26,10 +27,10 @@ export type ProjectType = {
   gallery?: any[];
   btsGallery?: any[];
 
-  introTitle: string;
-  introText: string[];
-  goalTitle: string;
-  goalText: string[];
+  introTitle?: string;
+  introText?: string[];
+  goalTitle?: string;
+  goalText?: string[];
   link: string;
 
   featured?: boolean;
@@ -57,15 +58,13 @@ export const projectsData: ProjectType[] = [
     ],
     introTitle: "Sleek Modern Commercial",
     introText: [
-      "A sleek, modern commercial showcasing ZTE smartphones through bold color design, confident talent presence, and polished cinematic lighting.",
-      "The production emphasizes product elegance, camera detail, and lifestyle appeal with a premium commercial finish."
+      "A sleek, modern commercial showcasing ZTE smartphones through bold color design, confident talent presence, and polished cinematic lighting. The production emphasizes product elegance, camera detail, and lifestyle appeal with a premium commercial finish."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Deliver a premium, cinematic TV commercial that highlights product elegance and brand identity.",
-      "Create a strong visual language for both broadcast and digital platforms."
+      "Deliver a premium, cinematic TV commercial that highlights product elegance and brand identity. Create a strong visual language for both broadcast and digital platforms."
     ],
-    link: "#",
+    link: "https://www.tiktok.com/@inframeproduction1/video/7600856647677906194",
     featured: true,
     grid: true
   },
@@ -90,15 +89,13 @@ export const projectsData: ProjectType[] = [
     ],
     introTitle: "Warm Lifestyle Commercial",
     introText: [
-      "A warm, lifestyle-driven commercial capturing everyday moments through soft natural light, authentic performances, and rich cinematic color grading.",
-      "The production blends storytelling and product focus to create a relatable, premium brand experience."
+      "A warm, lifestyle-driven commercial capturing everyday moments through soft natural light, authentic performances, and rich cinematic color grading.The production blends storytelling and product focus to create a relatable, premium brand experience."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Capture real human moments with cinematic lighting and emotional storytelling.",
-      "Build a premium brand image that feels authentic and relatable."
+      "Capture real human moments with cinematic lighting and emotional storytelling. Build a premium brand image that feels authentic and relatable."
     ],
-    link: "#",
+    link: "",
     featured: true,
     grid: true
   },
@@ -119,20 +116,17 @@ export const projectsData: ProjectType[] = [
       "/assets/img/bts/Largo/2.png",
       "/assets/img/bts/Largo/3.png",
       "/assets/img/bts/Largo/4.png",
-      "/assets/img/bts/Largo/5.png",
       
     ],
     introTitle: "Bright Family Commercial",
     introText: [
-      "A bright, family-centered commercial highlighting everyday care through natural performances, fresh lighting, and clean visual storytelling.",
-      "The production emphasizes trust, cleanliness, and generational connection with a warm, relatable commercial tone."
+      "A bright, family-centered commercial highlighting everyday care through natural performances, fresh lighting, and clean visual storytelling. The production emphasizes trust, cleanliness, and generational connection with a warm, relatable commercial tone."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Create a clean, warm commercial that connects with families and showcases trust.",
-      "Deliver a bright and optimistic visual style suitable for TV and digital."
+      "Create a clean, warm commercial that connects with families and showcases trust and deliver a bright and optimistic visual style suitable for TV and digital."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -154,15 +148,13 @@ export const projectsData: ProjectType[] = [
     ],
     introTitle: "Romantic Cinematic Campaign",
     introText: [
-      "A romantic, cinematic commercial capturing intimate moments through warm lighting, elegant styling, and refined visual storytelling.",
-      "The production highlights connection, celebration, and the premium character of Castel Wine in a sophisticated Valentine’s atmosphere."
+      "A romantic, cinematic commercial capturing intimate moments through warm lighting, elegant styling, and refined visual storytelling.The production highlights connection, celebration, and the premium character of Castel Wine in a sophisticated Valentine’s atmosphere."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase premium brand identity through cinematic storytelling and romantic visuals.",
-      "Create campaign content suitable for social media and digital platforms."
+      "Showcase premium brand identity through cinematic storytelling and romantic visuals and create campaign content suitable for social media and digital platforms."
     ],
-    link: "#",
+    link: "",
     featured: true,
     grid: false
   },
@@ -174,7 +166,7 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/EAL/herovideo.mp4",
-    youtubeUrl: "https://youtu.be/ZI49B85NjOI?si=Ae7yytxIxEW3DeMo",
+    // youtubeUrl: "https://youtu.be/ZI49B85NjOI?si=Ae7yytxIxEW3DeMo",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/EAL/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/EAL/heroimage.jpg",
@@ -188,60 +180,99 @@ export const projectsData: ProjectType[] = [
     ],
     introTitle: "Cinematic Brand Campaign",
     introText: [
-      "A cinematic brand campaign blending Ethiopian heritage, live music, and a modern travel experience.",
-      "The production combines refined storytelling, rich visuals, and immersive sound design to celebrate national identity while showcasing Ethiopian Airlines’ world-class journey."
+      "A cinematic brand campaign blending Ethiopian heritage, live music, and a modern travel experience. The production combines refined storytelling, rich visuals, and immersive sound design to celebrate national identity while showcasing Ethiopian Airlines’ world-class journey."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Capture the spirit of national identity with cinematic storytelling.",
-      "Highlight travel experience and modern luxury with premium visuals."
+      "Capture the spirit of national identity with cinematic storytelling. Highlight travel experience and modern luxury with premium visuals."
     ],
     link: "#",
     featured: true,
     grid: false
   },
 
+  // {
+  //   id: 6,
+  //   title: "Yewendoch Guday × TECNO Mobile – Brand Collaboration Campaign",
+  //   category: "TV Commercials",
+  //   year: "2024",
+  //   agency: "Inframe Production",
+  //   heroVideo: "/assets/img/portfolio/YG-Techno/herovideo.mp4",
+  //   // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
+  //   heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png",
+  //   thumbnailImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
+  //   gallery: ["/assets/img/portfolio/YG-Techno/gallery1.png","/assets/img/portfolio/YG-Techno/gallery2.png"],
+  //   // btsGallery:[
+  //   //   "/assets/img/portfolio/YG-Techno/bts1.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts2.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts3.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts4.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts5.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts6.png",
+  //   //   "/assets/img/portfolio/YG-Techno/bts7.png"
+  //   // ],
+
+  //   btsGallery:[
+  //     "/assets/img/bts/YWG/1.png",
+  //     "/assets/img/bts/YWG/2.png",
+  //     "/assets/img/bts/YWG/3.png",
+  //     "/assets/img/bts/YWG/4.png",
+  //     "/assets/img/bts/YWG/5.png",
+      
+  //   ],
+  //   introTitle: "Story-Driven Brand Campaign",
+  //   introText: [
+  //     "A story-driven brand campaign blending everyday craftsmanship and human connection with TECNO’s innovative technology.",
+  //     "The production uses warm cinematic lighting, authentic performances, and lifestyle storytelling to position the smartphone as part of real work, creativity, and progress."
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "Showcase the phone as part of real life, creativity, and progress.",
+  //     "Create warm, cinematic content optimized for social platforms."
+  //   ],
+  //   link: "#",
+  //   featured: false,
+  //   grid: true
+  // },
+
+
   {
     id: 6,
-    title: "Yewendoch Guday × TECNO Mobile – Brand Collaboration Campaign",
+    title: "Yewendoch Guday × TECNO Mobile – Brand Campaign",
     category: "TV Commercials",
     year: "2024",
     agency: "Inframe Production",
     heroVideo: "/assets/img/portfolio/YG-Techno/herovideo.mp4",
-    // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/YG-Techno/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/YG-Techno/heroimage.png",
-    gallery: ["/assets/img/portfolio/YG-Techno/gallery1.png","/assets/img/portfolio/YG-Techno/gallery2.png"],
-    // btsGallery:[
-    //   "/assets/img/portfolio/YG-Techno/bts1.png",
-    //   "/assets/img/portfolio/YG-Techno/bts2.png",
-    //   "/assets/img/portfolio/YG-Techno/bts3.png",
-    //   "/assets/img/portfolio/YG-Techno/bts4.png",
-    //   "/assets/img/portfolio/YG-Techno/bts5.png",
-    //   "/assets/img/portfolio/YG-Techno/bts6.png",
-    //   "/assets/img/portfolio/YG-Techno/bts7.png"
-    // ],
-
-    btsGallery:[
-      "/assets/img/bts/YWG/1.png",
-      "/assets/img/bts/YWG/2.png",
-      "/assets/img/bts/YWG/3.png",
-      "/assets/img/bts/YWG/4.png",
-      "/assets/img/bts/YWG/5.png",
+    gallery: [
+      "/assets/img/portfolio/YG-Techno/gallery1.png",
+      "/assets/img/portfolio/YG-Techno/gallery2.png",
       
+      
+    ],
+    btsGallery: [
+
+      "/assets/img/portfolio/YG-Techno-SR/bts1.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts2.png",
+      "/assets/img/portfolio/YG-Techno/gallery3.png",
+      "/assets/img/portfolio/YG-Techno/gallery4.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts3.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts4.png",
+      "/assets/img/portfolio/YG-Techno-SR/bts5.png",
+      "/assets/img/portfolio/YG-Techno/gallery13.png",
+      "/assets/img/portfolio/YG-Techno/gallery12.png",
     ],
     introTitle: "Story-Driven Brand Campaign",
     introText: [
-      "A story-driven brand campaign blending everyday craftsmanship and human connection with TECNO’s innovative technology.",
-      "The production uses warm cinematic lighting, authentic performances, and lifestyle storytelling to position the smartphone as part of real work, creativity, and progress."
+      "A story-driven brand campaign blending everyday craftsmanship and human connection with TECNO’s innovative technology.The production uses warm cinematic lighting, authentic performances, and lifestyle storytelling to position the smartphone as part of real work, creativity, and progress. Narrative-driven photography is integrated to capture real craftsmanship and human stories with cinematic visual treatment."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase the phone as part of real life, creativity, and progress.",
-      "Create warm, cinematic content optimized for social platforms."
+      "Showcase the phone as part of real life, creativity, and progress.Create warm, cinematic content optimized for social platforms.Tell a story through photography using cinematic lighting and real human moments.Create emotionally engaging visuals that feel authentic."
     ],
-    link: "#",
-    featured: false,
+    link: "https://www.tiktok.com/@inframeproduction1/video/7574841813484293387",
+    featured: true,
     grid: true
   },
 
@@ -268,7 +299,7 @@ export const projectsData: ProjectType[] = [
       "Create emotional storytelling with soft lighting and intimate moments.",
       "Position the brand as part of family love and celebration."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -280,54 +311,56 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EthioTelecom/herovideo.mp4",
-    heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
+    // heroVideoFallbackImage: "/assets/img/portfolio/EthioTelecom/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/EthioTelecom/gallery1.png",
-    gallery: ["/assets/img/portfolio/EthioTelecom/heroimage.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
-    btsGallery:[
-      "/assets/img/portfolio/EthioTelecom/bts1.png",
-      "/assets/img/portfolio/EthioTelecom/bts2.png",
-      "/assets/img/portfolio/EthioTelecom/bts3.png"
-    ],
+    gallery: ["/assets/img/portfolio/EthioTelecom/gallery1.png","/assets/img/portfolio/EthioTelecom/gallery2.png"],
+    
+    // btsGallery:[
+    //   "/assets/img/portfolio/EthioTelecom/bts1.png",
+    //   "/assets/img/portfolio/EthioTelecom/bts2.png",
+    //   "/assets/img/portfolio/EthioTelecom/bts3.png"
+    // ],
     introTitle: "Futuristic Brand Campaign",
     introText: [
-      "A high-impact brand campaign introducing Ethio Telecom’s 5G network through futuristic visuals, dynamic motion graphics, and cinematic storytelling.",
-      "The production connects education, innovation, and urban connectivity, positioning 5G as a catalyst for national progress and digital transformation."
+      "A high-impact brand campaign introducing Ethio Telecom’s 5G network through futuristic visuals, dynamic motion graphics, and cinematic storytelling.The production connects education, innovation, and urban connectivity, positioning 5G as a catalyst for national progress and digital transformation."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Create futuristic visuals to introduce 5G network benefits.",
-      "Deliver campaign content that supports national digital transformation."
+      "Create futuristic visuals to introduce 5G network benefits. Deliver campaign content that supports national digital transformation."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
 
   {
     id: 9,
-    title: "Abubeker Nura × TECNO Mobile – Ambassador Campaign",
+    title: "TECNO Mobile – Lifestyle Ambassador Campaign",
     category: "Social Media and Digital Campaigns",
     year: "2024",
     agency: "Inframe Production",
-    heroVideo: "/assets/img/portfolio/AmbCamp - Techno/herovideo.mp4",
-    thumbnailImage: "/assets/img/portfolio/AmbCamp - Techno/heroimage.png",
-    gallery: ["/assets/img/portfolio/AmbCamp - Techno/gallery2.png","/assets/img/portfolio/AmbCamp - Techno/gallery1.png"],
-    btsGallery:[
-      "/assets/img/portfolio/AmbCamp - Techno/bts1.png",
-      "/assets/img/portfolio/AmbCamp - Techno/bts2.png",
-      "/assets/img/portfolio/AmbCamp - Techno/bts3.png"
+    heroVideo: "/assets/img/portfolio/Techno/herovideo.mp4",
+    thumbnailImage: "/assets/img/portfolio/Techno/heroimage.png",
+    gallery: [
+      "/assets/img/portfolio/Techno/gallery1.png",
+      "/assets/img/portfolio/Techno/gallery2.png",
+      "/assets/img/portfolio/Techno/gallery3.png",
+      "/assets/img/portfolio/Techno/gallery4.png",
+      "/assets/img/portfolio/Techno/gallery5.png",
+      "/assets/img/portfolio/Techno/gallery6.png",
+      "/assets/img/portfolio/Techno/gallery7.png",
+      "/assets/img/portfolio/Techno/gallery8.png",
     ],
+
     introTitle: "Lifestyle Ambassador Campaign",
     introText: [
-      "A lifestyle-driven brand campaign featuring Abubeker Nura, showcasing TECNO smartphones as part of everyday performance and balance.",
-      "The production blends authentic moments, clean cinematic lighting, and modern storytelling to highlight connectivity, productivity, and smart living."
+      "A lifestyle-driven brand campaign featuring Abubeker Nura and Danayit Mekbib, showcasing TECNO smartphones as part of everyday performance and balance. The production blends authentic moments, clean cinematic lighting, and modern storytelling to highlight connectivity, productivity, and smart living."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase modern productivity and balance using authentic storytelling.",
-      "Create social-first content optimized for digital platforms."
+      "Showcase modern productivity and balance using authentic storytelling. Create social-first content optimized for digital platforms."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -339,12 +372,13 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EZM/herovideo.mp4",
-    thumbnailImage: "/assets/img/portfolio/EZM/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/EZM/thumb.png",
     gallery: ["/assets/img/portfolio/EZM/gallery1.png","/assets/img/portfolio/EZM/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/EZM/bts1.png",
       "/assets/img/portfolio/EZM/bts2.png",
-      "/assets/img/portfolio/EZM/bts3.png"
+      "/assets/img/portfolio/EZM/bts3.png",
+      "/assets/img/portfolio/EZM/bts4.png"
     ],
     introTitle: "Clean Product Campaign",
     introText: [
@@ -500,31 +534,32 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroImage: "/assets/img/portfolio/Tracon/heroimage.png",
-    thumbnailImage: "/assets/img/portfolio/Tracon/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Tracon/thumb.png",
+    gallery: [ "/assets/img/portfolio/Tracon/gallery1.png" ,  "/assets/img/portfolio/Tracon/gallery2.png"],
     btsGallery:[
-      "/assets/img/portfolio/Tracon/gallery1.png",
-      "/assets/img/portfolio/Tracon/gallery2.png",
-      "/assets/img/portfolio/Tracon/gallery3.png",
-      "/assets/img/portfolio/Tracon/gallery4.png",
-      "/assets/img/portfolio/Tracon/gallery5.png",
-      "/assets/img/portfolio/Tracon/gallery6.png",
+      "/assets/img/portfolio/Tracon/bts1.png",
+      "/assets/img/portfolio/Tracon/bts2.png",
+      "/assets/img/portfolio/Tracon/bts3.png",
+      "/assets/img/portfolio/Tracon/bts4.png",
+      "/assets/img/portfolio/Tracon/bts5.png",
+      "/assets/img/portfolio/Tracon/bts6.png",
+      "/assets/img/portfolio/Tracon/bts7.png",
+
     ],
     introTitle: "Coffee Brand Film",
     introText: [
-      "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup.",
-      "The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
+      "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup. The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase coffee craftsmanship and heritage through cinematic storytelling.",
-      "Deliver content for brand positioning and digital platforms."
+      "Showcase coffee craftsmanship and heritage through cinematic storytelling. Deliver content for brand positioning and digital platforms."
     ],
     link: "#"
   },
 
   {
     id: 17,
-    title: "Infinix – PUBG 2025 Event Campaign",
+    title: "Event Campaigns",
     category: "Events",
     year: "2025",
     agency: "Inframe Production",
@@ -548,34 +583,71 @@ export const projectsData: ProjectType[] = [
     link: "#"
   },
 
+  // {
+  //   id: 18,
+  //   title: "TECNO × Selam Tesfaye – Social Media Campaign",
+  //   category: "Social Media and Digital Campaigns",
+  //   year: "2024",
+  //   agency: "Berry Advertising",
+  //   heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
+  //   thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
+  //   gallery: ["/assets/img/portfolio/infinix - ST/gallery1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
+  //   btsGallery:[
+  //     "/assets/img/portfolio/infinix - ST/bts1.png",
+  //     "/assets/img/portfolio/infinix - ST/bts2.png",
+  //     "/assets/img/portfolio/infinix - ST/heroimage.png"
+  //   ],
+  //   introTitle: "Influencer Social Campaign",
+  //   introText: [
+  //     "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean, cinematic visuals.The production highlights TECNO smartphones through relatable moments and platform-optimized content."
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "Create social-first content optimized for engagement.Showcase modern lifestyle visuals with clean cinematic treatment."
+  //   ],
+  //   link: "#",
+  //   featured: false,
+  //   grid: true
+  // },
+
   {
-    id: 18,
-    title: "TECNO × Selam Tesfaye – Social Media Campaign",
-    category: "Social Media and Digital Campaigns",
-    year: "2024",
-    agency: "Berry Advertising",
-    heroImage: "/assets/img/portfolio/infinix - ST/gallery1.png",
-    thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
-    gallery: ["/assets/img/portfolio/infinix - ST/bts1.png","/assets/img/portfolio/infinix - ST/gallery2.png"],
-    btsGallery:[
-      "/assets/img/portfolio/infinix - ST/gallery1.png",
-      "/assets/img/portfolio/infinix - ST/bts2.png",
-      "/assets/img/portfolio/infinix - ST/bts3.png"
-    ],
-    introTitle: "Influencer Social Campaign",
-    introText: [
-      "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean, cinematic visuals.",
-      "The production highlights TECNO smartphones through relatable moments and platform-optimized content."
-    ],
-    goalTitle: "The Goal",
-    goalText: [
-      "Create social-first content optimized for engagement.",
-      "Showcase modern lifestyle visuals with clean cinematic treatment."
-    ],
-    link: "#",
-    featured: false,
-    grid: true
-  },
+  id: 18,
+  title: "TECNO × Selam Tesfaye – Social Media Campaign",
+  category: "Social Media and Digital Campaigns",
+  year: "2024",
+  agency: "Berry Advertising",
+
+  thumbnailImage: "/assets/img/portfolio/infinix - ST/heroimage.png",
+
+  gallery: [
+    "/assets/img/portfolio/infinix - ST/gallery1.png",
+    "/assets/img/portfolio/infinix - ST/gallery2.png",
+    "/assets/img/portfolio/infinix - ST/gallery3.png",
+    "/assets/img/portfolio/infinix - ST/gallery4.png",
+    "/assets/img/portfolio/infinix - ST/gallery5.png",
+    "/assets/img/portfolio/infinix - ST/gallery6.png",
+    "/assets/img/portfolio/infinix - ST/gallery7.png",
+    "/assets/img/portfolio/infinix - ST/gallery8.png",
+    "/assets/img/portfolio/infinix - ST/gallery9.png",
+    "/assets/img/portfolio/infinix - ST/gallery10.png"
+  ],
+
+  makingVideo: "/assets/img/portfolio/infinix - ST/making.mp4",
+  makingFrame: "/assets/img/portfolio/infinix - ST/gallery4.png",
+
+  introTitle: "Influencer Social Campaign",
+  introText: [
+    "A lifestyle-driven social media campaign featuring Selam Tesfaye, blending authentic storytelling with clean cinematic visuals. The production highlights TECNO smartphones through relatable moments and platform-optimized content. Create social-first content optimized for engagement. Showcase modern lifestyle visuals with a clean cinematic treatment."
+  ],
+
+  // goalText: [
+  //   "Create social-first content optimized for engagement. Showcase modern lifestyle visuals with a clean cinematic treatment."
+  // ],
+
+  link: "#",
+  featured: false,
+  grid: true
+},
 
   {
     id: 19,
@@ -583,9 +655,17 @@ export const projectsData: ProjectType[] = [
     category: "Social Media and Digital Campaigns",
     year: "2024",
     agency: "Inframe Production",
-    heroImage: "/assets/img/portfolio/Jetson/heroimage.jpg",
+    // heroImage: "/assets/img/portfolio/Jetson/heroimage.jpg",
     thumbnailImage: "/assets/img/portfolio/Jetson/thumb.jpg",
     gallery: ["/assets/img/portfolio/Jetson/gallery.jpg", "/assets/img/portfolio/Jetson/thumb.jpg"],
+
+    btsGallery:[
+      "/assets/img/portfolio/Jetson/bts1.png",
+      "/assets/img/portfolio/Jetson/bts2.png",
+      "/assets/img/portfolio/Jetson/bts3.png",
+      "/assets/img/portfolio/Jetson/bts4.png",
+      "/assets/img/portfolio/Jetson/bts5.png"
+    ],
     introTitle: "Food & Lifestyle Campaign",
     introText: [
       "Appetizing social media photography and video content crafted to highlight Jetson Doro’s quality and freshness.",
@@ -633,10 +713,9 @@ export const projectsData: ProjectType[] = [
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Make spaces feel lived-in and relatable through natural moments.",
-      "Use light, playful storytelling to humanize the property."
+      "Make spaces feel lived-in and relatable through natural moments.Use light, playful storytelling to humanize the property."
     ],
-    link: "#",
+    link: "https://www.tiktok.com/@inframeproduction1/video/7304294403789671685",
     featured: false,
     grid: true
   },
@@ -683,32 +762,33 @@ export const projectsData: ProjectType[] = [
   //   link: "#"
   // },
 
-  {
-    id: 24,
-    title: "TECNO Wendoc Guday – Storytelling Photography",
-    category: "Photography",
-    year: "2024",
-    agency: "Inframe Production",
-    heroVideo: "/assets/img/portfolio/YG-Techno-SR/herovideo.mp4",
-    btsGallery:[
-      "/assets/img/portfolio/YG-Techno-SR/bts1.png",
-      "/assets/img/portfolio/YG-Techno-SR/bts2.png",
-      "/assets/img/portfolio/YG-Techno-SR/bts3.png",
-      "/assets/img/portfolio/YG-Techno-SR/bts4.png"
-    ],
-    introTitle: "Narrative Photography",
-    introText: [
-      "Narrative-driven photography blending real craftsmanship and human stories with cinematic visual treatment."
-    ],
-    goalTitle: "The Goal",
-    goalText: [
-      "Tell a story through photography using cinematic lighting and real human moments.",
-      "Create emotionally engaging visuals that feel authentic."
-    ],
-    link: "#",
-    featured: true,
-    grid: false
-  },
+  // {
+  //   id: 24,
+  //   title: "TECNO Wendoc Guday – Storytelling Photography",
+  //   category: "Photography",
+  //   year: "2024",
+  //   agency: "Inframe Production",
+  //   heroVideo: "/assets/img/portfolio/YG-Techno-SR/herovideo.mp4",
+  //   btsGallery:[
+  //     "/assets/img/portfolio/YG-Techno-SR/bts1.png",
+  //     "/assets/img/portfolio/YG-Techno-SR/bts2.png",
+  //     "/assets/img/portfolio/YG-Techno-SR/bts3.png",
+  //     "/assets/img/portfolio/YG-Techno-SR/bts4.png",
+  //     "/assets/img/portfolio/YG-Techno-SR/bts5.png"
+  //   ],
+  //   introTitle: "Narrative Photography",
+  //   introText: [
+  //     "Narrative-driven photography blending real craftsmanship and human stories with cinematic visual treatment."
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "Tell a story through photography using cinematic lighting and real human moments.",
+  //     "Create emotionally engaging visuals that feel authentic."
+  //   ],
+  //   link: "#",
+  //   featured: true,
+  //   grid: false
+  // },
 
   // {
   //   id: 25,
@@ -800,17 +880,23 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    gallery: ["/assets/img/portfolio/Leykun/gallery1.png","/assets/img/portfolio/Leykun/gallery2.png"],
+    heroImage: "/assets/img/portfolio/Leykun/bts1.png",
+    // gallery: ["/assets/img/portfolio/Leykun/gallery1.png","/assets/img/portfolio/Leykun/gallery2.png"],
+    btsGallery:[
+      "/assets/img/portfolio/Leykun/bts1.png",
+      "/assets/img/portfolio/Leykun/bts2.png",
+      "/assets/img/portfolio/Leykun/bts3.png",
+      "/assets/img/portfolio/Leykun/heroimage.png",
+    ],
     introTitle: "Album Art Photography",
     introText: [
       "Concept-driven album art photography using mood, color, and strong visual identity to support musical storytelling."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Create strong visual identity through mood and color.",
-      "Support musical storytelling with bold artistic photography."
+      "Create strong visual identity through mood and color. Support musical storytelling with bold artistic photography."
     ],
-    link: "#",
+    link: "https://www.tiktok.com/@inframeproduction1/video/7493510514786487607",
     featured: false,
     grid: true
   },
@@ -883,7 +969,7 @@ export const projectsData: ProjectType[] = [
     title: "Zemen Gebeya",
     category: "Documentary and Brand Film",
     year: "2024",
-    agency: "Berry Advertising",
+    agency: "TTree",
     thumbnailImage: "/assets/img/portfolio/Zemen/thumbimage.jpg",
     introTitle: "Heritage Documentary",
     introText: [
@@ -899,11 +985,11 @@ export const projectsData: ProjectType[] = [
 
    {
     id: 34,
-    title: "Suprema",
+    title: "Product Photography",
     category: "Photography",
     year: "2024",
     agency: "Berry Advertising",
-    thumbnailImage: "/assets/img/portfolio/Suprema/heroimage.jpg",
+    thumbnailImage: "/assets/img/portfolio/CastleProduct/bts3.png",
     introTitle: "",
     introText: [
       ""
@@ -912,45 +998,63 @@ export const projectsData: ProjectType[] = [
     goalText: [
       "",
       ""
+    ],
+    btsGallery:[
+      "/assets/img/portfolio/CastleProduct/bts1.png",
+      "/assets/img/portfolio/Suprema/heroimage.jpg", 
+      "/assets/img/portfolio/CastleProduct/bts1.png",
+      "/assets/img/portfolio/Vitrex/heroimage.jpg",
+      "/assets/img/portfolio/Meta/bts3.png",
+      "/assets/img/portfolio/CastleProduct/bts2.png",
+      "/assets/img/portfolio/Vega/heroimage.jpg",
+      "/assets/img/portfolio/CastleProduct/bts3.png",
+      "/assets/img/portfolio/Meta/bts1.png",
+      "/assets/img/portfolio/CastleProduct/bts4.png",
+
+      
+      "/assets/img/portfolio/Meta/bts2.png",
+      
+      "/assets/img/portfolio/Meta/bts4.png"
+      
     ],
     link: "#"
   },
 
-   {
-    id: 35,
-    title: "Vitrex",
-    category: "Photography",
-    year: "2024",
-    agency: "Berry Advertising",
-    thumbnailImage: "/assets/img/portfolio/Vitrex/heroimage.jpg",
-    introTitle: "",
-    introText: [
-      ""
-    ],
-    goalTitle: "",
-    goalText: [
-      "",
-      ""
-    ],
-    link: "#"
-  },
+  //  {
+  //   id: 35,
+  //   title: "Product Photography",
+  //   category: "Photography",
+  //   year: "2024",
+  //   agency: "Berry Advertising",
+  //   thumbnailImage: "/assets/img/portfolio/Vitrex/heroimage.jpg",
+  //   introTitle: "",
+  //   introText: [
+  //     ""
+  //   ],
+  //   goalTitle: "",
+  //   goalText: [
+  //     "",
+  //     ""
+  //   ],
+  //   link: "#"
+  // },
 
-   {
-    id: 36,
-    title: "Vega",
-    category: "Photography",
-    year: "2024",
-    agency: "Berry Advertising",
-    thumbnailImage: "/assets/img/portfolio/Vega/heroimage.jpg",
-    introTitle: "",
-    introText: [
-      ""
-    ],
-    goalTitle: "",
-    goalText: [
-      "",
-      ""
-    ],
-    link: "#"
-  },
+  //  {
+  //   id: 36,
+  //   title: "Vega",
+  //   category: "Photography",
+  //   year: "2024",
+  //   agency: "Berry Advertising",
+  //   thumbnailImage: "/assets/img/portfolio/Vega/heroimage.jpg",
+  //   introTitle: "",
+  //   introText: [
+  //     ""
+  //   ],
+  //   goalTitle: "",
+  //   goalText: [
+  //     "",
+  //     ""
+  //   ],
+  //   link: "#"
+  // },
 ];
