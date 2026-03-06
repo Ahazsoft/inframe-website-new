@@ -62,7 +62,7 @@ const HeroMedia = ({ project }: { project: any }) => {
         <Image
           src={project.heroImage}
           alt={project.title}
-          width={1500}
+          width={1800}
           height={900}
           style={{ objectFit: "cover" }}
         />

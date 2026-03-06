@@ -372,12 +372,13 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Berry Advertising",
     heroVideo: "/assets/img/portfolio/EZM/herovideo.mp4",
-    thumbnailImage: "/assets/img/portfolio/EZM/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/EZM/thumb.png",
     gallery: ["/assets/img/portfolio/EZM/gallery1.png","/assets/img/portfolio/EZM/gallery2.png"],
     btsGallery:[
       "/assets/img/portfolio/EZM/bts1.png",
       "/assets/img/portfolio/EZM/bts2.png",
-      "/assets/img/portfolio/EZM/bts3.png"
+      "/assets/img/portfolio/EZM/bts3.png",
+      "/assets/img/portfolio/EZM/bts4.png"
     ],
     introTitle: "Clean Product Campaign",
     introText: [
@@ -533,24 +534,25 @@ export const projectsData: ProjectType[] = [
     year: "2024",
     agency: "Inframe Production",
     heroImage: "/assets/img/portfolio/Tracon/heroimage.png",
-    thumbnailImage: "/assets/img/portfolio/Tracon/heroimage.png",
+    thumbnailImage: "/assets/img/portfolio/Tracon/thumb.png",
+    gallery: [ "/assets/img/portfolio/Tracon/gallery1.png" ,  "/assets/img/portfolio/Tracon/gallery2.png"],
     btsGallery:[
-      "/assets/img/portfolio/Tracon/gallery1.png",
-      "/assets/img/portfolio/Tracon/gallery2.png",
-      "/assets/img/portfolio/Tracon/gallery3.png",
-      "/assets/img/portfolio/Tracon/gallery4.png",
-      "/assets/img/portfolio/Tracon/gallery5.png",
-      "/assets/img/portfolio/Tracon/gallery6.png",
+      "/assets/img/portfolio/Tracon/bts1.png",
+      "/assets/img/portfolio/Tracon/bts2.png",
+      "/assets/img/portfolio/Tracon/bts3.png",
+      "/assets/img/portfolio/Tracon/bts4.png",
+      "/assets/img/portfolio/Tracon/bts5.png",
+      "/assets/img/portfolio/Tracon/bts6.png",
+      "/assets/img/portfolio/Tracon/bts7.png",
+
     ],
     introTitle: "Coffee Brand Film",
     introText: [
-      "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup.",
-      "The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
+      "A cinematic brand film capturing the journey of Teracon Coffee from farm to cup. The production blends authentic storytelling, scenic plantation visuals, and refined product cinematography."
     ],
     goalTitle: "The Goal",
     goalText: [
-      "Showcase coffee craftsmanship and heritage through cinematic storytelling.",
-      "Deliver content for brand positioning and digital platforms."
+      "Showcase coffee craftsmanship and heritage through cinematic storytelling. Deliver content for brand positioning and digital platforms."
     ],
     link: "#"
   },
