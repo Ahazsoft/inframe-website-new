@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -8,6 +8,14 @@ import { Button } from "@/components/ui/button";
 const CinemaPlatform = () => {
   const router = useRouter();
   const {theme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true)
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null 
+  }
   return (
     <section
       className="section-routers"

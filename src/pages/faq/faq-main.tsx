@@ -1,6 +1,6 @@
 "use client";
 import { gsap } from "gsap";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
@@ -27,6 +27,14 @@ const FaqMain = () => {
     return () => clearTimeout(timer);
   });
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null;
+  }
 
   return (
     <div id="smooth-wrapper">

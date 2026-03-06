@@ -3,10 +3,18 @@ import { Tv, Radio, Megaphone, Youtube } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function ServiceInframe() {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme(); // 'light' | 'dark'
-
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null 
+  }
   return (
     <section
       id="what-we-do"

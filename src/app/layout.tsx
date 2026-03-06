@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Syne,
-  Aladin,
-  Marcellus,
-} from "next/font/google";
+import { Syne, Aladin, Marcellus } from "next/font/google";
 import { VideoProvider } from "@/provider/VideoProvider";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
@@ -12,8 +8,6 @@ import "./globals.scss";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
-
 
 const gellery = localFont({
   src: [
@@ -35,7 +29,6 @@ const gellery = localFont({
   ],
   variable: "--tp-ff-gallery",
 });
-
 
 const mainfont = localFont({
   src: [
@@ -147,13 +140,10 @@ export default function RootLayout({
          ${syne_body.variable} ${syne_heading.variable} ${syne_p.variable}
           ${syne.variable} ${marcellus.variable}`}
       >
-        <ThemeProvider defaultTheme="light">
-          <VideoProvider>
-            {children}
-          </VideoProvider>
+        <ThemeProvider defaultTheme="dark" enableSystem={false}>
+          <VideoProvider>{children}</VideoProvider>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Play, Grid, Camera, Megaphone, Disc, Cloud } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -9,13 +9,21 @@ const BundlePackage = () => {
   const { theme } = useTheme(); // 'light' | 'dark'
   const iconColors = theme === "dark" ? "#111827" : "#FFFFFF";
   const iconBg = theme === "dark" ? "#FFFFFF" : "#121221";
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null;
+  }
   return (
     <div className="container my-5">
       <div
         className="row align-items-center justify-content-center g-5 rounded-4 p-4 p-md-5"
         // style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
         style={{
-          backgroundColor: theme ==='dark'?'#111111':'#ffffff'
+          backgroundColor: theme === "dark" ? "#111111" : "#ffffff",
         }}
       >
         {/* Icons Grid */}
