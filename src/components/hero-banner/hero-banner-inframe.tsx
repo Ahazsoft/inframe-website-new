@@ -8,13 +8,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import Hls from "hls.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUsHero() {
+
+  const HLS_URL =
+  "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
   const router = useRouter();
   const sectionRef = useRef<HTMLDivElement>(null);
+
   const videoWrapRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const heroTextRef = useRef<HTMLDivElement>(null);
   const h2Ref = useRef<HTMLDivElement>(null);
@@ -32,6 +38,35 @@ export default function AboutUsHero() {
   They aim to become one of the leading industry players in Ethiopia and a major force in the creative sector.`;
 
   const parts = text.split("\n");
+
+    useEffect(() => {
+      const video = videoRef.current;
+      if (!video) return;
+
+      const HLS_URL =
+        "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
+
+      let hls: Hls | null = null;
+
+      if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        // Safari
+        video.src = HLS_URL;
+      } else if (Hls.isSupported()) {
+        // Chrome / Firefox / Edge
+        hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+        });
+
+        hls.loadSource(HLS_URL);
+        hls.attachMedia(video);
+      }
+
+      return () => {
+        if (hls) hls.destroy();
+      };
+    }, []);
+
 
   useEffect(() => {
     if (!sectionRef.current || !videoWrapRef.current || !h2Ref.current) return;
@@ -151,7 +186,7 @@ export default function AboutUsHero() {
       
       {/* VIDEO BACKGROUND */}
       <div ref={videoWrapRef} className="ab-hero-video-wrap">
-        <video
+        {/* <video
           className="ab-hero-video"
           autoPlay
           muted
@@ -159,6 +194,16 @@ export default function AboutUsHero() {
           playsInline
           preload="auto"
           src="/assets/img/home-01/hero/herovideo.mp4"
+        /> */}
+
+        <video
+          ref={videoRef}
+          className="ab-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
         />
 
         <div className="ab-hero-overlay" />

@@ -15,10 +15,59 @@ import {
 } from "./ui/carousel";
 
 import { projectsData } from "./portfolio/details/projectData";
-
+import Hls from "hls.js";
 /* ============================= */
 /* Intersection Observer Hook */
 /* ============================= */
+
+function VideoHLS({
+  hlsSrc,
+  poster,
+  autoPlay = true,
+  muted = true,
+  loop = true,
+}: {
+  hlsSrc: string;
+  poster?: string;
+  autoPlay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !hlsSrc) return;
+
+    let hls: Hls | null = null;
+
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      // Safari / iOS native HLS
+      video.src = hlsSrc;
+    } else if (Hls.isSupported()) {
+      hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+      hls.loadSource(hlsSrc);
+      hls.attachMedia(video);
+    }
+
+    return () => {
+      if (hls) hls.destroy();
+    };
+  }, [hlsSrc]);
+
+  return (
+    <video
+      ref={videoRef}
+      poster={poster}
+      autoPlay={autoPlay}
+      muted={muted}
+      loop={loop}
+      playsInline
+      preload="metadata"
+      className="object-fit-cover w-100 h-100"
+    />
+  );
+}
 
 function useInView(
   ref: React.RefObject<Element>,
@@ -145,7 +194,7 @@ export function FeaturedWorkSection() {
             {featuredProjects.map((project) => (
               <CarouselItem key={project.id} className="custom-basis">
                 <div className="position-relative overflow-hidden cursor-pointer carousel-fixed-size">
-                  {project.heroVideo ? (
+                  {/* {project.heroVideo ? (
                     <video
                       src={project.heroVideo}
                       poster={
@@ -160,6 +209,28 @@ export function FeaturedWorkSection() {
                       playsInline
                       preload="metadata"
                       className="object-fit-cover w-100 h-100"
+                    />
+                  ) : (
+                    <Image
+                      src={project.heroImage || project.thumbnailImage || "/default-placeholder.png"}
+                      alt={project.title}
+                      fill
+                      className="object-fit-cover"
+                      priority
+                    />
+                  )} */}
+                  {project.heroVideo ? (
+                    <VideoHLS
+                      hlsSrc={project.heroVideo} // <-- your HLS link
+                      poster={
+                        project.heroVideoFallbackImage ||
+                        project.thumbnailImage ||
+                        project.heroImage ||
+                        "/default-placeholder.png"
+                      }
+                      autoPlay={!paused}
+                      muted
+                      loop
                     />
                   ) : (
                     <Image
