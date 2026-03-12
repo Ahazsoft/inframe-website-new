@@ -49,7 +49,7 @@ export default function TecnoLayout({ project }: Props) {
           </h4>
           <div className="row">
             <div className="col-xl-9">
-              {project.introText.map((text, i) => (
+              {project.introText?.map((text, i) => (
                 <p key={i} className="pb-25">{text}</p>
               ))}
             </div>

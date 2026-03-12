@@ -49,7 +49,7 @@ export default function InfinixLayout({ project }: Props) {
 
       <div className="container pb-120">
         <div className="domino-gallery">
-          {project.gallery.map((img, i) => (
+          {project.gallery?.map((img, i) => (
             <div key={i} className={`domino-item item-${i + 1}`}>
               <Image
                 src={img}
@@ -73,12 +73,14 @@ export default function InfinixLayout({ project }: Props) {
         >
           {/* IMAGE */}
           <div className="making-frame-inner">
-            <Image
-              src={project.makingFrame}
-              alt="making frame"
-              fill
-              style={{ objectFit: "contain" }}
-            />
+            {project.makingFrame && (
+              <Image
+                src={project.makingFrame}
+                alt="making frame"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            )}
 
             {/* VIDEO */}
             <video
@@ -110,7 +112,7 @@ export default function InfinixLayout({ project }: Props) {
             <div className="col-xl-9">
 
               {/* INTRO */}
-              {project.introText.map((text, i) => (
+              {project.introText?.map((text, i) => (
                 <p key={`intro-${i}`} className="pb-25">
                   {text}
                 </p>

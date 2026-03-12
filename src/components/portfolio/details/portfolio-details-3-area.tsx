@@ -182,7 +182,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             </div>
 
             <div className="col-xl-9">
-              {project.introText.map((text, i) => (
+              {project.introText?.map((text, i) => (
                 <p key={i} className="pb-25">
                   {text}
                 </p>
@@ -222,7 +222,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             </div>
 
             <div className="col-xl-9">
-              {project.goalText.map((text, i) => (
+              {project.goalText?.map((text, i) => (
                 <p key={i} className="pb-25">
                   {text}
                 </p>
