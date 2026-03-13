@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { ProjectType } from "./details/projectData";
 import { Leaf } from "@/components/svg";
+import Hls from "hls.js";
+import { useEffect, useRef } from "react";
 
 type Props = {
   project: ProjectType;
@@ -15,7 +17,30 @@ type Props = {
 
 export default function InfinixLayout({ project }: Props) {
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const [playVideo, setPlayVideo] = useState(false);
+    
+  
+  useEffect(() => {
+    if (project.makingVideo && videoRef.current) {
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(project.makingVideo);
+        hls.attachMedia(videoRef.current);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          // Optionally autoplay after HLS is ready
+          if (playVideo) videoRef.current?.play();
+        });
+        return () => {
+          hls.destroy();
+        };
+      } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
+        // Safari natively supports HLS
+        videoRef.current.src = project.makingVideo;
+      }
+    }
+  }, [project.makingVideo, playVideo]);
 
   return (
     <>
@@ -84,8 +109,8 @@ export default function InfinixLayout({ project }: Props) {
 
             {/* VIDEO */}
             <video
-              src={project.makingVideo}
-              autoPlay
+              ref={videoRef}
+              autoPlay={false}
               muted
               loop
               playsInline
