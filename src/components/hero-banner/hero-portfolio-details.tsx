@@ -1,6 +1,7 @@
 import Image from "next/image";
 import useLazyVideo from "@/hooks/useLazyVideo";
 import { useEffect, useRef } from "react";
+import Hls from "hls.js";
 
 const HeroMedia = ({ project }: { project: any }) => {
 
@@ -18,6 +19,26 @@ const HeroMedia = ({ project }: { project: any }) => {
       video.pause();
     }
   }, [isVisible, videoRef]);
+
+  // HLS setup
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !project.heroVideo) return;
+
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      // Native HLS support (Safari)
+      video.src = project.heroVideo;
+    } else if (Hls.isSupported()) {
+      // HLS.js for other browsers
+      const hls = new Hls();
+      hls.loadSource(project.heroVideo);
+      hls.attachMedia(video);
+
+      return () => {
+        hls.destroy();
+      };
+    }
+  }, [project.heroVideo]);
 
   // Mobile fallback (optional)
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
