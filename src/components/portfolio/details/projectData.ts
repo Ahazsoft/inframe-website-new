@@ -559,31 +559,31 @@ export const projectsData: ProjectType[] = [
     link: ""
   },
 
-  {
-    id: 17,
-    title: "Event Campaigns",
-    category: "Events",
-    year: "2025",
-    agency: "Inframe Production",
-    // heroImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
-    thumbnailImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
-    btsGallery: [
-      "/assets/img/portfolio/InfinixEvent/gallery1.png", 
-      "/assets/img/portfolio/InfinixEvent/gallery2.png",
-       "/assets/img/portfolio/InfinixEvent/gallery3.png", 
-       "/assets/img/portfolio/InfinixEvent/gallery4.png"],
-    introTitle: "Gaming Event Campaign",
-    introText: [
-      "A dynamic event campaign capturing the energy of competitive gaming through fast-paced cinematography, immersive lighting, and live-event storytelling.",
-      "The production blends esports culture and Infinix innovation to create a bold, youth-driven brand experience."
-    ],
-    goalTitle: "The Goal",
-    goalText: [
-      "Capture esports energy with dynamic cinematography.",
-      "Create youth-driven content for digital and event platforms."
-    ],
-    link: ""
-  },
+  // {
+  //   id: 17,
+  //   title: "Event Campaigns",
+  //   category: "Events",
+  //   year: "2025",
+  //   agency: "Inframe Production",
+  //   // heroImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
+  //   thumbnailImage: "/assets/img/portfolio/InfinixEvent/heroimage.png",
+  //   btsGallery: [
+  //     "/assets/img/portfolio/InfinixEvent/gallery1.png", 
+  //     "/assets/img/portfolio/InfinixEvent/gallery2.png",
+  //      "/assets/img/portfolio/InfinixEvent/gallery3.png", 
+  //      "/assets/img/portfolio/InfinixEvent/gallery4.png"],
+  //   introTitle: "Gaming Event Campaign",
+  //   introText: [
+  //     "A dynamic event campaign capturing the energy of competitive gaming through fast-paced cinematography, immersive lighting, and live-event storytelling.",
+  //     "The production blends esports culture and Infinix innovation to create a bold, youth-driven brand experience."
+  //   ],
+  //   goalTitle: "The Goal",
+  //   goalText: [
+  //     "Capture esports energy with dynamic cinematography.",
+  //     "Create youth-driven content for digital and event platforms."
+  //   ],
+  //   link: ""
+  // },
 
   // {
   //   id: 18,
