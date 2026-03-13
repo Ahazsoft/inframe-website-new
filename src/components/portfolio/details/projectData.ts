@@ -391,7 +391,7 @@ export const projectsData: ProjectType[] = [
       "Create precise product visuals that show quality and engineering.",
       "Deliver a corporate style campaign suitable for B2B marketing."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -439,7 +439,7 @@ export const projectsData: ProjectType[] = [
       "Highlight eco-tourism and sustainability through cinematic visuals.",
       "Tell authentic community stories in a national development context."
     ],
-    link: "#"
+    link: ""
   },
 
   {
@@ -462,7 +462,7 @@ export const projectsData: ProjectType[] = [
       "Showcase sustainable hospitality and eco-tourism potential.",
       "Capture authentic cultural and natural storytelling."
     ],
-    link: "#"
+    link: ""
   },
 
   // {
@@ -524,7 +524,7 @@ export const projectsData: ProjectType[] = [
       "Tell a story of sustainable tourism and cultural heritage.",
       "Create cinematic visuals that highlight village life and natural beauty."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -556,7 +556,7 @@ export const projectsData: ProjectType[] = [
     goalText: [
       "Showcase coffee craftsmanship and heritage through cinematic storytelling. Deliver content for brand positioning and digital platforms."
     ],
-    link: "#"
+    link: ""
   },
 
   {
@@ -582,7 +582,7 @@ export const projectsData: ProjectType[] = [
       "Capture esports energy with dynamic cinematography.",
       "Create youth-driven content for digital and event platforms."
     ],
-    link: "#"
+    link: ""
   },
 
   // {
@@ -646,7 +646,7 @@ export const projectsData: ProjectType[] = [
   //   "Create social-first content optimized for engagement. Showcase modern lifestyle visuals with a clean cinematic treatment."
   // ],
 
-  link: "#",
+  link: "",
   featured: false,
   grid: true
 },
@@ -678,7 +678,7 @@ export const projectsData: ProjectType[] = [
       "Create appetizing visuals optimized for social media.",
       "Highlight product quality through premium composition and lighting."
     ],
-    link: "#"
+    link: ""
   },
 
   {
@@ -687,7 +687,7 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    gallery: ["/assets/img/portfolio/STG - Buhe/gallery1.png","/assets/img/portfolio/STG - Buhe/gallery2.png"],
+    gallery: ["https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/4a8f3b7e-72dd-4f72-6772-ffe2e0b07f00/public","https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/f021b101-77ea-4f2a-604b-e9a248987a00/public"],
     introTitle: "Dramatic Beer Photography",
     introText: [
       "Dramatic indoor beer photography using low-key lighting, rich contrast, and moody highlights to emphasize atmosphere, texture, and social energy."
@@ -697,7 +697,7 @@ export const projectsData: ProjectType[] = [
       "Create moody, high-contrast beer visuals with premium lighting.",
       "Highlight texture and atmosphere in a cinematic style."
     ],
-    link: "#",
+    link: "",
     featured: false,
     grid: true
   },
@@ -708,7 +708,7 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    gallery: ["/assets/img/portfolio/Jenboro/gallery1.png","/assets/img/portfolio/Jenboro/gallery2.png"],
+    gallery: ["https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/a06bcff6-6bd8-460a-7e93-2f7e1001be00/public","https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/affeb8e7-8dbe-4bd8-6ba5-87f9beae6800/public"],
     introTitle: "Humanized Real Estate",
     introText: [
       "Humanized real estate photography with light, funny moments, capturing everyday life and personality to make spaces feel relatable and lived-in."
@@ -882,13 +882,13 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Inframe Production",
-    heroImage: "/assets/img/portfolio/Leykun/bts1.png",
+    heroImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/b493f201-4709-40fa-e858-f435bfbf8000/public",
     // gallery: ["/assets/img/portfolio/Leykun/gallery1.png","/assets/img/portfolio/Leykun/gallery2.png"],
     btsGallery:[
-      "/assets/img/portfolio/Leykun/bts1.png",
-      "/assets/img/portfolio/Leykun/bts2.png",
-      "/assets/img/portfolio/Leykun/bts3.png",
-      "/assets/img/portfolio/Leykun/heroimage.png",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/b493f201-4709-40fa-e858-f435bfbf8000/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/e696726e-924d-4e14-8540-fc68620cf500/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/d9007e7a-2ccd-486f-3ffd-d9c12ead0f00/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/4eb056d9-0cd8-47b6-c335-767dfb7c9900/public",
     ],
     introTitle: "Album Art Photography",
     introText: [
@@ -930,8 +930,8 @@ export const projectsData: ProjectType[] = [
     category: "Documentary and Brand Film",
     year: "2024",
     agency: "Berry Advertising",
-    heroImage: "/assets/img/portfolio/Gorgora/heroimage.jpg",
-    thumbnailImage: "/assets/img/portfolio/Gorgora/heroimage.jpg",
+    heroImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/2e8a9814-5947-451b-b823-09d85ec1fa00/public",
+    thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/2e8a9814-5947-451b-b823-09d85ec1fa00/public",
     youtubeUrl: "https://youtu.be/oqmvvoDMK2Q?si=ek4nQfSysqltWGuU",
     
     introTitle: "Heritage Documentary",
@@ -944,7 +944,7 @@ export const projectsData: ProjectType[] = [
       "Highlight heritage preservation through cinematic storytelling.",
       "Showcase architecture and history with premium visuals."
     ],
-    link: "#"
+    link: ""
   },
   //     {
   //   id: 32,
@@ -972,7 +972,7 @@ export const projectsData: ProjectType[] = [
     category: "Documentary and Brand Film",
     year: "2024",
     agency: "TTree",
-    thumbnailImage: "/assets/img/portfolio/Zemen/thumbimage.jpg",
+    thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/4ad5dbcc-aef3-4a40-1012-bbb6991df700/public",
     introTitle: "Heritage Documentary",
     introText: [
       ""
@@ -982,7 +982,7 @@ export const projectsData: ProjectType[] = [
       "",
       ""
     ],
-    link: "#"
+    link: ""
   },
 
    {
@@ -991,7 +991,7 @@ export const projectsData: ProjectType[] = [
     category: "Photography",
     year: "2024",
     agency: "Berry Advertising",
-    thumbnailImage: "/assets/img/portfolio/CastleProduct/bts3.png",
+    thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/830bd816-8847-40d1-2619-01b825f6f000/public",
     introTitle: "",
     introText: [
       ""
@@ -1002,24 +1002,21 @@ export const projectsData: ProjectType[] = [
       ""
     ],
     btsGallery:[
-      "/assets/img/portfolio/CastleProduct/bts1.png",
-      "/assets/img/portfolio/Suprema/heroimage.jpg", 
-      "/assets/img/portfolio/CastleProduct/bts1.png",
-      "/assets/img/portfolio/Vitrex/heroimage.jpg",
-      "/assets/img/portfolio/Meta/bts3.png",
-      "/assets/img/portfolio/CastleProduct/bts2.png",
-      "/assets/img/portfolio/Vega/heroimage.jpg",
-      "/assets/img/portfolio/CastleProduct/bts3.png",
-      "/assets/img/portfolio/Meta/bts1.png",
-      "/assets/img/portfolio/CastleProduct/bts4.png",
-
-      
-      "/assets/img/portfolio/Meta/bts2.png",
-      
-      "/assets/img/portfolio/Meta/bts4.png"
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/a9b6920a-a4b4-4813-de11-2bf7d2775800/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/fbdfc24e-3422-4e98-df04-0510bccc1e00/public", 
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/a9b6920a-a4b4-4813-de11-2bf7d2775800/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/15069b13-2039-497a-984a-576f7532e500/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/830bd816-8847-40d1-2619-01b825f6f000/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/7187b70e-ef86-4982-3ae0-80ba63333e00/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/2d8dd04b-2e47-461d-e657-6a0528f3fd00/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/664d34c0-07b6-46fb-a94e-281277e1e000/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/f3a541e1-e146-42bc-a13b-6533de33c800/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/33f4f7a6-8781-4e04-12e5-3f3a17931500/public", 
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/bbca110c-fa55-43fd-2c5b-3a5d90f19f00/public",
+      "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/0606c016-79a5-499c-1049-82c9dd922600/public"
       
     ],
-    link: "#"
+    link: ""
   },
 
   //  {
