@@ -60,7 +60,7 @@ const ArtistOffer = () => {
               }}
             >
               <Image
-                src="/assets/img/home-01/artistoffer/artistoffer.jpg"
+                src="https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/14e9f53d-a274-4daa-0d96-d739f15b9400/public"
                 alt="Inframe featured work"
                 fill
                 style={{ objectFit: "cover" }}

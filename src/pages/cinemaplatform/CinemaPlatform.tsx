@@ -82,7 +82,7 @@ const CinemaPlatform = () => {
             }}
           >
             <Image
-              src="/assets/img/home-01/service/serviceback1.png"
+              src="https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/c49879d8-efac-4c5c-39cf-f3d8c9346300/public"
               alt="Cinema grade example"
               fill
               style={{ objectFit: "cover" }}
@@ -135,7 +135,7 @@ const CinemaPlatform = () => {
             }}
           >
             <Image
-              src="/assets/img/home-01/service/serviceback2.png"
+              src="https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/db706ba7-40cc-46b4-f04f-6ec4e12cb000/public"
               alt="Multi-platform example"
               fill
               style={{ objectFit: "cover" }}

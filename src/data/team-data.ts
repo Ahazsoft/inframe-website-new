@@ -3,7 +3,7 @@ import { ITeamDT } from "@/types/team-d-t";
 const team_data:ITeamDT[] = [
   {
     id:1,
-    image:"/assets/img/team/1.jpg",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/7856e922-b99c-4a34-e4a0-4a3dd8a2ef00/public",
     designation:"Co-Founder, Creative Director",
     name:"Seyfe Molla",
     socials:[
@@ -15,7 +15,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:2,
-    image:"/assets/img/team/2.jpg",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/fdf130ff-6217-40d1-260f-bfdb6891c900/public",
     designation:"Co-Founder, Creative Director",
     name:"Elyase Takele",
     socials:[
@@ -27,7 +27,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:3,
-    image:"/assets/img/team/3.jpg",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/a2c28a60-c696-4b00-0007-b04b9d8e2f00/public",
     designation:"Video Editor & Graphics Designer",
     name:"Tsemru Fikremariam",
     socials:[
@@ -39,7 +39,7 @@ const team_data:ITeamDT[] = [
   },
   {
     id:4,
-    image:"/assets/img/team/4.jpg",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/328e0f9e-3ab8-40cf-e79d-c24fb38e4f00/public",
     designation:"Social Media Manager",
     name:"Adonias Nega",
     socials:[
@@ -51,7 +51,7 @@ const team_data:ITeamDT[] = [
   },
     {
     id:5,
-    image:"/assets/img/team/5.png",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/15d3b3ef-7c6f-4e0c-d479-7e55c1b94500/public",
     designation:"Finance Head",
     name:"Abdisa Obsa",
     socials:[
@@ -63,7 +63,7 @@ const team_data:ITeamDT[] = [
   },
     {
     id:6,
-    image:"/assets/img/team/6.png",
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/2974a15b-7df6-4463-924a-bc3d8a070000/public",
     designation:"Makeup Artist",
     name:"Lidiya Haylemariyam",
     socials:[

@@ -8,6 +8,7 @@ import ab_1 from "@/assets/img/about/about-1.jpg";
 import ab_2 from "@/assets/img/about/about-3.jpg";
 import ab_3 from "@/assets/img/about/about-2.jpg";
 
+
 export default function AboutUsArea() {
   return (
     <div className="ab-about-area ab-about-mt pb-90 z-index-5">
