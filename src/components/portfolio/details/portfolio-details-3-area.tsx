@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -10,7 +10,7 @@ import { Leaf, ScrollDownTwo, UpArrowFour } from "@/components/svg";
 import Link from "next/link";
 import HeroMedia from "@/components/hero-banner/hero-portfolio-details";
 import { ProjectType } from "./projectData";
-
+import { useTheme } from "next-themes";
 import InfinixLayout from "../InfinixLayout";
 import TecnoLayout from "../TechnoLayout";
 type Props = {
@@ -54,6 +54,16 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
     });
   };
 
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  });
+  if (!mounted) {
+    // Render a skeleton or nothing to prevent the "confusion"
+    return null;
+  }
+
   return (
     <>
       {/* TOP SECTION */}
@@ -61,7 +71,12 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
         <div className="container container-1560">
           <div className="row">
             <div className="col-xl-12">
-              <h2 className="tp-section-title-70 mb-50 tp-char-animation">
+              <h2
+                className="tp-section-title-70 mb-50 tp-char-animation"
+                style={{
+                  color: theme === "light" ? "#121212" : "white",
+                }}
+              >
                 {project.title}
               </h2>
             </div>
@@ -71,21 +86,25 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             <div className="col-xl-6">
               <div className="tp-project-details-3-scroll smooth">
                 <a onClick={scrollTo} className="pointer">
-                  <span><ScrollDownTwo /></span>
+                  <span>
+                    <ScrollDownTwo />
+                  </span>
                   Scroll to Explore
                 </a>
               </div>
             </div>
 
             <div className="col-xl-6">
-            {project.link && (
-              <div className="tp-project-details-3-link mt-30 text-start text-md-end">
-                <Link href={project.link}>
-                  View Behind The Scenes
-                  <span><UpArrowFour /></span>
-                </Link>
-              </div>
-            )}
+              {project.link && (
+                <div className="tp-project-details-3-link mt-30 text-start text-md-end">
+                  <Link href={project.link}>
+                    View Behind The Scenes
+                    <span>
+                      <UpArrowFour />
+                    </span>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -108,7 +127,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             height="100%"
             src={`${project.youtubeUrl.replace(
               "watch?v=",
-              "embed/"
+              "embed/",
             )}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=${project.youtubeUrl.split("v=")[1]}`}
             title={project.title}
             frameBorder="0"
@@ -124,47 +143,43 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             }}
           ></iframe>
         </div>
-      ) : (
-        project.heroVideo || project.heroImage ? <HeroMedia project={project} /> : null
-      )}
-
+      ) : project.heroVideo || project.heroImage ? (
+        <HeroMedia project={project} />
+      ) : null}
 
       {/* GALLERY GRID */}
       {project.gallery && project.gallery.length > 0 && (
-      // <div className="tp-project-details-3-thumb mb-90">
-      <div className="tp-project-details-3-thumb">
-
-        <div className="container">
-          <div className="row">
-            {project.gallery.slice(0, 2).map((img, i) => (
-              <div key={i} className="col-xl-6 col-lg-6 col-md-12">
-                <div
-                  className="tp-project-details-3-thumb-box mb-30"
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "400px", 
-                    overflow: "hidden",
-                    borderRadius: "20px",
-                  }}
-                >
-                  <Image
-                    src={img}
-                    alt="gallery-img"
-                    fill
+        // <div className="tp-project-details-3-thumb mb-90">
+        <div className="tp-project-details-3-thumb">
+          <div className="container">
+            <div className="row">
+              {project.gallery.slice(0, 2).map((img, i) => (
+                <div key={i} className="col-xl-6 col-lg-6 col-md-12">
+                  <div
+                    className="tp-project-details-3-thumb-box mb-30"
                     style={{
-                      objectFit: "cover",
+                      position: "relative",
+                      width: "100%",
+                      height: "400px",
+                      overflow: "hidden",
+                      borderRadius: "20px",
                     }}
-                  />
+                  >
+                    <Image
+                      src={img}
+                      alt="gallery-img"
+                      fill
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    )}
-
-      
+      )}
 
       {/* INTRO SECTION */}
       {/* <div className="showcase-details-2-area pb-120"> */}
@@ -252,9 +267,6 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           </Swiper>
         </div>
       )}
-
-      
-
     </>
   );
 }
