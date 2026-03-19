@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube ,Linkdin, TikTok } from "../svg";
 
 // images
 import logo from "@/assets/img/logo/logo.png";
@@ -8,10 +8,15 @@ import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
 import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
 import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
 import gallery_4 from "@/assets/img/menu/offcanvas/offcanvas-4.jpg";
+
+import ab_1 from "@/assets/img/about/about-1.jpg";
+import ab_2 from "@/assets/img/about/about-3.jpg";
+import ab_3 from "@/assets/img/about/about-2.jpg";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
+// import { TikTok } from "../svg/social";
 
-const gallery_images = [gallery_1, gallery_2, gallery_3, gallery_4];
+const gallery_images = [gallery_1, gallery_2, gallery_3];
 
 // prop type
 type IProps = {
@@ -42,13 +47,13 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
               <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              <p>Crafting Powerful Brand Stories </p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none">
               <MobileMenus />
             </div>
             <div className="tp-offcanvas-gallery">
-              <div className="row gx-2">
+              {/* <div className="row gx-2">
                 {gallery_images.map((item, i) => (
                   <div className="col-md-3 col-3" key={i}>
                     <div className="tp-offcanvas-gallery-img fix">
@@ -58,17 +63,19 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm">Information</h3>
 
               <ul>
                 <li>
-                  <Link href="tel:1245654">+ 251 20 7700 1007</Link>
+                  <Link href="tel:0923002831">0923002831</Link>
+                  <Link href="tel:0926724885">0926724885</Link>
+                  <Link href="tel:0970222223">0970222223</Link>
                 </li>
                 <li>
-                  <Link href="mailto:hello@diego.com">info@inframe.com</Link>
+                  <Link href="mailto:info@inframe.com">info@inframe.com</Link>
                 </li>
                 <li>
                   <Link href="#">Bole Sub City, Addis Ababa</Link>
@@ -79,17 +86,19 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <ul>
                 <li>
+                  <Link href="#"><Youtube /></Link>
+                </li>
+                <li>
+                  <Link href="#"><TikTok /></Link>
+                </li>
+                <li>
                   <Link href="#"><InstagramTwo /></Link>
                 </li>
                 <li>
-                  <Link href="#"><Dribble /></Link>
+                  <Link href="#"><Linkdin /></Link>
                 </li>
-                <li>
-                  <Link href="#"> <Behance /></Link>
-                </li>
-                <li>
-                  <Link href="#"><Youtube /></Link>
-                </li>
+
+                
               </ul>
             </div>
           </div>

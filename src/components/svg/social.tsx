@@ -184,6 +184,26 @@ export function Behance() {
   );
 }
 
+
+export function TikTok() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 3C16.5 5 18 6.5 20 7V10C18.5 10 17 9.5 16 8.5V15C16 18 13.5 20 10.5 20C7.5 20 5 17.5 5 14.5C5 11.5 7.5 9 10.5 9C11 9 11.5 9 12 9.2V12C11.6 11.8 11.1 11.7 10.5 11.7C9 11.7 7.7 13 7.7 14.5C7.7 16 9 17.3 10.5 17.3C12 17.3 13.3 16 13.3 14.5V3H16Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function Youtube() {
   return (
     <svg

@@ -143,6 +143,13 @@ export default function PortfolioGridColTwoArea() {
                       <h4 className="tp-project-5-2-title-sm">
                         {item.title}
                       </h4>
+
+                      <br/>
+
+                      <h4 className="tp-project-5-2-meta">
+                        Agency: {item.agency}
+                      </h4>
+
                     </div>
                   </Link>
                 </div>

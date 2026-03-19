@@ -72,12 +72,16 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
           <div className="row">
             <div className="col-xl-12">
               <h2
-                className="tp-section-title-70 mb-50 tp-char-animation"
+                className="tp-section-title-70  tp-char-animation"
                 style={{
                   color: theme === "light" ? "#121212" : "white",
                 }}
               >
                 {project.title}
+              </h2>
+
+              <h2 className="tp-sub-title mb-20">
+                Agency: {project.agency}
               </h2>
             </div>
           </div>
