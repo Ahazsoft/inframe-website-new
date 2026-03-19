@@ -80,7 +80,10 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
                 {project.title}
               </h2>
 
-              <h2 className="tp-sub-title mb-20">
+              <h2 className="tp-sub-title mb-20"
+               style={{
+                  color: theme === "light" ? "#121212" : "white",
+                }}>
                 Agency: {project.agency}
               </h2>
             </div>
