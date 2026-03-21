@@ -903,6 +903,8 @@ export const projectsData: ProjectType[] = [
     grid: true
   },
 
+  
+
   // {
   //   id: 30,
   //   title: "Jetson Doro – Food Photography",
@@ -969,7 +971,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 33,
     title: "Zemen Gebeya",
-    category: "Documentary and Brand Film",
+    category: "TV Commercials",
     year: "2024",
     agency: "TTree",
     thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/4ad5dbcc-aef3-4a40-1012-bbb6991df700/public",
@@ -1015,6 +1017,28 @@ export const projectsData: ProjectType[] = [
       "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/bbca110c-fa55-43fd-2c5b-3a5d90f19f00/public",
       "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/0606c016-79a5-499c-1049-82c9dd922600/public"
       
+    ],
+    link: ""
+  },
+
+     {
+    id: 35,
+    title: "Event Campaigns",
+    category: "Events",
+    year: "2024",
+    agency: "Inframe Production",
+    thumbnailImage: "/assets/img/portfolio/Events/1.jpg",
+    btsGallery:[
+      "/assets/img/portfolio/Events/1.jpg",
+      "/assets/img/portfolio/Events/2.jpg",
+      "/assets/img/portfolio/Events/3.jpg",
+      "/assets/img/portfolio/Events/4.jpg",
+      "/assets/img/portfolio/Events/5.jpg",
+      "/assets/img/portfolio/Events/6.jpg",
+      "/assets/img/portfolio/Events/7.jpg",
+      "/assets/img/portfolio/Events/8.jpg",
+      "/assets/img/portfolio/Events/9.jpg",
+      "/assets/img/portfolio/Events/10.jpg",
     ],
     link: ""
   },

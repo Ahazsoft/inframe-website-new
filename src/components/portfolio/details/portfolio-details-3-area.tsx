@@ -196,6 +196,8 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
             {project.introTitle}
           </h4>
 
+          {project.category !== "Events" && (
+
           <div className="row">
             <div className="col-xl-3">
               <span className="ab-inner-subtitle mb-25">
@@ -211,6 +213,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
               ))}
             </div>
           </div>
+        )}
         </div>
       </div>
 
@@ -230,12 +233,12 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
       )} */}
 
       {/* GOAL SECTION */}
-      <div className="showcase-details-2-area pb-120">
+      <div className="showcase-details-2-area">
         <div className="container">
           {/* <h4 className="showcase-details-2-section-title tp-char-animation">
             {project.goalTitle}
           </h4> */}
-
+          {project.category !== "Events" && (
           <div className="row">
             <div className="col-xl-3">
               <span className="ab-inner-subtitle mb-25">
@@ -251,6 +254,7 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
               ))}
             </div>
           </div>
+          )}
         </div>
       </div>
 

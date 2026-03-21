@@ -137,7 +137,7 @@ export default function ServiceSix() {
                         </ul>
                       </div>
 
-                      <div className="sv-service-btn">
+                      {/* <div className="sv-service-btn">
                         <Link href="/service-details">
                           <Button
                             variant="secondary"
@@ -146,7 +146,7 @@ export default function ServiceSix() {
                             See Details
                           </Button>
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
 
                   </div>
