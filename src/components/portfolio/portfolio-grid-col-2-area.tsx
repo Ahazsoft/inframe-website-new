@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,35 +7,39 @@ import { useIsotop } from "@/hooks/use-isotop";
 
 import { Button } from "../ui/button";
 
-
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 import { projectsData } from "@/components/portfolio/details/projectData";
+import PortfolioGalleryView from "./PortfolioGalleryView";
+import PortfolioProjectView from "./PortfolioProjectView";
 
 export default function PortfolioGridColTwoArea() {
   const { initIsotop, isotopContainer } = useIsotop();
   const [height, setHeight] = useState(900); // Default height
+  const [activeFilter, setActiveFilter] = useState("*");
+  const router = useRouter();
+  const isGalleryMode = activeFilter === ".events" || activeFilter === ".photo";
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setHeight(500); // Set height for small screens
+      } else {
+        setHeight(900); // Set height for larger screens
+      }
+    };
 
-  const router = useRouter()
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setHeight(500); // Set height for small screens
-            } else {
-                setHeight(900); // Set height for larger screens
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-        handleResize(); // Initial check
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
-    initIsotop();
-  }, [initIsotop]);
+    // Re-init Isotope whenever filter changes
+    setTimeout(() => {
+      initIsotop();
+    }, 100);
+  }, [activeFilter, initIsotop]);
 
   // Map category to isotop class
   const getCategoryClass = (category: string) => {
@@ -57,34 +61,50 @@ export default function PortfolioGridColTwoArea() {
 
   // Get thumbnail dynamically
   const getProjectThumbnail = (project: any) => {
-    return project.thumbnailImage || project.gallery?.[0] || project.btsGallery?.[0];
+    return (
+      project.thumbnailImage || project.gallery?.[0] || project.btsGallery?.[0]
+    );
   };
-
 
   return (
     <div className="tp-project-5-2-area tp-project-5-2-pt pb-130">
       <div className="container container-1530">
-
         {/* FILTER MENU */}
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="portfolio-filter masonary-menu d-flex justify-content-center flex-wrap gap-3 mb-40">
-              <button data-filter="*" className="active">
+              <button
+                data-filter="*"
+                className="active"
+                onClick={() => setActiveFilter("*")}
+              >
                 <span>SHOW ALL</span>
               </button>
-              <button data-filter=".tv">
+              <button data-filter=".tv" onClick={() => setActiveFilter(".tv")}>
                 <span>TV COMMERCIALS</span>
               </button>
-              <button data-filter=".events">
+              <button
+                data-filter=".events"
+                onClick={() => setActiveFilter(".events")}
+              >
                 <span>EVENTS</span>
               </button>
-              <button data-filter=".digital">
+              <button
+                data-filter=".digital"
+                onClick={() => setActiveFilter(".digital")}
+              >
                 <span>DIGITAL CAMPAIGNS</span>
               </button>
-              <button data-filter=".film">
+              <button
+                data-filter=".film"
+                onClick={() => setActiveFilter(".film")}
+              >
                 <span>BRAND FILM & DOCUMENTARY</span>
               </button>
-              <button data-filter=".photo">
+              <button
+                data-filter=".photo"
+                onClick={() => setActiveFilter(".photo")}
+              >
                 <span>PHOTOGRAPHY</span>
               </button>
             </div>
@@ -93,69 +113,20 @@ export default function PortfolioGridColTwoArea() {
 
         {/* GRID */}
         <div className="row grid" ref={isotopContainer}>
-          {projectsData.map((item) => {
-            const categoryClass = getCategoryClass(item.category);
-            const thumbnail = getProjectThumbnail(item);
-
-            return (
-              <div
-                key={item.id}
-                className={`col-xl-6 col-lg-6 col-md-6 grid-item ${categoryClass}`}
-              >
-                <div
-                  className="tp-project-5-2-thumb anim-zoomin-wrap mb-30 not-hide-cursor p-relative"
-                  // data-cursor="View<br>Project"
-                >
-                  <Link href={`/projects/${item.id}`}>
-                    <Image
-                      src={thumbnail}
-                      alt={item.title}
-                      width={600}
-                      height={height}
-                      
-                      style={{ objectFit: "cover"}}
-                    />
-
-                      {/* Hover Overlay */}
-                    <div className="project-hover">
-                      <Button
-                        className="btn btn-secondary btn-sm project-btn rounded-pill bg-white text-dark fw-semibold px-4 px-md-5"
-                        onClick={() => router.push(`/projects/${item.id}`)}
-                      >
-                        View Project
-                      </Button>
-                    </div>
-
-                    <div className="hover-btn">
-                      <Button className="btn btn-secondary btn-sm rounded-pill bg-white text-dark fw-semibold px-4 px-md-5">
-                        View Project
-                      </Button>
-                    </div>
-
-                    <div className="tp-project-5-2-category tp_fade_anim">
-                      <span>{item.category}</span>
-                    </div>
-
-                    <div className="tp-project-5-2-content tp_fade_anim">
-                      <span className="tp-project-5-2-meta">
-                        {item.year}
-                      </span>
-                      <h4 className="tp-project-5-2-title-sm">
-                        {item.title}
-                      </h4>
-
-                      <br/>
-
-                      <h4 className="tp-project-5-2-meta">
-                        Agency: {item.agency}
-                      </h4>
-
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
+          {/* PROJECT / GALLERY VIEW */}
+          <div ref={isotopContainer}>
+            {isGalleryMode ? (
+              <PortfolioGalleryView
+                projects={projectsData.filter((item) =>
+                  activeFilter === ".events"
+                    ? item.category === "Events"
+                    : item.category === "Photography",
+                )}
+              />
+            ) : (
+              <PortfolioProjectView projects={projectsData} height={height} />
+            )}
+          </div>
         </div>
 
         {/* MORE PROJECTS BUTTON */}
@@ -179,16 +150,13 @@ export default function PortfolioGridColTwoArea() {
             </div>
           </div>
         </div> */}
-
       </div>
 
-      <style jsx>{
-        `
+      <style jsx>{`
         .tp-project-5-2-thumb {
           border-radius: 16px;
           overflow: hidden; /* THIS makes the image respect the radius */
         }
-
 
         /* Hide button by default */
         .hover-btn {
@@ -206,31 +174,19 @@ export default function PortfolioGridColTwoArea() {
           opacity: 1;
           pointer-events: auto;
         }
-        
 
-
-        .cursor-hide{
-          max-width:100%;
-          height:900px;
-          border:4px solid red;
+        .cursor-hide {
+          max-width: 100%;
+          height: 900px;
+          border: 4px solid red;
         }
 
-        @media (max-width:760px){
-        .cursor-hide{
-          height:300px;
+        @media (max-width: 760px) {
+          .cursor-hide {
+            height: 300px;
+          }
         }
-                  
-        }
-        
-        
-        
-        
-        `        
-        }</style>
-
-
-
+      `}</style>
     </div>
   );
 }
-
