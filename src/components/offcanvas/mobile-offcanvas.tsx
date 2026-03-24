@@ -69,9 +69,12 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
               <h3 className="tp-offcanvas-title sm">Information</h3>
 
               <ul>
-                <li>
-                  <Link href="tel:0923002831">0923002831</Link>
-                  <Link href="tel:0926724885">0926724885</Link>
+                <li style={{
+                  display:"flex",
+                  gap:"10px",
+                }}>
+                  <Link href="tel:0923002831">0923002831</Link> 
+                  <Link href="tel:0926724885">0926724885</Link> 
                   <Link href="tel:0970222223">0970222223</Link>
                 </li>
                 <li>

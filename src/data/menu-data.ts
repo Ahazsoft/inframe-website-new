@@ -221,7 +221,7 @@ const menu_data:IMenuDT[] = [
   },
 
     {
-    id: 4,
+    id: 5,
     title: 'BTS',
     link: '/home-12',
     // dropdown_menus: [
@@ -233,7 +233,7 @@ const menu_data:IMenuDT[] = [
     // ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Contact',
     link: '/contact',
     // dropdown_menus:[

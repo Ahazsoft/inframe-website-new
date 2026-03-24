@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import menu_data from "@/data/menu-data";
-import shop_banner from '@/assets/img/menu/shop-menu/banner-1.jpg';
-import port_img from '@/assets/img/menu/portfolio-menu/portfolio.png';
-
+import shop_banner from "@/assets/img/menu/shop-menu/banner-1.jpg";
+import port_img from "@/assets/img/menu/portfolio-menu/portfolio.png";
+import { useRouter } from "next/navigation";
 export default function MobileMenus() {
   const [navTitle, setNavTitle] = React.useState<string>("");
+  const router = useRouter();
 
   //openMobileMenu
   const openMobileMenu = (menu: string) => {
@@ -20,21 +21,33 @@ export default function MobileMenus() {
     <>
       <nav className="tp-main-menu-content">
         <ul>
-          {menu_data.map((menu) => (
+          {menu_data.map((menu, index) => (
             <li
               key={menu.id}
-              className={`has-dropdown ${menu.home_menus || menu.portfolio_mega_menus
+              className={`has-dropdown ${
+                menu.home_menus || menu.portfolio_mega_menus
                   ? "has-homemenu"
                   : ""
-                } ${menu.home_menus ? "dropdown-opened" : ""}`}
+              } ${menu.home_menus ? "dropdown-opened" : ""}`}
             >
-              <a className="pointer" onClick={() => openMobileMenu(menu.title)}>
+              <a
+                className="pointer"
+                onClick={() => {
+                  openMobileMenu(menu.title);
+                  router.push(menu.link);
+                }}
+              >
                 {menu.title}
-                <button className="dropdown-toggle-btn">
+                <button
+                  className="dropdown-toggle-btn"
+                  onClick={() => {
+                    router.push(menu.link);
+                  }}
+                >
                   <i className="fa-light fa-plus"></i>
                 </button>
               </a>
-              {menu.home_menus ? (
+              {/* {menu.home_menus ? (
                 <div className="tp-submenu submenu tp-mega-menu" style={{ display: navTitle === menu.title ? "block" : "none" }}>
                   <div className="tp-menu-fullwidth">
                     <div className="tp-homemenu-wrapper">
@@ -216,7 +229,7 @@ export default function MobileMenus() {
                     </li>
                   ))}
                 </ul>
-              ) : null}
+              ) : null} */}
             </li>
           ))}
         </ul>
