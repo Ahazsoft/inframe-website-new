@@ -13,9 +13,13 @@ import Hls from "hls.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUsHero() {
-
+//   {
+//   stopLoading,
+// }: {
+//   stopLoading: () => void;
+// }
   const HLS_URL =
-  "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
+    "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
   const router = useRouter();
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -28,7 +32,7 @@ export default function AboutUsHero() {
   const scrollTo = () => {
     scroller.scrollTo("about-info", {
       duration: 800,
-      delay: 10,
+      delay: 30,
       smooth: "easeInOutQuart",
     });
   };
@@ -39,34 +43,38 @@ export default function AboutUsHero() {
 
   const parts = text.split("\n");
 
-    useEffect(() => {
-      const video = videoRef.current;
-      if (!video) return;
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
 
-      const HLS_URL =
-        "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
+    const HLS_URL =
+      "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/ee87b554ba7985934f4750e1caa02790/manifest/video.m3u8";
 
-      let hls: Hls | null = null;
+    let hls: Hls | null = null;
 
-      if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        // Safari
-        video.src = HLS_URL;
-      } else if (Hls.isSupported()) {
-        // Chrome / Firefox / Edge
-        hls = new Hls({
-          enableWorker: true,
-          lowLatencyMode: true,
-        });
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      // Safari
+      video.src = HLS_URL;
+    } else if (Hls.isSupported()) {
+      // Chrome / Firefox / Edge
+      hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: true,
+      });
 
-        hls.loadSource(HLS_URL);
-        hls.attachMedia(video);
-      }
+      hls.loadSource(HLS_URL);
+      hls.attachMedia(video);
+    }
 
-      return () => {
-        if (hls) hls.destroy();
-      };
-    }, []);
+    // const timerId = setTimeout(() => {
+    //   stopLoading();
+    // }, 3000);
 
+    // clearTimeout(timerId);
+    return () => {
+      if (hls) hls.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     if (!sectionRef.current || !videoWrapRef.current || !h2Ref.current) return;
@@ -83,11 +91,11 @@ export default function AboutUsHero() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=950", 
+          end: "+=950",
           scrub: true,
           invalidateOnRefresh: true,
           pin: true,
-        }
+        },
       });
 
       /**
@@ -105,7 +113,7 @@ export default function AboutUsHero() {
       });
 
       /**
-       * 0:05–0:15 — Hero holds 
+       * 0:05–0:15 — Hero holds
        */
       tl.to({}, { duration: 0.45 });
 
@@ -118,11 +126,15 @@ export default function AboutUsHero() {
         ease: "none",
       });
 
-      tl.to(videoWrapRef.current, {
-        "--overlay": 0.65,
-        duration: 1,
-        ease: "none",
-      }, "<");
+      tl.to(
+        videoWrapRef.current,
+        {
+          "--overlay": 0.65,
+          duration: 1,
+          ease: "none",
+        },
+        "<",
+      );
 
       /**
        * 0:20 — First H2
@@ -133,12 +145,16 @@ export default function AboutUsHero() {
         ease: "none",
       });
 
-      tl.to(lines[0], {
-        opacity: 1,
-        y: 0,
-        duration: 1.4,
-        ease: "none",
-      }, "<");
+      tl.to(
+        lines[0],
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.4,
+          ease: "none",
+        },
+        "<",
+      );
 
       /**
        * 0:25 — Second H2
@@ -149,12 +165,16 @@ export default function AboutUsHero() {
         ease: "none",
       });
 
-      tl.to(lines[1], {
-        opacity: 1,
-        y: 0,
-        duration: 1.4,
-        ease: "none",
-      }, "<");
+      tl.to(
+        lines[1],
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.4,
+          ease: "none",
+        },
+        "<",
+      );
 
       /**
        * 0:30 — Third H2
@@ -165,13 +185,16 @@ export default function AboutUsHero() {
         ease: "none",
       });
 
-      tl.to(lines[2], {
-        opacity: 1,
-        y: 0,
-        duration: 1.4,
-        ease: "none",
-      }, "<");
-
+      tl.to(
+        lines[2],
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.4,
+          ease: "none",
+        },
+        "<",
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -183,7 +206,6 @@ export default function AboutUsHero() {
       className="ab-inner-hero-area p-relative"
       style={{ height: "100vh" }}
     >
-      
       {/* VIDEO BACKGROUND */}
       <div ref={videoWrapRef} className="ab-hero-video-wrap">
         {/* <video
@@ -262,9 +284,7 @@ export default function AboutUsHero() {
           <div ref={h2Ref}>
             {parts.map((p, idx) => (
               <div key={idx}>
-                <h2 className="text-white  ab-inner-hero-h2ref">
-                  {p}
-                </h2>
+                <h2 className="text-white  ab-inner-hero-h2ref">{p}</h2>
                 <div style={{ height: idx === parts.length - 1 ? 80 : 15 }} />
               </div>
             ))}
@@ -279,21 +299,19 @@ export default function AboutUsHero() {
           position: relative;
           overflow: hidden;
           height: 200vh;
-          background: transparent
-          
+          background: transparent;
         }
 
         .ab-hero-video-wrap {
-          position: absolute;          
+          position: absolute;
           inset: 0;
           width: 100vw;
           height: 100vh;
           overflow: hidden;
-          z-index: 0;              
+          z-index: 0;
           --overlay: 0;
-          pointer-events: none;    
+          pointer-events: none;
         }
-
 
         .ab-hero-video {
           position: absolute;
@@ -307,7 +325,6 @@ export default function AboutUsHero() {
           object-fit: cover;
           will-change: transform;
         }
-
 
         .ab-hero-overlay {
           position: absolute;
@@ -328,8 +345,6 @@ export default function AboutUsHero() {
           pointer-events: none;
         }
 
-
-
         .ab-inner-hero-area .container {
           position: absolute;
           z-index: 2;
@@ -344,29 +359,27 @@ export default function AboutUsHero() {
           left: 50%;
           transform: translate(-50%, -50%);
           width: 75%;
-          margin: 0 auto;              
-          text-align: center;         
+          margin: 0 auto;
+          text-align: center;
           display: flex;
           flex-direction: column;
-          align-items: center;        
+          align-items: center;
           justify-content: center;
         }
 
-        .ab-inner-hero-title-box h1{
+        .ab-inner-hero-title-box h1 {
           color: #ffffff !important;
-          font-size:80px;
-          letter-spacing:1;
+          font-size: 80px;
+          letter-spacing: 1;
         }
         .ab-inner-hero-title-box p {
           color: #ffffff !important;
         }
 
-
         .ab-inner-hero-h2ref {
-            text-align: center;
-            font-size: 40px;
-          }
-        
+          text-align: center;
+          font-size: 40px;
+        }
 
         @media (max-width: 540px) {
           .ab-inner-hero-title-box h1 {
@@ -387,10 +400,9 @@ export default function AboutUsHero() {
             font-size: 1.1rem;
           }
 
-
           .ab-inner-hero-h2ref {
-            text-aling:left;
-            font-size: 30px;            
+            text-aling: left;
+            font-size: 30px;
           }
         }
       `}</style>
