@@ -15,8 +15,10 @@ const location_data = [
     time: "12:00 pm GMT+2",
     location_title: "Base Create",
     address: "Bole SubCity, Addis Ababa <br /> Ethiopia",
-    phone: "(+251) 76001726",
-    email: "info@inframe.com",
+    phone1: "(+251) 923002831",
+    phone2: "(+251) 926724885",
+    phone3: "(+251) 970222223",
+    email: "info@inframeadvertising.com",
   },
   // {
   //   id: 2,
@@ -55,10 +57,10 @@ const ContactLocation = () => {
                     </div> */}
                     <div className="cn-contact-left-info">
                       <h4 className="cn-contact-left-title">{item.country}</h4>
-                      <span>
+                      {/* <span>
                         <i className="fa-regular fa-clock"></i>
                         {item.time}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>
@@ -70,18 +72,20 @@ const ContactLocation = () => {
                           {item.location_title}
                         </span>
                         <Link
-                          href="https://www.google.com/maps"
+                          href="#"
                           target="_blank"
                           dangerouslySetInnerHTML={{ __html: item.address }}
                         ></Link>
                       </div>
                       <div className="cn-contact-map">
-                        <Link href="#">Google Maps</Link>
+                        <Link href="https://maps.app.goo.gl/mtTrKxseKiSdQjsAA">Google Maps</Link>
                       </div>
                     </div>
                     <div className="cn-contact-right-info text-start text-md-end">
-                      <Link href="tel:(+91)76001726">{item.phone}</Link> <br />
-                      <Link href="mailto:Hello@contact.com">{item.email}</Link>
+                      <Link href="tel:0923002831">{item.phone1}</Link> <br />
+                      <Link href="tel:0926724885">{item.phone2}</Link> <br />
+                      <Link href="tel:0970222223">{item.phone3}</Link> <br />
+                      <Link href="mailto:info@inframeadvertising.com">{item.email}</Link>
                     </div>
                   </div>
                 </div>

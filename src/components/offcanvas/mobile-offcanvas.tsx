@@ -78,7 +78,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
                   <Link href="tel:0970222223">0970222223</Link>
                 </li>
                 <li>
-                  <Link href="mailto:info@inframe.com">info@inframe.com</Link>
+                  <Link href="mailto:info@inframeadvertising.com">info@inframeadvertising.com</Link>
                 </li>
                 <li>
                   <Link href="#">Bole Sub City, Addis Ababa</Link>
