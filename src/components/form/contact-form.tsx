@@ -33,12 +33,12 @@ export default function ContactForm({btnCls=''}:IProps) {
     <form onSubmit={onSubmit}>
       <div className="cn-contactform-input mb-25">
         <label>Name</label>
-        <input id='name' {...register("name")} type="text" placeholder="John Doe" />
+        <input id='name' {...register("name")} type="text" placeholder="" />
         <ErrorMsg msg={errors.name?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
         <label>Subject</label>
-        <input id='subject' {...register("subject")} type="text" placeholder="Your@email.com" />
+        <input id='subject' {...register("subject")} type="text" placeholder="" />
         <ErrorMsg msg={errors.subject?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
