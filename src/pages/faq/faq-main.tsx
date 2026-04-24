@@ -6,11 +6,7 @@ import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-// internal imports
-import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import BigText from "@/components/big-text";
-import FooterTwo from "@/layouts/footers/footer-two";
+
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import FaqArea from "@/components/faq/faq-area";

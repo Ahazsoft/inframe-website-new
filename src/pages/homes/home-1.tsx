@@ -25,7 +25,6 @@ import BrandOne from "@/components/brand/brand-one";
 import ServiceOne from "@/components/service/service-one";
 import { ServiceInframe } from "@/components/service/service-inframe";
 import ProjectOne from "@/components/project/project-one";
-import AwardOne from "@/components/award/award-one";
 import TeamOne from "@/components/team/team-one";
 import TestimonialOne from "@/components/testimonial/testimonial-one";
 import ArtistOffer from "../artistoffer/ArtistOffer";

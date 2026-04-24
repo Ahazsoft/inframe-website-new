@@ -8,13 +8,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
 import TeamArea from "@/components/team/team-area";
 import StudioPanelFour from "@/components/studio-panels/studio-panel-4";
-import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import {charAnimation,titleAnimation} from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
+import HeaderOne from "@/layouts/headers/header-one";
+import FooterOne from "@/layouts/footers/footer-one";
 
 const TeamMain = () => {
   useScrollSmooth();
@@ -31,7 +31,7 @@ const TeamMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderEleven />
+      <HeaderOne />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -71,7 +71,7 @@ const TeamMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" whiteFooter={true} />
+          <FooterOne/>
           {/* footer area */}
         </div>
       </div>
