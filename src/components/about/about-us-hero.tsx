@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+
 import { scroller } from "react-scroll";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -73,7 +75,6 @@ export default function AboutUsHero() {
                 style={{
                   color: theme === "light" ? "#111111" : "#efefef",
                 }}
-              
               >
                 Creative production and marketing solutions that bring ideas to
                 life. Inframe Productions and Promotion develops creative

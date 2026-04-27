@@ -183,7 +183,7 @@ const menu_data:IMenuDT[] = [
   {
     id: 3,
     title: 'Projects',
-    link: '/portfolio-grid-col-2',    
+    link: '/projects',    
   },
   // {
   //   id: 4,
@@ -223,7 +223,7 @@ const menu_data:IMenuDT[] = [
     {
     id: 5,
     title: 'BTS',
-    link: '/home-12',
+    link: '/bts',
     // dropdown_menus: [
     //   { title: 'Modern', link: '/blog-modern' },
     //   { title: 'Classic Sidebar', link: '/blog-classic' },

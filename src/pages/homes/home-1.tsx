@@ -2,8 +2,6 @@
 import { gsap } from "gsap";
 import React, { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
-import Link from "next/link";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import {
   ScrollSmoother,
@@ -16,26 +14,15 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderOne from "@/layouts/headers/header-one-index";
-import HeroBannerOne from "@/components/hero-banner/hero-banner-one";
 import HeroBannerInframe from "@/components/hero-banner/hero-banner-inframe";
 import VideOne from "@/components/video/video-one";
-// import FaqMain from "../faq/faq-main";
-import FaqArea from "@/components/faq/faq-area";
 import BrandOne from "@/components/brand/brand-one";
-import ServiceOne from "@/components/service/service-one";
 import { ServiceInframe } from "@/components/service/service-inframe";
-import ProjectOne from "@/components/project/project-one";
-import AwardOne from "@/components/award/award-one";
-import TeamOne from "@/components/team/team-one";
-import TestimonialOne from "@/components/testimonial/testimonial-one";
 import ArtistOffer from "../artistoffer/ArtistOffer";
 import CinemaPlatform from "../cinemaplatform/CinemaPlatform";
 import BundlePackage from "../bundlepackages/BundlePackage";
 import FooterOne from "@/layouts/footers/footer-one";
 
-// images
-import shape_1 from "@/assets/img/home-01/footer/footer-circle-shape-1.png";
-import shape_2 from "@/assets/img/home-01/footer/footer-circle-shape-2.png";
 
 // animation
 import { videoAnimOne } from "@/utils/video-anim";

@@ -6,10 +6,11 @@ import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
+
 import TeamDetailsArea from "@/components/team/team-details-area";
 import { IdProps } from "@/types/custom-d-t";
+import HeaderOne from "@/layouts/headers/header-one";
+import FooterOne from "@/layouts/footers/footer-one";
 
 const TeamDetailsMain = ({id}:IdProps) => {
   useScrollSmooth();
@@ -17,7 +18,7 @@ const TeamDetailsMain = ({id}:IdProps) => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderEleven />
+      <HeaderOne />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -29,7 +30,7 @@ const TeamDetailsMain = ({id}:IdProps) => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterOne />
           {/* footer area */}
         </div>
       </div>

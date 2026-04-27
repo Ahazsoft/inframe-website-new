@@ -8,11 +8,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
 import HeaderOne from "@/layouts/headers/header-one";
 import PortfolioGridColTwoArea from "@/components/portfolio/portfolio-grid-col-2-area";
 import BigText from "@/components/big-text";
-import FooterTwo from "@/layouts/footers/footer-two";
 import FooterOne from "@/layouts/footers/footer-one";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
