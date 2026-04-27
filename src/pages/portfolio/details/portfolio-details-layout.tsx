@@ -9,10 +9,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 import Wrapper from "@/layouts/wrapper";
 import HeaderOne from "@/layouts/headers/header-one";
-// import HeaderEleven from "@/layouts/headers/header-eleven";
 import PortfolioDetailsThreeArea from "@/components/portfolio/details/portfolio-details-3-area";
 import FooterOne from "@/layouts/footers/footer-one";
-// import FooterTwo from "@/layouts/footers/footer-two";
 
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { ProjectType } from "@/components/portfolio/details/projectData";

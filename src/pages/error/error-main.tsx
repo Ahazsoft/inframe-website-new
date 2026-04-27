@@ -9,8 +9,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
 import error from '@/assets/img/error/error.png';
 import HeaderOne from "@/layouts/headers/header-one-index";
 import FooterOne from "@/layouts/footers/footer-one";

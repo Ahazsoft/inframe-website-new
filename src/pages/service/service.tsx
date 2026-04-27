@@ -14,7 +14,6 @@ import ServiceSix from "@/components/service/service-six";
 import { BrandItems } from "@/components/brand/brand-two";
 import LineImgSlider from "@/components/line-text/line-img-slider";
 import BigText from "@/components/big-text";
-import { Leaf } from "@/components/svg";
 // animation
 import { charAnimation, fadeAnimation } from "@/utils/title-animation";
 import { servicePanel } from "@/utils/panel-animation";
