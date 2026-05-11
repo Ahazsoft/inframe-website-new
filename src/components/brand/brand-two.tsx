@@ -10,6 +10,9 @@ import b_5 from "@/assets/img/home-01/brand/brand-5.png";
 import b_6 from "@/assets/img/home-01/brand/brand-6.png";
 import b_7 from "@/assets/img/home-01/brand/brand-7.png";
 import b_8 from "@/assets/img/home-01/brand/brand-8.png";
+import b_9 from "@/assets/img/home-01/brand/brand-9.png";
+import b_10 from "@/assets/img/home-01/brand/brand-10.png";
+import b_11 from "@/assets/img/home-01/brand/brand-11.png";
 
 
 // brand_data
@@ -86,37 +89,61 @@ const brand_data = [
       "https://www.berryethiopia.com/",
     ],
   },
-  // {
-  //   id: 7,
-  //   brand: b_7,
-  //   texts: [
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //     "https://www.youtube.com/c/EyohaMedia",
-  //   ],
-  // },
-  // {
-  //   id: 8,
-  //   brand: b_8,
-  //   texts: [
-  //     "https://www.youtube.com/@yenetatube9036",
-  //     "https://www.youtube.com/@yenetatube9036",
-  //     "https://www.youtube.com/@yenetatube9036",
-  //     "https://www.youtube.com/@yenetatube9036",
-  //     "https://www.youtube.com/@yenetatube9036",
-  //     "https://www.youtube.com/@yenetatube9036",
-  //   ],
-  // },
+  {
+    id: 7,
+    brand: b_7,
+    texts: [
+      "https://www.youtube.com/c/EyohaMedia",
+      "https://www.youtube.com/c/EyohaMedia",
+      "https://www.youtube.com/c/EyohaMedia",
+      "https://www.youtube.com/c/EyohaMedia",
+      "https://www.youtube.com/c/EyohaMedia",
+      "https://www.youtube.com/c/EyohaMedia",
+    ],
+  },
+  {
+    id: 8,
+    brand: b_8,
+    texts: [
+      "https://www.youtube.com/@yenetatube9036",
+      "https://www.youtube.com/@yenetatube9036",
+      "https://www.youtube.com/@yenetatube9036",
+      "https://www.youtube.com/@yenetatube9036",
+      "https://www.youtube.com/@yenetatube9036",
+      "https://www.youtube.com/@yenetatube9036",
+    ],
+  },
+  {
+    id: 9,
+    brand: b_9,
+    texts: [
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+    ],
+  },
+  {
+    id: 10,
+    brand: b_10,
+    texts: [
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+      // "https://www.youtube.com/@yenetatube9036",
+    ],
+  },
 ];
 
 // brand items
 export function BrandItems() {
   return (
     <>
-      {brand_data.map((item) => (
+      {/* {brand_data.map((item) => (
         <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
           <div className="tp-brand-4-item p-relative">
             <Image src={item.brand} alt="brand" style={{ height: "auto" }} />
@@ -127,7 +154,7 @@ export function BrandItems() {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </>
   );
 }

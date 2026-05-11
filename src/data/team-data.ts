@@ -73,18 +73,18 @@ const team_data:ITeamDT[] = [
       // {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
     ]
   },
-  // {
-  //   id:5,
-  //   img:"/assets/img/team/5.PNG",
-  //   designation:"",
-  //   name:"",
-  //   socials:[
-  //     {icon:'fa-brands fa-twitter',link:'https://twitter.com'},
-  //     {icon:'fa-brands fa-facebook',link:'https://facebook.com'},
-  //     {icon:'fa-brands fa-instagram',link:'https://instagram.com'},
-  //     {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
-  //   ]
-  // },
+  {
+    id:7,
+    image:"https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/83b6f63c-f7b4-4aed-c32e-38efaf59ee00/public",
+    designation:"Marketing  officer /production assistant",
+    name:"Tigest Kassahun",
+    socials:[
+      // {icon:'fa-brands fa-twitter',link:'https://twitter.com'},
+      // {icon:'fa-brands fa-facebook',link:'https://facebook.com'},
+      // {icon:'fa-brands fa-instagram',link:'https://instagram.com'},
+      // {icon:'fa-brands fa-linkedin-in',link:'https://linkedin.com'},
+    ]
+  },
   // {
   //   id:6,
   //   image:"/assets/img/home-01/team/team-1-6.jpg",

@@ -109,7 +109,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/2dff2d1c3dc1b7e071951de3a5698ed4/manifest/video.m3u8",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/b8d6f9a6-59f8-4e06-552b-69705fa36400/public",
-    thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/601555d3-dc83-4425-18d4-79bbc13e6600/public",
+    thumbnailImage: "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/fb10357d-5cea-4d6a-8823-1f9159406700/public",
     gallery: ["https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/118cd25d-2f3d-47c3-b2c8-d89eeb3bf600/public","https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/e6a6e842-ed6a-4a62-fff6-f0bd106f8b00/public"],
     btsGallery:[
       "https://imagedelivery.net/b7i_8h3I_Vzzf0daoDffiA/23368e40-5c6a-412e-dd20-4745a43bac00/public",
