@@ -8,6 +8,9 @@ import { Leaf } from "@/components/svg";
 import Hls from "hls.js";
 import { useEffect, useRef } from "react";
 
+
+import shape from "@/assets/img/inner-about/about/shape-1.png";
+
 type Props = {
   project: ProjectType;
 };
@@ -89,7 +92,9 @@ export default function InfinixLayout({ project }: Props) {
 
       {/* MAKING OF THIS FRAME */}
       <div className="container pb-120">
-        <h3 className="mb-40">The Making of This Frame</h3>
+        <h3 className="mb-40">Hover on the image to see the Making</h3>
+
+       
 
         <div
           className="making-frame"
@@ -97,6 +102,11 @@ export default function InfinixLayout({ project }: Props) {
           onMouseLeave={() => setPlayVideo(false)}
         >
           {/* IMAGE */}
+                       <Image
+                className=""
+                src={shape}
+                alt="shape"
+              />
           <div className="making-frame-inner">
             {project.makingFrame && (
               <Image
@@ -106,6 +116,9 @@ export default function InfinixLayout({ project }: Props) {
                 style={{ objectFit: "contain" }}
               />
             )}
+
+
+
 
             {/* VIDEO */}
             <video

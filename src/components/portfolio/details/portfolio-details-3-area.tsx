@@ -103,8 +103,8 @@ export default function PortfolioDetailsThreeArea({ project }: Props) {
 
             <div className="col-xl-6">
               {project.link && (
-                <div className="tp-project-details-3-link mt-30 text-start text-md-end">
-                  <Link href={project.link}>
+                <div className="tp-project-details-3-link mt-30 text-start text-md-end ">
+                  <Link href={project.link} className="blink-arrow">
                     View Behind The Scenes
                     <span>
                       <UpArrowFour />

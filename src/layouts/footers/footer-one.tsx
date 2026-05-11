@@ -114,10 +114,19 @@ export default function FooterOne() {
               </div>
               <div className="col-xl-6 col-md-8">
                 <div className="tp-copyright-text text-center text-md-end">
-                  <p>
-                    Copyright © {new Date().getFullYear()} Inframe. All rights
-                    reserved.
-                  </p>
+                <p>
+                  Copyright © {new Date().getFullYear()} Inframe. All rights
+                  reserved. Powered by{" "}
+                  <a
+                    href="https://ahaz.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#57B3E5" }}
+                  >
+                    Ahaz Solutions
+                  </a>
+                </p>
+                  
                 </div>
               </div>
             </div>

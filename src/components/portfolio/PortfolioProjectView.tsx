@@ -88,9 +88,11 @@ export default function PortfolioProjectView({ projects, height }: Props) {
 
                       <br />
 
-                      <h4 className="tp-project-5-2-meta">
-                        Agency: {item.agency}
-                      </h4>
+                      {item.agency && (
+                        <h4 className="tp-project-5-2-meta">
+                          Agency: {item.agency}
+                        </h4>
+                      )}
                     </div>
                   </Link>
                 </div>
