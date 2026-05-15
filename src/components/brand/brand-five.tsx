@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 import b_1 from "@/assets/img/home-01/brand/berry.png";
 import b_2 from "@/assets/img/home-01/brand/tracon.png";
 import b_3 from "@/assets/img/home-01/brand/malesa.jpg";
-import b_4 from "@/assets/img/home-01/brand/traconreal.png";
+// import b_4 from "@/assets/img/home-01/brand/traconreal.png";
 import b_5 from "@/assets/img/home-01/brand/yoniniy.png";
 import b_6 from "@/assets/img/home-01/brand/infinix.png";
 import b_7 from "@/assets/img/home-01/brand/brand-7.png";
@@ -14,9 +14,10 @@ import b_8 from "@/assets/img/home-01/brand/brand-8.png";
 import b_9 from "@/assets/img/home-01/brand/brand-9.png";
 import b_10 from "@/assets/img/home-01/brand/brand-10.png";
 import b_11 from "@/assets/img/home-01/brand/brand-11.png";
+import b_12 from "@/assets/img/home-01/brand/brand-12.png";
 
 // brand images
-const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8 ,b_9,b_10,b_11];
+const brand_images = [b_1, b_2, b_3, b_5, b_6, b_7, b_8 ,b_9,b_10,b_11,b_12];
 
 export default function BrandFive() {
   return (
