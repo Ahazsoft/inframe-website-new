@@ -48,7 +48,7 @@ export const projectsData: ProjectType[] = [
     heroVideo: "https://customer-nxmkxhnsavbizlm1.cloudflarestream.com/a48c464296ccef327d79f945f1829c91/manifest/video.m3u8",
     // heroVideoPoster: "/assets/img/portfolio/ZTE/herofallback.png",
     heroVideoFallbackImage: "/assets/img/portfolio/ZTE/herofallback.png",
-    heroImage:"/assets/img/portfolio/ZTE/heroimage.png",
+    heroImage:"/assets/img/portfolio/ZTE/herofallback.png",
     thumbnailImage: "/assets/img/portfolio/ZTE/heroimage.jpg",
     gallery: ["/assets/img/portfolio/ZTE/gallery1.png","/assets/img/portfolio/ZTE/gallery2.png"],
 
@@ -441,7 +441,7 @@ export const projectsData: ProjectType[] = [
     ],
     link: ""
   },
-
+// http://localhost:3000/_next/image?url=/assets/img/portfolio/ZTE/heroimage.png&w=3840&q=75
   {
     id: 13,
     title: "Chebera Churchura Lodge – Gebeta Le Hager",

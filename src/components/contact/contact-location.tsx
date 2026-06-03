@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 // images
 import location_1 from "@/assets/img/inner-contact/contact/info-1.jpg";
-import location_2 from "@/assets/img/inner-contact/contact/info-2.jpg";
-import location_3 from "@/assets/img/inner-contact/contact/info-3.jpg";
 import Link from "next/link";
 
 // data
@@ -20,26 +18,7 @@ const location_data = [
     phone3: "(+251) 970222223",
     email: "info@inframeadvertising.com",
   },
-  // {
-  //   id: 2,
-  //   img: location_2,
-  //   country: "Germany",
-  //   time: "11:00 pm GMT+2",
-  //   location_title: "Base Create",
-  //   address: "Base Creative, 43 Appleton <br /> Lane, 3287 Hamilton",
-  //   phone: "(+91) 76001726",
-  //   email: "Hello@contact.com",
-  // },
-  // {
-  //   id: 3,
-  //   img: location_3,
-  //   country: "New Zealand",
-  //   time: "10:00 pm GMT+2",
-  //   location_title: "Base Create",
-  //   address: "Base Creative, 43 Appleton <br /> Lane, 3287 Hamilton",
-  //   phone: "(+91) 76001726",
-  //   email: "Hello@contact.com",
-  // },
+
 ];
 
 const ContactLocation = () => {
