@@ -271,11 +271,7 @@ export default function AboutUsHero() {
             <div style={{ height: 40 }} />
 
             <p className="text-white text-justify break-words ab-inner-hero-title">
-              We craft powerful visual experiences that go beyond aesthetics
-              stories that move people, spark emotion, and leave a lasting
-              impression. From concept to final frame, we transform ideas into
-              compelling narratives that connect brands with audiences in
-              meaningful and unforgettable ways.
+             We craft powerful visual experiences that transcend aesthetics  stories that move people, ignite emotion, and create lasting impact. From concept to final frame, we shape ideas into captivating brand narratives that connect with audiences in unforgettable, meaningful ways.
             </p>
           </div>
 

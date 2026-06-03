@@ -52,11 +52,7 @@ export default function AboutUsArea() {
                 Hi!
               </span>
               <p className="tp-dropcap tp_fade_bottom">
-                Inframe Productions and Promotion is a creative production and marketing
-                company founded in 2022 by Seyfe Molla and Eliyas Takele. Built on strong
-                experience in television and media, we specialize in transforming ideas
-                into powerful visual stories that strengthen brands and connect with
-                audiences.
+               Inframe Productions and Promotion is a creative production and branding agency founded in 2022 by Seyfe Molla and Eliyas Takele. With deep expertise in television and media, we transform ideas into compelling visual stories that elevate brands and engage audiences.
               </p>
             </div>
           </div>
