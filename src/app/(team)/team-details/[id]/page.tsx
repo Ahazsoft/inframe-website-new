@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 
 // Props type
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: number }>;
 };
 
 // Dynamic metadata for each team member
@@ -26,16 +26,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: member.name, // e.g., "Jane Doe | Inframe Advertising" (template adds brand)
     description:
-      member.bio?.slice(0, 160) ||
-      `${member.name}, ${member.jobTitle || "team member"} at Inframe Advertising.`,
+      member.designation?.slice(0, 160) ||
+      `${member.name}, ${member.designation || "team member"} at Inframe Advertising.`,
     alternates: {
       canonical: memberUrl,
     },
     openGraph: {
-      title: `${member.name} – ${member.jobTitle || "Team Member"} | Inframe Advertising`,
+      title: `${member.name} – ${member.designation || "Team Member"} | Inframe Advertising`,
       description:
-        member.bio?.slice(0, 200) ||
-        `Meet ${member.name}, ${member.jobTitle} at Inframe Advertising.`,
+        member.designation?.slice(0, 200) ||
+        `Meet ${member.name}, ${member.designation} at Inframe Advertising.`,
       url: memberUrl,
       type: "profile", // indicates a person page
       images: member.image
@@ -51,8 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary",
-      title: `${member.name} – ${member.jobTitle}`,
-      description: member.bio?.slice(0, 200) || "",
+      title: `${member.name} – ${member.designation}`,
+      description: member.designation?.slice(0, 200) || "",
       images: member.image ? [member.image] : undefined,
     },
   };
@@ -78,7 +78,7 @@ export default async function TeamDetailsPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: member.name,
-    jobTitle: member.jobTitle || undefined,
+    jobTitle: member.designation || undefined,
     worksFor: {
       "@type": "Organization",
       name: "Inframe Advertising",
@@ -86,14 +86,11 @@ export default async function TeamDetailsPage({ params }: Props) {
     },
     url: `https://www.inframeadvertising.com/team/${id}`,
     image: member.image || undefined,
-    description: member.bio || undefined,
-    sameAs: member.socialLinks
-      ? [
-          member.socialLinks.linkedin,
-          member.socialLinks.twitter,
-          member.socialLinks.instagram,
-        ].filter(Boolean)
-      : undefined,
+    description: member.designation || undefined,
+    sameAs:
+      member.socials && member.socials.length > 0
+        ? member.socials.map((social) => social.link)
+        : undefined,
   };
 
   const breadcrumbSchema = {
