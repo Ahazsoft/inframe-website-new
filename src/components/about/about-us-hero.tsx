@@ -76,10 +76,7 @@ export default function AboutUsHero() {
                   color: theme === "light" ? "#111111" : "#efefef",
                 }}
               >
-                Creative production and marketing solutions that bring ideas to
-                life. Inframe Productions and Promotion develops creative
-                production and marketing solutions that bring brands to life and
-                drive real impact.
+                Creative production and marketing solutions that bring ideas to life. Inframe Productions and Promotion delivers tailored creative production and marketing solutions that elevate brands and drive measurable impact.
               </p>
             </div>
           </div>

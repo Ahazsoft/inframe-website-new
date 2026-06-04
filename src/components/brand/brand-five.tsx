@@ -58,8 +58,7 @@ export default function BrandFive() {
           <div className="col-xl-7 col-lg-9">
             <div className="ab-brand-content tp_title_anim">
               <p>
-                We build long-term partnerships through trust, transparency, and consistent
-                results. Many clients choose to stay with us year after year.
+               We build lasting client partnerships on trust, transparency, and proven results. Most clients stay with us year after year.
               </p>
 
               {/* <span>More about us</span> */}
