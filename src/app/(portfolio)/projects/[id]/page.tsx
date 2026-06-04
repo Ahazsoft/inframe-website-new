@@ -1,4 +1,4 @@
-import { projectsData } from "@/components/portfolio/details/projectData";
+import { projectsData, type ProjectType } from "@/components/portfolio/details/projectData";
 import PortfolioDetailsLayout from "@/pages/portfolio/details/portfolio-details-layout";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -29,22 +29,26 @@ export async function generateMetadata({
 
   // Base URL comes from the layout's metadataBase
   const projectUrl = `/portfolio/projects/${id}`;
+  const projectDescription =
+    project.introText?.[0] || project.goalText?.[0] || project.title;
+  const projectImage =
+    project.heroImage || project.thumbnailImage || project.heroVideoFallbackImage;
 
   return {
     title: project.title, // e.g., "Nike Campaign – Inframe Advertising"
-    description: project.excerpt || project.description, // short summary
+    description: projectDescription,
     alternates: {
       canonical: projectUrl,
     },
     openGraph: {
       title: project.title,
-      description: project.excerpt || project.description,
+      description: projectDescription,
       url: projectUrl,
       type: "article", // since this is a creative work showcase
-      images: project.image
+      images: projectImage
         ? [
             {
-              url: project.image,
+              url: projectImage,
               width: 1200,
               height: 630,
               alt: project.title,
@@ -55,15 +59,19 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: project.title,
-      description: project.excerpt || project.description,
-      images: project.image ? [project.image] : undefined,
+      description: projectDescription,
+      images: projectImage ? [projectImage] : undefined,
     },
   };
 }
 
 // Schema.org structured data for each project
-function ProjectStructuredData({ project }: { project: any }) {
+function ProjectStructuredData({ project }: { project: ProjectType }) {
   const projectUrl = `https://www.inframeadvertising.com/portfolio/projects/${project.id}`;
+  const projectDescription =
+    project.introText?.[0] || project.goalText?.[0] || project.title;
+  const projectImage =
+    project.heroImage || project.thumbnailImage || project.heroVideoFallbackImage;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -95,8 +103,8 @@ function ProjectStructuredData({ project }: { project: any }) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: project.title,
-    description: project.excerpt || project.description,
-    image: project.image,
+    description: projectDescription,
+    image: projectImage,
     url: projectUrl,
     author: {
       "@type": "Organization",
@@ -108,7 +116,7 @@ function ProjectStructuredData({ project }: { project: any }) {
       name: "Inframe Advertising",
       url: "https://www.inframeadvertising.com",
     },
-    datePublished: project.date || undefined, // include if available
+    datePublished: project.year || undefined, // include if available
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": projectUrl,
