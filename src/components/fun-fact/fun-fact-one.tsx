@@ -12,7 +12,7 @@ const counter_data = [
   {
     id: 2,
     title: "YEARS OF EXPERIENCE",
-    count: 2,
+    count: 3,
     text: "+",
   },
   {
