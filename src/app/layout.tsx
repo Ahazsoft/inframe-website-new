@@ -208,13 +208,13 @@ export default function RootLayout({
           <VideoProvider>{children}</VideoProvider>
         </ThemeProvider>
         <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-045ZRL47E2"></script>
-      <script>
-       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEZ3KHYMSR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-045ZRL47E2');
+    gtag('config', 'G-BEZ3KHYMSR');
       </script>
       </body>
     </html>
