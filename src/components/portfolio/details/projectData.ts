@@ -1039,6 +1039,11 @@ export const projectsData: ProjectType[] = [
       "/assets/img/portfolio/Events/8.jpg",
       "/assets/img/portfolio/Events/9.jpg",
       "/assets/img/portfolio/Events/10.jpg",
+      "/assets/img/portfolio/Events/11.jpg",
+      "/assets/img/portfolio/Events/12.jpg",
+      "/assets/img/portfolio/Events/13.jpg",
+      "/assets/img/portfolio/Events/14.jpg",
+      
     ],
     link: ""
   },

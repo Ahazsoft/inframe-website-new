@@ -16,10 +16,15 @@ import b_9 from "@/assets/img/home-01/brand/brand-9.png";
 import b_10 from "@/assets/img/home-01/brand/brand-10.png";
 import b_11 from "@/assets/img/home-01/brand/brand-11.png";
 import b_12 from "@/assets/img/home-01/brand/brand-12.png";
+import b_13 from "@/assets/img/home-01/brand/brand-13.png";
+import b_14 from "@/assets/img/home-01/brand/brand-14.jpg";
+import b_15 from "@/assets/img/home-01/brand/brand-15.jpg";
+import b_16 from "@/assets/img/home-01/brand/brand-16.png";
 
 
 
-const brand_images = [b_1, b_2, b_3,b_12, b_5, b_6, b_7, b_8 ,b_9,b_10,b_11,  b_1, b_2, b_3,b_12, b_5, b_6, b_7, b_8,b_9,b_10,b_11];
+
+const brand_images = [b_1, b_2, b_3,b_12, b_5, b_6, b_7, b_8 ,b_9,b_10,b_11,b_13,b_14,b_15 ,b_16, b_1, b_2, b_3,b_12, b_5, b_6, b_7, b_8,b_9,b_10,b_11,b_13,b_14,b_15,b_16];
 
 export default function BrandSlider() {
   return (
